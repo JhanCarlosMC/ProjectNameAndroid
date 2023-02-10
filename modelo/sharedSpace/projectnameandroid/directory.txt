@@ -1,0 +1,84 @@
+---------------------Directory of the Project---------------------------------
+
+Package {
+	name :  projectnameandroid
+	nameSpace: projectnameandroid
+
+	Class {
+		name :  ModelFactory
+		nameSpace: projectnameandroid.ModelFactory
+		Method {
+			name :  cargar
+			nameSpace: projectnameandroid.ModelFactory.cargar()
+			signature: ModelFactory cargar( String ruta );
+		}
+
+		Method {
+			name :  salvar
+			nameSpace: projectnameandroid.ModelFactory.salvar()
+			signature: void salvar( String ruta );
+		}
+
+		Method {
+			name :  implementarModelo
+			nameSpace: projectnameandroid.ModelFactory.implementarModelo()
+			signature: void implementarModelo(  );
+		}
+
+	}
+}
+
+Package {
+	name :  domain
+	nameSpace: projectnameandroid.domain
+
+	Class {
+		name :  Domain
+		nameSpace: projectnameandroid.domain.Domain
+		Method {
+			name :  implementarModelo
+			nameSpace: projectnameandroid.domain.Domain.implementarModelo()
+			signature: void implementarModelo(  );
+		}
+
+	}
+}
+
+Package {
+	name :  ui
+	nameSpace: projectnameandroid.ui
+
+	Class {
+		name :  UI
+		nameSpace: projectnameandroid.ui.UI
+		Method {
+			name :  implementarModelo
+			nameSpace: projectnameandroid.ui.UI.implementarModelo()
+			signature: void implementarModelo(  );
+		}
+
+	}
+}
+
+Package {
+	name :  viewModels
+	nameSpace: projectnameandroid.ui.viewModels
+
+}
+
+Package {
+	name :  viewParts
+	nameSpace: projectnameandroid.ui.viewParts
+
+}
+
+Package {
+	name :  model
+	nameSpace: projectnameandroid.ui.model
+
+	Class {
+		name :  ModelFactoryModel
+		nameSpace: projectnameandroid.ui.model.ModelFactoryModel
+	}
+}
+

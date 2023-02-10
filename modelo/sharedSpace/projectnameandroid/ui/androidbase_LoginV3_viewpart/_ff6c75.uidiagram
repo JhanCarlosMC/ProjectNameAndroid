@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui">
+  <tooldataform.ui:UI_Diagram xmi:id="_8gcsJoI0Ee2QP7-HcaId4g" name="ViewPart: LoginV3" ownerElement="Sinfoci Team" dateElement="Fri Feb 03 14:35:24 COT 2023" resumenElement="name#Export,Fri Feb 03 14:35:24 COT 2023,androidbase,Sinfoci Team,undefined" nameProject="androidbase" developerElement="undefined">
+    <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_8gcsJ4I0Ee2QP7-HcaId4g" name="LoginV3" nameVar="LoginV3" type="View Modal" description="Insert a description" font="Segoe UI" stateFigure="VMVP" width="487" height="589" positionX="0" positionY="0" nameUserInterfaceReference="" idWidget="_8gcsIII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_8gcsKII0Ee2QP7-HcaId4g" name="viewPartLoadedAction" id="_8gcsIYI0Ee2QP7-HcaId4g" typeElement="Operation" urlIcon="" body="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_8gcsKYI0Ee2QP7-HcaId4g" name="constructorLoginV3ViewPart" id="_8gcsIoI0Ee2QP7-HcaId4g" typeElement="Operation" urlIcon="" body="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_8gcsKoI0Ee2QP7-HcaId4g" name="reboot" id="_8gcsI4I0Ee2QP7-HcaId4g" typeElement="Operation" urlIcon="" body="constructorLoginV3ViewPart();&#xD;&#xA;" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_8gcsK4I0Ee2QP7-HcaId4g" name="syncModel" id="_8gcsJII0Ee2QP7-HcaId4g" typeElement="Operation" urlIcon="" body="" visible="true"/>
+      <listGraphicalContainerWidget xmi:type="tooldataform.ui:Group" xmi:id="_Bb55gII1Ee2QP7-HcaId4g" name="LoginBase" esteriotipoName="LoginBase" nameVar="Ingreso por WhatsApp" type="No View" font="Segoe UI" stateFigure="No_mostrarMensaje" width="437" height="253" positionX="20" positionY="284" roleNameElementVM="theIngresoporWhatsApp" reused="true" estadoRoleName="DEFINIDO_POR_TITLE" idWidget="_Bb6gkII1Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_Bb8VwYI1Ee2QP7-HcaId4g" name="viewPartLoadedAction" id="_Bb8VwII1Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_Bb8Vw4I1Ee2QP7-HcaId4g" name="constructorNameViewPart" id="_Bb8VwoI1Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_Bb8VxYI1Ee2QP7-HcaId4g" name="reboot" id="_Bb8VxII1Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_Bb8Vx4I1Ee2QP7-HcaId4g" name="syncModel" id="_Bb8VxoI1Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_BdE-MII1Ee2QP7-HcaId4g" name="ingrese su numero de whatsapp" nameVar="ingrese su numero de whatsapp" font="Segoe UI" stateFigure="No_mostrarMensaje" width="226" height="24" positionX="81" positionY="41" sourceCode="" idWidget="_BdIBgII1Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_BdIokII1Ee2QP7-HcaId4g" name="continuar" nameVar="continuar" font="Segoe UI" stateFigure="No_mostrarMensaje" width="85" height="22" positionX="160" positionY="154" idAndroid="Selection#" sourceCode="" idWidget="_BdLr4II1Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+          <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BdLr4oI1Ee2QP7-HcaId4g" name="btnContinuarFromTheIngresoporWhatsApp_Selection_LogicalEvent" id="_BdLr4YI1Ee2QP7-HcaId4g" typeElement="Operation" visible="true" returnTypeMethod="void">
+            <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_BdLr44I1Ee2QP7-HcaId4g" name="event" type="String"/>
+          </listModelElementCore>
+        </listIndividualWidge>
+        <listIndividualWidge xmi:type="tooldataform.ui:ImageView" xmi:id="_BdOvMII1Ee2QP7-HcaId4g" name="flag" nameVar="flag" stateFigure="No_mostrarMensaje" width="56" height="24" positionX="93" positionY="105" sourceCode="" idWidget="_BdP9UII1Ee2QP7-HcaId4g"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_BdRLcII1Ee2QP7-HcaId4g" name="numerowpp" nameVar="numerowpp" pathImage="15:17:35" font="Segoe UI" stateFigure="No_mostrarMensaje" width="120" height="20" positionX="154" positionY="108" idAndroid="ModifyText#" sourceCode="" idWidget="_BdTnsII1Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+          <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BdTnsoI1Ee2QP7-HcaId4g" name="textNumerowppFromTheIngresoporWhatsApp_ModifyText_LogicalEvent" id="_BdTnsYI1Ee2QP7-HcaId4g" typeElement="Operation" visible="true" returnTypeMethod="void">
+            <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_BdTns4I1Ee2QP7-HcaId4g" name="event" type="String"/>
+          </listModelElementCore>
+        </listIndividualWidge>
+      </listGraphicalContainerWidget>
+    </theUserInterface>
+  </tooldataform.ui:UI_Diagram>
+  <notation:Diagram xmi:id="_8gfvcII0Ee2QP7-HcaId4g" type="MetamodelodataformUIdiagram" element="_8gcsJoI0Ee2QP7-HcaId4g" name="ViewPart: LoginV3" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_8kgswII0Ee2QP7-HcaId4g" type="2001" element="_8gcsJ4I0Ee2QP7-HcaId4g">
+      <children xmi:type="notation:DecorationNode" xmi:id="_8kgsxYI0Ee2QP7-HcaId4g" type="5028"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_8kgsxoI0Ee2QP7-HcaId4g" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_Bb6gkYI1Ee2QP7-HcaId4g" type="3005" element="_Bb55gII1Ee2QP7-HcaId4g">
+          <children xmi:type="notation:DecorationNode" xmi:id="_Bb6gloI1Ee2QP7-HcaId4g" type="5025"/>
+          <children xmi:type="notation:BasicCompartment" xmi:id="_Bb6gl4I1Ee2QP7-HcaId4g" type="7005">
+            <children xmi:type="notation:Node" xmi:id="_BdFlQYI1Ee2QP7-HcaId4g" type="3024" element="_BdE-MII1Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BdFlRoI1Ee2QP7-HcaId4g" type="5021"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BdFlQoI1Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BdFlQ4I1Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_BdFlRII1Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BdFlRYI1Ee2QP7-HcaId4g" x="81" y="41" width="226" height="24"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BdJPoII1Ee2QP7-HcaId4g" type="3010" element="_BdIokII1Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BdJPpYI1Ee2QP7-HcaId4g" type="5007"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BdJPoYI1Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BdJPooI1Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_BdJPo4I1Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BdJPpII1Ee2QP7-HcaId4g" x="160" y="154" width="85" height="22"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BdOvMYI1Ee2QP7-HcaId4g" type="3016" element="_BdOvMII1Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BdOvNoI1Ee2QP7-HcaId4g" type="5013"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BdOvMoI1Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BdOvM4I1Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_BdOvNII1Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BdOvNYI1Ee2QP7-HcaId4g" x="93" y="105" width="56" height="24"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BdRLcoI1Ee2QP7-HcaId4g" type="3023" element="_BdRLcII1Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BdRLd4I1Ee2QP7-HcaId4g" type="5020"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BdRLc4I1Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BdRLdII1Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_BdRLdYI1Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BdRLdoI1Ee2QP7-HcaId4g" x="154" y="108" width="120" height="20"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_Bb6gkoI1Ee2QP7-HcaId4g"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Bb6gk4I1Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_Bb6glII1Ee2QP7-HcaId4g"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bb6glYI1Ee2QP7-HcaId4g" x="20" y="284" width="437" height="253"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_8kgswYI0Ee2QP7-HcaId4g"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_8kgswoI0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_8kgsw4I0Ee2QP7-HcaId4g"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8kgsxII0Ee2QP7-HcaId4g" width="487" height="589"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_8gfvcYI0Ee2QP7-HcaId4g"/>
+  </notation:Diagram>
+</xmi:XMI>

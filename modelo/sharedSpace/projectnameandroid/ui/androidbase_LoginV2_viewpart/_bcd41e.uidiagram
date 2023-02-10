@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui">
+  <tooldataform.ui:UI_Diagram xmi:id="_qsLOtoIzEe2QP7-HcaId4g" name="ViewPart: LoginV2" ownerElement="Sinfoci Team" dateElement="Fri Feb 03 14:35:18 COT 2023" resumenElement="name#Export,Fri Feb 03 14:35:18 COT 2023,androidbase,Sinfoci Team,undefined" nameProject="androidbase" developerElement="undefined">
+    <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_qsL1wIIzEe2QP7-HcaId4g" name="LoginV2" nameVar="LoginV2" type="View Modal" description="Insert a description" font="Segoe UI" stateFigure="VMVP" width="493" height="701" positionX="0" positionY="0" nameUserInterfaceReference="" idWidget="_qsLOsIIzEe2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_qsL1wYIzEe2QP7-HcaId4g" name="viewPartLoadedAction" id="_qsLOsYIzEe2QP7-HcaId4g" typeElement="Operation" urlIcon="" body="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_qsL1woIzEe2QP7-HcaId4g" name="constructorLoginV2ViewPart" id="_qsLOsoIzEe2QP7-HcaId4g" typeElement="Operation" urlIcon="" body="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_qsL1w4IzEe2QP7-HcaId4g" name="reboot" id="_qsLOs4IzEe2QP7-HcaId4g" typeElement="Operation" urlIcon="" body="constructorLoginV2ViewPart();&#xD;&#xA;" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_qsL1xIIzEe2QP7-HcaId4g" name="syncModel" id="_qsLOtIIzEe2QP7-HcaId4g" typeElement="Operation" urlIcon="" body="" visible="true"/>
+      <listGraphicalContainerWidget xmi:type="tooldataform.ui:Group" xmi:id="_BWecYII0Ee2QP7-HcaId4g" name="LoginBase" esteriotipoName="LoginBase" nameVar="Datos de Usuario" type="No View" font="Segoe UI" stateFigure="No_mostrarMensaje" width="437" height="389" positionX="14" positionY="12" roleNameElementVM="theDatosdeUsuario" reused="true" estadoRoleName="DEFINIDO_POR_TITLE" idWidget="_BWecYYI0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BWgRkYI0Ee2QP7-HcaId4g" name="viewPartLoadedAction" id="_BWgRkII0Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BWgRk4I0Ee2QP7-HcaId4g" name="constructorNameViewPart" id="_BWgRkoI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BWgRlYI0Ee2QP7-HcaId4g" name="reboot" id="_BWgRlII0Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BWgRl4I0Ee2QP7-HcaId4g" name="syncModel" id="_BWgRloI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_BWhfsII0Ee2QP7-HcaId4g" name="usuario" nameVar="usuario" font="Segoe UI" stateFigure="No_mostrarMensaje" width="85" height="24" positionX="68" positionY="6" sourceCode="" idWidget="_BWj78II0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_BWlKEII0Ee2QP7-HcaId4g" name="usuario" nameVar="usuario" pathImage="15:6:52" font="Segoe UI" stateFigure="No_mostrarMensaje" width="280" height="20" positionX="68" positionY="29" idAndroid="ModifyText#" sourceCode="" idWidget="_BWnmUII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+          <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BWnmUoI0Ee2QP7-HcaId4g" name="textUsuarioFromTheDatosdeUsuario_ModifyText_LogicalEvent" id="_BWnmUYI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true" returnTypeMethod="void">
+            <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_BWnmU4I0Ee2QP7-HcaId4g" name="event" type="String"/>
+          </listModelElementCore>
+        </listIndividualWidge>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_BWo0cII0Ee2QP7-HcaId4g" name="contrasena" nameVar="contrasena" font="Segoe UI" stateFigure="No_mostrarMensaje" width="85" height="24" positionX="68" positionY="57" sourceCode="" idWidget="_BWqpoII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_BWr3wII0Ee2QP7-HcaId4g" name="contrasena" nameVar="contrasena" pathImage="15:6:59" font="Segoe UI" stateFigure="No_mostrarMensaje" width="280" height="20" positionX="68" positionY="80" idAndroid="ModifyText#" sourceCode="" idWidget="_BWwwQII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+          <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BWwwQoI0Ee2QP7-HcaId4g" name="textContrasenaFromTheDatosdeUsuario_ModifyText_LogicalEvent" id="_BWwwQYI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true" returnTypeMethod="void">
+            <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_BWwwQ4I0Ee2QP7-HcaId4g" name="event" type="String"/>
+          </listModelElementCore>
+        </listIndividualWidge>
+        <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_BWylcII0Ee2QP7-HcaId4g" name="¿Has ollvidado tu contrasena?" nameVar="¿Has ollvidado tu contrasena?" font="Segoe UI" stateFigure="No_mostrarMensaje" width="231" height="22" positionX="83" positionY="117" idAndroid="Selection#" sourceCode="" idWidget="_BW1BsII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+          <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BW1BsoI0Ee2QP7-HcaId4g" name="btnHasollvidadotucontrasenaFromTheDatosdeUsuario_Selection_LogicalEvent" id="_BW1BsYI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true" returnTypeMethod="void">
+            <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_BW1Bs4I0Ee2QP7-HcaId4g" name="event" type="String"/>
+          </listModelElementCore>
+        </listIndividualWidge>
+        <listIndividualWidge xmi:type="tooldataform.ui:CheckBox" xmi:id="_BW2P0II0Ee2QP7-HcaId4g" name="Recordarme" nameVar="Recordarme" font="Segoe UI" stateFigure="No_mostrarMensaje" width="120" height="24" positionX="63" positionY="173" sourceCode="" idWidget="_BW56MII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_BW6hQII0Ee2QP7-HcaId4g" name="iniciar sesion" nameVar="iniciar sesion" font="Segoe UI" stateFigure="No_mostrarMensaje" width="204" height="32" positionX="106" positionY="217" idAndroid="Selection#" sourceCode="" idWidget="_BW89gII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+          <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BW89goI0Ee2QP7-HcaId4g" name="btnIniciarsesionFromTheDatosdeUsuario_Selection_LogicalEvent" id="_BW89gYI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true" returnTypeMethod="void">
+            <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_BW89g4I0Ee2QP7-HcaId4g" name="event" type="String"/>
+          </listModelElementCore>
+        </listIndividualWidge>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_BW9kkII0Ee2QP7-HcaId4g" name="¿No tienes cuenta?" nameVar="¿No tienes cuenta?" font="Segoe UI" stateFigure="No_mostrarMensaje" width="135" height="24" positionX="68" positionY="315" sourceCode="" idWidget="_BW_ZwII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_BXAn4II0Ee2QP7-HcaId4g" name="registrate" nameVar="registrate" font="Segoe UI" stateFigure="No_mostrarMensaje" width="115" height="22" positionX="232" positionY="316" idAndroid="Selection#" sourceCode="" idWidget="_BXFgYII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+          <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_BXFgYoI0Ee2QP7-HcaId4g" name="btnRegistrateFromTheDatosdeUsuario_Selection_LogicalEvent" id="_BXFgYYI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true" returnTypeMethod="void">
+            <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_BXFgY4I0Ee2QP7-HcaId4g" name="event" type="String"/>
+          </listModelElementCore>
+        </listIndividualWidge>
+      </listGraphicalContainerWidget>
+      <listGraphicalContainerWidget xmi:type="tooldataform.ui:Group" xmi:id="_mIvqUII0Ee2QP7-HcaId4g" name="LoginBase" esteriotipoName="LoginBase" nameVar="Opciones de Inicio de Sesion" type="No View" font="Segoe UI" stateFigure="No_mostrarMensaje" width="437" height="217" positionX="17" positionY="428" roleNameElementVM="theOpcionesdeIniciodeSesion" reused="true" estadoRoleName="DEFINIDO_POR_TITLE" idWidget="_mIvqUYI0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_mIxfgYI0Ee2QP7-HcaId4g" name="viewPartLoadedAction" id="_mIxfgII0Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_mIxfg4I0Ee2QP7-HcaId4g" name="constructorNameViewPart" id="_mIxfgoI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_mIxfhYI0Ee2QP7-HcaId4g" name="reboot" id="_mIxfhII0Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_mIxfh4I0Ee2QP7-HcaId4g" name="syncModel" id="_mIxfhoI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_mJcN4II0Ee2QP7-HcaId4g" name="selecciona una aplicacion para continuar" nameVar="selecciona una aplicacion para continuar" font="Segoe UI" stateFigure="No_mostrarMensaje" width="275" height="24" positionX="68" positionY="13" sourceCode="" idWidget="_mJeqIII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_mJfRMII0Ee2QP7-HcaId4g" name="continuar con whatsapp" nameVar="continuar con whatsapp" font="Segoe UI" stateFigure="No_mostrarMensaje" width="185" height="22" positionX="163" positionY="61" idAndroid="Selection#" sourceCode="" idWidget="_mJhtcII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+          <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_mJhtcoI0Ee2QP7-HcaId4g" name="btnContinuarconwhatsappFromTheOpcionesdeIniciodeSesion_Selection_LogicalEvent" id="_mJhtcYI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true" returnTypeMethod="void">
+            <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_mJhtc4I0Ee2QP7-HcaId4g" name="event" type="String"/>
+          </listModelElementCore>
+        </listIndividualWidge>
+        <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_mJiUgII0Ee2QP7-HcaId4g" name="continuar con facebook" nameVar="continuar con facebook" font="Segoe UI" stateFigure="No_mostrarMensaje" width="184" height="22" positionX="164" positionY="90" idAndroid="Selection#" sourceCode="" idWidget="_mJl-4II0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+          <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_mJml8YI0Ee2QP7-HcaId4g" name="btnContinuarconfacebookFromTheOpcionesdeIniciodeSesion_Selection_LogicalEvent" id="_mJml8II0Ee2QP7-HcaId4g" typeElement="Operation" visible="true" returnTypeMethod="void">
+            <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_mJml8oI0Ee2QP7-HcaId4g" name="event" type="String"/>
+          </listModelElementCore>
+        </listIndividualWidge>
+        <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_mJnNAII0Ee2QP7-HcaId4g" name="continuar con gmail" nameVar="continuar con gmail" font="Segoe UI" stateFigure="No_mostrarMensaje" width="185" height="19" positionX="163" positionY="118" idAndroid="Selection#" sourceCode="" idWidget="_mJpCMII0Ee2QP7-HcaId4g" textColor="0" textSize="9" textStyle="false">
+          <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_mJpCMoI0Ee2QP7-HcaId4g" name="btnContinuarcongmailFromTheOpcionesdeIniciodeSesion_Selection_LogicalEvent" id="_mJpCMYI0Ee2QP7-HcaId4g" typeElement="Operation" visible="true" returnTypeMethod="void">
+            <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_mJpCM4I0Ee2QP7-HcaId4g" name="event" type="String"/>
+          </listModelElementCore>
+        </listIndividualWidge>
+        <listIndividualWidge xmi:type="tooldataform.ui:ImageView" xmi:id="_mJppQII0Ee2QP7-HcaId4g" name="whatsapp" nameVar="whatsapp" stateFigure="No_mostrarMensaje" width="80" height="22" positionX="53" positionY="59" sourceCode="" idWidget="_mJrecII0Ee2QP7-HcaId4g"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:ImageView" xmi:id="_mJtToII0Ee2QP7-HcaId4g" name="facebook" nameVar="facebook" stateFigure="No_mostrarMensaje" width="80" height="25" positionX="54" positionY="87" sourceCode="" idWidget="_mJwW8II0Ee2QP7-HcaId4g"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:ImageView" xmi:id="_mJxlEII0Ee2QP7-HcaId4g" name="gmail" nameVar="gmail" stateFigure="No_mostrarMensaje" width="84" height="25" positionX="53" positionY="114" sourceCode="" idWidget="_mJ0BUII0Ee2QP7-HcaId4g"/>
+      </listGraphicalContainerWidget>
+    </theUserInterface>
+  </tooldataform.ui:UI_Diagram>
+  <notation:Diagram xmi:id="_qsNq8IIzEe2QP7-HcaId4g" type="MetamodelodataformUIdiagram" element="_qsLOtoIzEe2QP7-HcaId4g" name="ViewPart: LoginV2" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_qvlvEIIzEe2QP7-HcaId4g" type="2001" element="_qsL1wIIzEe2QP7-HcaId4g">
+      <children xmi:type="notation:DecorationNode" xmi:id="_qvlvFYIzEe2QP7-HcaId4g" type="5028"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_qvlvFoIzEe2QP7-HcaId4g" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_BWfDcII0Ee2QP7-HcaId4g" type="3005" element="_BWecYII0Ee2QP7-HcaId4g">
+          <children xmi:type="notation:DecorationNode" xmi:id="_BWfDdYI0Ee2QP7-HcaId4g" type="5025"/>
+          <children xmi:type="notation:BasicCompartment" xmi:id="_BWfDdoI0Ee2QP7-HcaId4g" type="7005">
+            <children xmi:type="notation:Node" xmi:id="_BWiGwII0Ee2QP7-HcaId4g" type="3024" element="_BWhfsII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWiGxYI0Ee2QP7-HcaId4g" type="5021"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BWiGwYI0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BWiGwoI0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_BWiGw4I0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWiGxII0Ee2QP7-HcaId4g" x="68" y="6" width="85" height="24"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BWlKEoI0Ee2QP7-HcaId4g" type="3023" element="_BWlKEII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWlKF4I0Ee2QP7-HcaId4g" type="5020"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BWlKE4I0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BWlKFII0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_BWlKFYI0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWlKFoI0Ee2QP7-HcaId4g" x="68" y="29" width="280" height="20"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BWo0coI0Ee2QP7-HcaId4g" type="3024" element="_BWo0cII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWo0d4I0Ee2QP7-HcaId4g" type="5021"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BWo0c4I0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BWo0dII0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_BWo0dYI0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWo0doI0Ee2QP7-HcaId4g" x="68" y="57" width="85" height="24"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BWr3woI0Ee2QP7-HcaId4g" type="3023" element="_BWr3wII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWse0II0Ee2QP7-HcaId4g" type="5020"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BWr3w4I0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BWr3xII0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_BWr3xYI0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWr3xoI0Ee2QP7-HcaId4g" x="68" y="80" width="280" height="20"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BWzMgII0Ee2QP7-HcaId4g" type="3010" element="_BWylcII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWzMhYI0Ee2QP7-HcaId4g" type="5007"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BWzMgYI0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BWzMgoI0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_BWzMg4I0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWzMhII0Ee2QP7-HcaId4g" x="83" y="117" width="231" height="22"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BW2P0oI0Ee2QP7-HcaId4g" type="3011" element="_BW2P0II0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BW224II0Ee2QP7-HcaId4g" type="5008"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BW2P04I0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BW2P1II0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_BW2P1YI0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BW2P1oI0Ee2QP7-HcaId4g" x="63" y="173" width="120" height="24"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BW7IUII0Ee2QP7-HcaId4g" type="3010" element="_BW6hQII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BW7IVYI0Ee2QP7-HcaId4g" type="5007"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BW7IUYI0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BW7IUoI0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_BW7IU4I0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BW7IVII0Ee2QP7-HcaId4g" x="106" y="217" width="204" height="32"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BW9kkoI0Ee2QP7-HcaId4g" type="3024" element="_BW9kkII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BW9kl4I0Ee2QP7-HcaId4g" type="5021"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BW9kk4I0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BW9klII0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_BW9klYI0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BW9kloI0Ee2QP7-HcaId4g" x="68" y="315" width="135" height="24"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BXBO8II0Ee2QP7-HcaId4g" type="3010" element="_BXAn4II0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BXBO9YI0Ee2QP7-HcaId4g" type="5007"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_BXBO8YI0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_BXBO8oI0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_BXBO84I0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BXBO9II0Ee2QP7-HcaId4g" x="232" y="316" width="115" height="22"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_BWfDcYI0Ee2QP7-HcaId4g"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_BWfDcoI0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_BWfDc4I0Ee2QP7-HcaId4g"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWfDdII0Ee2QP7-HcaId4g" x="14" y="12" width="437" height="389"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_mIvqUoI0Ee2QP7-HcaId4g" type="3005" element="_mIvqUII0Ee2QP7-HcaId4g">
+          <children xmi:type="notation:DecorationNode" xmi:id="_mIvqV4I0Ee2QP7-HcaId4g" type="5025"/>
+          <children xmi:type="notation:BasicCompartment" xmi:id="_mIvqWII0Ee2QP7-HcaId4g" type="7005">
+            <children xmi:type="notation:Node" xmi:id="_mJc08YI0Ee2QP7-HcaId4g" type="3024" element="_mJcN4II0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_mJc09oI0Ee2QP7-HcaId4g" type="5021"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_mJc08oI0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_mJc084I0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_mJc09II0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mJc09YI0Ee2QP7-HcaId4g" x="68" y="13" width="275" height="24"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mJf4QYI0Ee2QP7-HcaId4g" type="3010" element="_mJfRMII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_mJf4RoI0Ee2QP7-HcaId4g" type="5007"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_mJf4QoI0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_mJf4Q4I0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_mJf4RII0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mJf4RYI0Ee2QP7-HcaId4g" x="163" y="61" width="185" height="22"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mJi7kYI0Ee2QP7-HcaId4g" type="3010" element="_mJiUgII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_mJjioII0Ee2QP7-HcaId4g" type="5007"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_mJi7koI0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_mJi7k4I0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_mJi7lII0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mJi7lYI0Ee2QP7-HcaId4g" x="164" y="90" width="184" height="22"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mJnNAoI0Ee2QP7-HcaId4g" type="3010" element="_mJnNAII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_mJnNB4I0Ee2QP7-HcaId4g" type="5007"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_mJnNA4I0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_mJnNBII0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_mJnNBYI0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mJnNBoI0Ee2QP7-HcaId4g" x="163" y="118" width="185" height="19"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mJppQYI0Ee2QP7-HcaId4g" type="3016" element="_mJppQII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_mJqQUII0Ee2QP7-HcaId4g" type="5013"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_mJppQoI0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_mJppQ4I0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_mJppRII0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mJppRYI0Ee2QP7-HcaId4g" x="53" y="59" width="80" height="22"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mJuhwII0Ee2QP7-HcaId4g" type="3016" element="_mJtToII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_mJuhxYI0Ee2QP7-HcaId4g" type="5013"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_mJuhwYI0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_mJuhwoI0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_mJuhw4I0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mJuhxII0Ee2QP7-HcaId4g" x="54" y="87" width="80" height="25"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mJxlEYI0Ee2QP7-HcaId4g" type="3016" element="_mJxlEII0Ee2QP7-HcaId4g">
+              <children xmi:type="notation:DecorationNode" xmi:id="_mJxlFoI0Ee2QP7-HcaId4g" type="5013"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_mJxlEoI0Ee2QP7-HcaId4g"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_mJxlE4I0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_mJxlFII0Ee2QP7-HcaId4g"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mJxlFYI0Ee2QP7-HcaId4g" x="53" y="114" width="84" height="25"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_mIvqU4I0Ee2QP7-HcaId4g"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_mIvqVII0Ee2QP7-HcaId4g" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_mIvqVYI0Ee2QP7-HcaId4g"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mIvqVoI0Ee2QP7-HcaId4g" x="17" y="428" width="437" height="217"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_qvlvEYIzEe2QP7-HcaId4g"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_qvlvEoIzEe2QP7-HcaId4g" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_qvlvE4IzEe2QP7-HcaId4g"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qvlvFIIzEe2QP7-HcaId4g" width="493" height="701"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_qsNq8YIzEe2QP7-HcaId4g"/>
+  </notation:Diagram>
+</xmi:XMI>
