@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xsi:schemaLocation="http:///tooldataform/core.ecore http:///tooldataform.ecore#//core http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo">
+  <tooldataform.core:Datos_Diagram xmi:id="_9-POkM89Ee2LAs71B-KWxw">
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_-iyGEM89Ee2LAs71B-KWxw" name="ServiceManager" id="_-i0iUM89Ee2LAs71B-KWxw" pathElementRoot="projectnameandroid.client.services"/>
+  </tooldataform.core:Datos_Diagram>
+  <notation:Diagram xmi:id="_9-QcsM89Ee2LAs71B-KWxw" type="MetamodelodataformDatosDiagram" element="_9-POkM89Ee2LAs71B-KWxw" name="containment" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_-i5a0M89Ee2LAs71B-KWxw" type="2002" element="_-iyGEM89Ee2LAs71B-KWxw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_-i5a1c89Ee2LAs71B-KWxw" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_-i5a1s89Ee2LAs71B-KWxw" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_-i5a1889Ee2LAs71B-KWxw" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_-i5a2M89Ee2LAs71B-KWxw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_-i5a2c89Ee2LAs71B-KWxw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_-i5a2s89Ee2LAs71B-KWxw" type="7002">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_-i5a2889Ee2LAs71B-KWxw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_-i5a3M89Ee2LAs71B-KWxw"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_-i5a0c89Ee2LAs71B-KWxw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_-i5a0s89Ee2LAs71B-KWxw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_-i5a0889Ee2LAs71B-KWxw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-i5a1M89Ee2LAs71B-KWxw" x="380" y="119"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_9-Qcsc89Ee2LAs71B-KWxw"/>
+  </notation:Diagram>
+</xmi:XMI>

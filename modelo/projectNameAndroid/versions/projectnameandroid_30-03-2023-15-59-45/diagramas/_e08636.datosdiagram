@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xsi:schemaLocation="http:///tooldataform/core.ecore http:///tooldataform.ecore#//core">
+  <tooldataform.core:Datos_Diagram xmi:id="_zimLkM88Ee2LAs71B-KWxw">
+    <listPackageParent xmi:type="tooldataform.core:Package" xmi:id="_HFvbEM89Ee2LAs71B-KWxw" name="viewParts" id="_HkyCkGmMEeqb1MocvlRzgw" type="System" pathElementRoot="projectnameandroid.ui" typeElement="Package" nameSpace=""/>
+    <listPackageParent xmi:type="tooldataform.core:Package" xmi:id="_HeYkkM89Ee2LAs71B-KWxw" name="viewModels" id="_D9tS8LosEem_27ANHTL-0g" type="System" pathElementRoot="projectnameandroid.ui" typeElement="Package" nameSpace=""/>
+  </tooldataform.core:Datos_Diagram>
+  <notation:Diagram xmi:id="_zioAwM88Ee2LAs71B-KWxw" type="MetamodelodataformDatosDiagram" element="_zimLkM88Ee2LAs71B-KWxw" name="containment" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_HFxQQM89Ee2LAs71B-KWxw" type="2001" element="_HFvbEM89Ee2LAs71B-KWxw" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_HFxQQs89Ee2LAs71B-KWxw" type="5001"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_HFxQQ889Ee2LAs71B-KWxw" type="5002"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HFxQQc89Ee2LAs71B-KWxw" x="60" y="20"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_HeaZwM89Ee2LAs71B-KWxw" type="2001" element="_HeYkkM89Ee2LAs71B-KWxw" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_HeaZws89Ee2LAs71B-KWxw" type="5001"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_HeaZw889Ee2LAs71B-KWxw" type="5002"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HeaZwc89Ee2LAs71B-KWxw" x="195" y="20"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_zioAwc88Ee2LAs71B-KWxw"/>
+  </notation:Diagram>
+</xmi:XMI>

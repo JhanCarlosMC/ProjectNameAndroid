@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.navegation="http:///tooldataform/navegation.ecore" xsi:schemaLocation="http:///tooldataform/navegation.ecore http:///tooldataform.ecore#//navegation">
+  <tooldataform.navegation:NavegationDiagram xmi:id="_FoVNsN06Ee2O3P_Q4HvJnw" name="navigation">
+    <listaModelElementUINavagacion xmi:type="tooldataform.navegation:UserInterfaceNavegation" xmi:id="_Nn3QEN06Ee2O3P_Q4HvJnw" name="Login"/>
+    <listaModelElementUINavagacion xmi:type="tooldataform.navegation:UserInterfaceNavegation" xmi:id="_OZfhUN06Ee2O3P_Q4HvJnw" name="PanelControl"/>
+    <theNavegationRelation xmi:type="tooldataform.navegation:NavegationRelation" xmi:id="_S7a0YN06Ee2O3P_Q4HvJnw" source="_Nn3QEN06Ee2O3P_Q4HvJnw" target="_OZfhUN06Ee2O3P_Q4HvJnw"/>
+  </tooldataform.navegation:NavegationDiagram>
+  <notation:Diagram xmi:id="_Fpkj0N06Ee2O3P_Q4HvJnw" type="MetamodelodataformNavegationdiagram" element="_FoVNsN06Ee2O3P_Q4HvJnw" name="navigation" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_NpbWUN06Ee2O3P_Q4HvJnw" type="2001" element="_Nn3QEN06Ee2O3P_Q4HvJnw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_NpdLgN06Ee2O3P_Q4HvJnw" type="5001"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_NpbWUd06Ee2O3P_Q4HvJnw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_NpbWUt06Ee2O3P_Q4HvJnw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_NpbWU906Ee2O3P_Q4HvJnw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NpbWVN06Ee2O3P_Q4HvJnw" x="60" y="45"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OZhWgN06Ee2O3P_Q4HvJnw" type="2001" element="_OZfhUN06Ee2O3P_Q4HvJnw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_OZh9kN06Ee2O3P_Q4HvJnw" type="5001"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_OZhWgd06Ee2O3P_Q4HvJnw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_OZhWgt06Ee2O3P_Q4HvJnw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_OZhWg906Ee2O3P_Q4HvJnw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OZhWhN06Ee2O3P_Q4HvJnw" x="279" y="38" width="302"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_FplK4N06Ee2O3P_Q4HvJnw"/>
+    <edges xmi:type="notation:Edge" xmi:id="_S7j-UN06Ee2O3P_Q4HvJnw" type="4001" element="_S7a0YN06Ee2O3P_Q4HvJnw" source="_NpbWUN06Ee2O3P_Q4HvJnw" target="_OZhWgN06Ee2O3P_Q4HvJnw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_S7klYN06Ee2O3P_Q4HvJnw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_S7klYd06Ee2O3P_Q4HvJnw" y="16"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_S7j-Ud06Ee2O3P_Q4HvJnw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_S7j-Ut06Ee2O3P_Q4HvJnw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_S7j-U906Ee2O3P_Q4HvJnw" points="[30, 3, -141, -19]$[158, 4, -13, -18]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S71EEN06Ee2O3P_Q4HvJnw" id="(0.7,0.13333333333333333)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S71EEd06Ee2O3P_Q4HvJnw" id="(0.21,0.15)"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

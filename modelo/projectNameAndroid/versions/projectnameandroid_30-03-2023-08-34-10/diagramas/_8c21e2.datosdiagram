@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xsi:schemaLocation="http:///tooldataform/core.ecore http:///tooldataform.ecore#//core http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo">
+  <tooldataform.core:Datos_Diagram xmi:id="_9iapUc79Ee2sR8E02N6uUg">
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_-LgpoM79Ee2sR8E02N6uUg" name="ModelFactory" id="_p0LDwBc7EeiSj8tKu3ogxw" type="System" description="" pathElementRoot=".projectnameandroid" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: projectnameandroid)" nameSpaceElement="(from: projectnameandroid)">
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_-L32AM79Ee2sR8E02N6uUg" name="cargar" id="_dv7jMExNEeqn3OiIt93rEQ" description="" pathElementRoot="projectnameandroid" typeElement="Operation" body="&#x9;&#x9;ModelFactory modelFactory = null;&#xD;&#xA;&#x9;&#x9;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xD;&#xA;&#x9;&#x9;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xD;&#xA;&#x9;&#x9;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xD;&#xA;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;resource.load(java.util.Collections.EMPTY_MAP);&#xD;&#xA;&#x9;&#x9;&#x9;modelFactory = (ModelFactory) resource.getContents().get(0);&#xD;&#xA;&#x9;&#x9;} catch (java.io.IOException e) {&#xD;&#xA;&#x9;&#x9;&#x9;// TO-DO Auto-generated catch block&#xD;&#xA;&#x9;&#x9;&#x9;e.printStackTrace();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;return modelFactory;&#xD;&#xA;&#xD;&#xA;" returnTypeMethod="ModelFactory">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_-L32Ac79Ee2sR8E02N6uUg" name="ruta" id="_xVIBIExNEeqn3OiIt93rEQ" type="String" valueDefault="" namePresentation="ruta:String"/>
+      </listaMetodos>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_-L32As79Ee2sR8E02N6uUg" name="salvar" id="_eZtgAUxNEeqn3OiIt93rEQ" description="" pathElementRoot="projectnameandroid" typeElement="Operation" body="ModelFactory modelFactory = this;&#xD;&#xA;&#x9;&#x9;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xD;&#xA;&#x9;&#x9;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xD;&#xA;&#x9;&#x9;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xD;&#xA;&#x9;&#x9;resource.getContents().add(modelFactory);&#xD;&#xA;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;resource.save(java.util.Collections.EMPTY_MAP);&#xD;&#xA;&#x9;&#x9;} catch (java.io.IOException e) {&#xD;&#xA;&#x9;&#x9;&#x9;// TO-DO Auto-generated catch block&#xD;&#xA;&#x9;&#x9;&#x9;e.printStackTrace();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;return;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" returnTypeMethod="">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_-L32A879Ee2sR8E02N6uUg" name="ruta" id="_6aId0UxNEeqn3OiIt93rEQ" type="String" valueDefault="" namePresentation="ruta:String"/>
+      </listaMetodos>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_-L32BM79Ee2sR8E02N6uUg" name="implementarModelo" id="_XBlqgGsbEeqv98S2YDhvpQ" description="" pathElementRoot="projectnameandroid" typeElement="Operation" body="void"/>
+    </listClase>
+  </tooldataform.core:Datos_Diagram>
+  <notation:Diagram xmi:id="_9iuLUM79Ee2sR8E02N6uUg" type="MetamodelodataformDatosDiagram" element="_9iapUc79Ee2sR8E02N6uUg" name="containment" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_-Lgpoc79Ee2sR8E02N6uUg" type="2002" element="_-LgpoM79Ee2sR8E02N6uUg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_-Lgpps79Ee2sR8E02N6uUg" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_-Lgpp879Ee2sR8E02N6uUg" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_-LgpqM79Ee2sR8E02N6uUg" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_-Lgpqc79Ee2sR8E02N6uUg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_-Lgpqs79Ee2sR8E02N6uUg"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_-Lgpq879Ee2sR8E02N6uUg" type="7002">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_-LgprM79Ee2sR8E02N6uUg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_-Lgprc79Ee2sR8E02N6uUg"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_-Lgpos79Ee2sR8E02N6uUg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_-Lgpo879Ee2sR8E02N6uUg" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_-LgppM79Ee2sR8E02N6uUg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Lgppc79Ee2sR8E02N6uUg" x="330" y="35"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_9iuLUc79Ee2sR8E02N6uUg"/>
+  </notation:Diagram>
+</xmi:XMI>

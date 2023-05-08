@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui">
+  <tooldataform.ui:UI_Diagram xmi:id="_dNMk8M8-Ee2LAs71B-KWxw" name="ViewPart: Hhh">
+    <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_dNNMAM8-Ee2LAs71B-KWxw" name="Hhh" nameVar="Hhh" type="View Modal" font="Segoe UI" width="200" height="300" positionX="0" positionY="0" idWidget="_dNL94M8-Ee2LAs71B-KWxw" textColor="0" textSize="9" textStyle="false">
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_dNNMAc8-Ee2LAs71B-KWxw" name="viewPartLoadedAction" id="_dNL94c8-Ee2LAs71B-KWxw" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_dNNMAs8-Ee2LAs71B-KWxw" name="constructorHhhViewPart" id="_dNL94s8-Ee2LAs71B-KWxw" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_dNNMA88-Ee2LAs71B-KWxw" name="reboot" id="_dNL9488-Ee2LAs71B-KWxw" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_dNNMBM8-Ee2LAs71B-KWxw" name="syncModel" id="_dNL95M8-Ee2LAs71B-KWxw" typeElement="Operation" urlIcon="" visible="true"/>
+    </theUserInterface>
+  </tooldataform.ui:UI_Diagram>
+  <notation:Diagram xmi:id="_dNPBMM8-Ee2LAs71B-KWxw" type="MetamodelodataformUIdiagram" element="_dNMk8M8-Ee2LAs71B-KWxw" name="ViewPart: Hhh" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_dNPBMc8-Ee2LAs71B-KWxw"/>
+  </notation:Diagram>
+</xmi:XMI>

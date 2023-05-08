@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.projectname.applicationanme.ui.viewparts.home.HomeFragment"
+        android:name="com.projectname.applicationanme.presentation.viewparts.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.projectname.applicationanme.ui.viewparts.dashboard.DashboardFragment"
+        android:name="com.projectname.applicationanme.presentation.viewparts.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.projectname.applicationanme.ui.viewparts.loginviewpart.LoginViewPart"
+        android:name="com.projectname.applicationanme.presentation.viewparts.formloginvp.FormLoginVP"
         android:label="@string/title_login"
         tools:layout="@layout/login_form" />
 </navigation>

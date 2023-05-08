@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xsi:schemaLocation="http:///tooldataform/core.ecore http:///tooldataform.ecore#//core http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo">
+  <tooldataform.core:Datos_Diagram xmi:id="_gH7ioc88Ee2LAs71B-KWxw">
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_ggyHgM88Ee2LAs71B-KWxw" name="Kernel" id="_gg0jwM88Ee2LAs71B-KWxw" pathElementRoot="projectnameandroid.client.kernel"/>
+  </tooldataform.core:Datos_Diagram>
+  <notation:Diagram xmi:id="_gH9X0M88Ee2LAs71B-KWxw" type="MetamodelodataformDatosDiagram" element="_gH7ioc88Ee2LAs71B-KWxw" name="containment" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_gg6qYM88Ee2LAs71B-KWxw" type="2002" element="_ggyHgM88Ee2LAs71B-KWxw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_gg6qZc88Ee2LAs71B-KWxw" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_gg6qZs88Ee2LAs71B-KWxw" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_gg6qZ888Ee2LAs71B-KWxw" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_gg6qaM88Ee2LAs71B-KWxw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_gg6qac88Ee2LAs71B-KWxw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_gg6qas88Ee2LAs71B-KWxw" type="7002">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_gg6qa888Ee2LAs71B-KWxw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_gg6qbM88Ee2LAs71B-KWxw"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_gg6qYc88Ee2LAs71B-KWxw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_gg6qYs88Ee2LAs71B-KWxw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_gg6qY888Ee2LAs71B-KWxw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gg6qZM88Ee2LAs71B-KWxw" x="192" y="71"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_gH9X0c88Ee2LAs71B-KWxw"/>
+  </notation:Diagram>
+</xmi:XMI>
