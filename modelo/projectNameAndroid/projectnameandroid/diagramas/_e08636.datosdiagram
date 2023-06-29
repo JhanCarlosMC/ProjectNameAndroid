@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xsi:schemaLocation="http:///tooldataform/core.ecore http:///tooldataform.ecore#//core http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo">
   <tooldataform.core:Datos_Diagram xmi:id="_zimLkM88Ee2LAs71B-KWxw">
-    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_FE5MoN0-Ee2VU6ZfEZ22YQ" name="DesktopVP" id="_FE83AN0-Ee2VU6ZfEZ22YQ" type="System" description="" pathElementRoot="projectnameandroid.ui.viewParts" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: viewParts)" nameSpaceElement="(from: viewParts)" nombreArchivo="">
-      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_RBfeMOOkEe2FpK-t18oFvw" name="implementarModelo" id="_RBLVIeOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation.DesktopViewPart" typeElement="Operation"/>
-      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_TlY-UOOkEe2FpK-t18oFvw" name="implementarWidgets" id="_TkEIoeOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation.DesktopViewPart" typeElement="Operation"/>
-      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_VqTcYOOkEe2FpK-t18oFvw" name="montarEventos" id="_Vp9eIeOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation.DesktopViewPart" typeElement="Operation"/>
-      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_ZTNcwOOkEe2FpK-t18oFvw" name="updateViewPartContext" id="_ZSlKoOOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation.DesktopViewPart" typeElement="Operation"/>
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_FE5MoN0-Ee2VU6ZfEZ22YQ" name="DesktopVP" id="_FE83AN0-Ee2VU6ZfEZ22YQ" type="System" description="" pathElementRoot="projectnameandroid.client.navigation" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: navigation)" nameSpaceElement="(from: navigation)" nombreArchivo="" listaMetodosBinding="_RBfeMOOkEe2FpK-t18oFvw _TlY-UOOkEe2FpK-t18oFvw _VqTcYOOkEe2FpK-t18oFvw _ZTNcwOOkEe2FpK-t18oFvw">
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_RBfeMOOkEe2FpK-t18oFvw" name="implementModel" id="_RBLVIeOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation.DesktopViewPart" typeElement="Operation" theClaseBinding="_FE5MoN0-Ee2VU6ZfEZ22YQ"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_TlY-UOOkEe2FpK-t18oFvw" name="implementWidgets" id="_TkEIoeOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation.DesktopViewPart" typeElement="Operation" theClaseBinding="_FE5MoN0-Ee2VU6ZfEZ22YQ"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_VqTcYOOkEe2FpK-t18oFvw" name="settingEvents" id="_Vp9eIeOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation.DesktopViewPart" typeElement="Operation" theClaseBinding="_FE5MoN0-Ee2VU6ZfEZ22YQ"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_ZTNcwOOkEe2FpK-t18oFvw" name="updateViewPartContext" id="_ZSlKoOOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation.DesktopViewPart" typeElement="Operation" theClaseBinding="_FE5MoN0-Ee2VU6ZfEZ22YQ"/>
     </listClase>
     <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_x9Y4kN3zEe2g7rgyMitujA" name="UIManager" id="_ncaSUM87Ee2LAs71B-KWxw" type="System" pathElementRoot="projectnameandroid.client.navigation" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: navigation)" nameSpaceElement="(from: navigation)">
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_3YNKkN43Ee2g7rgyMitujA" name="UiRendered" id="_3Xpw8d43Ee2g7rgyMitujA" type="String" pathElementRoot="projectnameandroid.client.navigation" valueDefault="WITHOUTUI" namePresentation="UiRendered:String=WITHOUTUI"/>
@@ -13,12 +13,12 @@
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_7T0EgN43Ee2g7rgyMitujA" name="nextNavigationViewPart" id="_7TZ00t43Ee2g7rgyMitujA" type="String" pathElementRoot="projectnameandroid.client.navigation" valueDefault="" namePresentation="nextNavigationViewPart:String"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_pEUx8PW0Ee2mdOX5y2I4KA" name="listRegisteredScreens" id="_pDfEcPW0Ee2mdOX5y2I4KA" type="String" pathElementRoot="projectnameandroid.client.navigation" valueDefault="" namePresentation="listRegisteredScreens:ArrayList"/>
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_gPHs8N4oEe2g7rgyMitujA" name="getTheNextNavigationViewPart" id="_gObJYN4oEe2g7rgyMitujA" typeElement="Operation"/>
-      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_yPlowN4oEe2g7rgyMitujA" name="implementarModelo" id="_yPIVwN4oEe2g7rgyMitujA" typeElement="Operation"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_yPlowN4oEe2g7rgyMitujA" name="implementModel" id="_yPIVwN4oEe2g7rgyMitujA" typeElement="Operation"/>
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_zhXZsN4oEe2g7rgyMitujA" name="navigationMachine" id="_zg6twN4oEe2g7rgyMitujA" typeElement="Operation"/>
-      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_YNE0UOtpEe2BeO-e7bu-aQ" name="registrarViewPart" id="_YMXpsetpEe2BeO-e7bu-aQ" typeElement="Operation"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_YNE0UOtpEe2BeO-e7bu-aQ" name="registerViewPart" id="_YMXpsetpEe2BeO-e7bu-aQ" typeElement="Operation"/>
     </listClase>
-    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_7xLy0Oq1Ee2BeO-e7bu-aQ" name="DesktopVM" id="_fTwW0OOMEe2FpK-t18oFvw" type="System" pathElementRoot="projectnameandroid.ui.viewModels" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: viewModels)" nameSpaceElement="(from: viewModels)">
-      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_7ySmEOq1Ee2BeO-e7bu-aQ" name="implementarModelo" id="_NmTwwOOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.ui.viewModels" typeElement="Operation"/>
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_7xLy0Oq1Ee2BeO-e7bu-aQ" name="DesktopVM" id="_fTwW0OOMEe2FpK-t18oFvw" type="System" pathElementRoot="projectnameandroid.client.navigation" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: navigation)" nameSpaceElement="(from: navigation)">
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_7ySmEOq1Ee2BeO-e7bu-aQ" name="implementModel" id="_NmTwwOOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.ui.viewModels" typeElement="Operation"/>
     </listClase>
     <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_x9e_MN3zEe2g7rgyMitujA" id="_qvZiwN1BEe2lzp2ogg8XCg" aRol="ownedByUIManager" bRol="theDesktopVP" aMultiplicidad="_1" bMultiplicidad="_1" multiplicidadB="1" multiplicidadA=" " bContainment="si" bAgregacion="si" source="_x9Y4kN3zEe2g7rgyMitujA" target="_FE5MoN0-Ee2VU6ZfEZ22YQ"/>
     <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_7xO2IOq1Ee2BeO-e7bu-aQ" id="_kQDRseOMEe2FpK-t18oFvw" aRol="ownedByUIManager" bRol="theDesktopVM" aMultiplicidad="_1" bMultiplicidad="_1" multiplicidadB="1" multiplicidadA=" " bContainment="si" bAgregacion="si" source="_x9Y4kN3zEe2g7rgyMitujA" target="_7xLy0Oq1Ee2BeO-e7bu-aQ"/>
@@ -50,7 +50,7 @@
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_FF8Vgd0-Ee2VU6ZfEZ22YQ"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_FF8Vgt0-Ee2VU6ZfEZ22YQ" fontName="Segoe UI"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_FF8Vg90-Ee2VU6ZfEZ22YQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FF8VhN0-Ee2VU6ZfEZ22YQ" x="305" y="340"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FF8VhN0-Ee2VU6ZfEZ22YQ" x="315" y="340"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_x9atwN3zEe2g7rgyMitujA" type="2002" element="_x9Y4kN3zEe2g7rgyMitujA">
       <children xmi:type="notation:DecorationNode" xmi:id="_x9atxd3zEe2g7rgyMitujA" type="5003"/>

@@ -7,7 +7,7 @@ public class DesktopVM extends ViewModel {
 
     private FormLoginVM formLoginVM;
 
-    public void implementarModelo() {
+    public void implementModel() {
         //Instanciar Hijos
         //OLD -> ContenedorLoginViewModel newContenedorLoginViewModel = racional.app.denuncia.denuncia.denuncia.ui.contenedorformulariologinvm.ContenedorformulariologinvmFactory.eINSTANCE.createContenedorFormularioLoginVM();
         FormLoginVM newFormLoginVM = new FormLoginVM();
@@ -25,7 +25,7 @@ public class DesktopVM extends ViewModel {
         newFormLoginVM.setIdViewModel(getIdViewModel() + ":LoginViewModel");
 
         //Implementar el modelo de los hijos "newHijo.implementarModelo();"
-        newFormLoginVM.implementarModelo();
+        newFormLoginVM.implementModel();
 
         //Registrar viewVM
 

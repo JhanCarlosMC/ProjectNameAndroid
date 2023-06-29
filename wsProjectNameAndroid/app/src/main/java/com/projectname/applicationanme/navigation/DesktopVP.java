@@ -3,11 +3,7 @@ package com.projectname.applicationanme.navigation;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.Editable;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -61,7 +57,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         setContentView(R.layout.activity_main);
 
         //---------------------------------Implementar el modelo------------------------------------------------------------------------------------------------------------
-        implementarModelo();
+        implementModel();
 
         //open viewpart defautl
         ViewVP nextNavigationVP = getUIManager().getTheNextNavigationViewPart();
@@ -71,7 +67,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
     }
 
-    public void implementarModelo() {
+    public void implementModel() {
 
         /*[]=============================== Formulario de Control de implementarModelo() =============================[]*/
         //  [x] aplica,  []---> setThis;
@@ -132,18 +128,18 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
         //  [x] aplica,  //registrar el viewPart de los hijos: getTheUIManager().registrarViewPart(newHijo.getIIdViewPart(), newHijo);
-        getUIManager().registrarViewPart(newFormLoginVP, "LoginUI");
+        getUIManager().registerViewPart(newFormLoginVP, "LoginUI");
 
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
 
         //---------------------------------Implementar los widgets de la ViewPart-----------------------------------------------------------------------------------------
         //  [x] aplica,  []---> crear los widgets de la pantalla [solamente la creacion desde el recurso]: tipoWidget newWidget = findViewById(R.id.nombreWidgetEnElLayout);
-        implementarWidgets();
+        implementWidgets();
         //---------------------------------Implementar los widgets de la ViewPart-----------------------------------------------------------------------------------------
 
         //---------------------------------montar los eventos de la interfaz-----------------------------------------------------------------------------------------
         //  [x] aplica,  //montar los eventos de los widgets (listener = onclick(), keyPressed(), etc
-        montarEventos();
+        settingEvents();
         //---------------------------------montar los eventos de la interfaz-----------------------------------------------------------------------------------------
 
         //---------------------------------obtener los datos del viewModel desde el domain----------------------------------------------------------------------------
@@ -164,7 +160,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         /*[]=============================== Formulario de Control de implementarModelo() =============================[]*/
     }
 
-    private void implementarWidgets() {
+    private void implementWidgets() {
 
         navigationButton = (BottomNavigationView) findViewById(R.id.nav_view);
         //BottomNavigationViewHelper.disableShiftMode(navigationButton);  No se necesita por el momento
@@ -172,7 +168,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
     }
 
-    private void montarEventos() {
+    private void settingEvents() {
 
         mOnNavigationItemSelectedListener = item -> {
             Fragment selectedFragment = null;

@@ -13,8 +13,8 @@
     <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_SBrWQIRxEemeoZLzaonNpw" name="APIServer" id="_t31tgBc7EeiSj8tKu3ogxw" pathElementRoot="projectnameandroid.domain.api" nameSpace="(from: api)" nameSpaceElement="(from: api)">
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_dXxJcGsbEeqv98S2YDhvpQ" name="implementarModelo" id="_dXeOgGsbEeqv98S2YDhvpQ" description="" body="void"/>
     </listClase>
-    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_Ug-DMIRxEemeoZLzaonNpw" name="APP" id="_v0Q98Bc7EeiSj8tKu3ogxw" pathElementRoot="projectnameandroid.ui" nameSpace="(from: client)" nameSpaceElement="(from: client)">
-      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_QvrnkGsbEeqv98S2YDhvpQ" name="implementarModelo" id="_QvhPgGsbEeqv98S2YDhvpQ" description="" body="void"/>
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_Ug-DMIRxEemeoZLzaonNpw" name="APP" id="_v0Q98Bc7EeiSj8tKu3ogxw" description="" pathElementRoot="projectnameandroid.ui" nameSpace="(from: client)" nameSpaceElement="(from: client)" nombreArchivo="" listaMetodosBinding="_QvrnkGsbEeqv98S2YDhvpQ">
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_QvrnkGsbEeqv98S2YDhvpQ" name="implementModel" id="_QvhPgGsbEeqv98S2YDhvpQ" description="" typeElement="Operation" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Metodo.gif" body="void" returnTypeMethod="" theClaseBinding="_Ug-DMIRxEemeoZLzaonNpw"/>
     </listClase>
     <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_SBwOwIRxEemeoZLzaonNpw" id="_za5GYBc7EeiSj8tKu3ogxw" aRol="theProject" bRol="theAPIServer" multiplicidadB="1" multiplicidadA="1" bContainment="si" bAgregacion="si" source="_RAwEwIRxEemeoZLzaonNpw" target="_SBrWQIRxEemeoZLzaonNpw"/>
     <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_UhDiwIRxEemeoZLzaonNpw" id="_1tXfURc7EeiSj8tKu3ogxw" aRol="theProject" bRol="theAPP" aMultiplicidad="_1" bMultiplicidad="_1" multiplicidadB="1" multiplicidadA="1" bContainment="si" bAgregacion="si" source="_RAwEwIRxEemeoZLzaonNpw" target="_Ug-DMIRxEemeoZLzaonNpw"/>

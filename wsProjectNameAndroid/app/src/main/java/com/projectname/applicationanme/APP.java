@@ -27,10 +27,10 @@ public class APP extends Application {
     }
     //------------------------------  Singleton ------------------------------------------------
     public APP() {
-        implementarModelo();
+        implementModel();
     }
 
-    public APP implementarModelo() {
+    public APP implementModel() {
         UIManager newUiManager = getTheUIManager();
         Domain newDomain = getTheDomain();
 
@@ -44,7 +44,7 @@ public class APP extends Application {
         }
 
         getTheDomain().setTheUIManager(getTheUIManager());
-        getTheUIManager().implementarModelo();
+        getTheUIManager().implementModel();
         return this;
     }
 

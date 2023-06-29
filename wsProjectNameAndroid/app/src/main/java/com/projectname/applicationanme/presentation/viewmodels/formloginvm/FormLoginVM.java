@@ -5,8 +5,6 @@ import android.text.InputType;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.projectname.applicationanme.navigation.DesktopVM;
-import com.projectname.applicationanme.navigation.UIManager;
 import com.projectname.applicationanme.presentation.viewmodels.ViewModel;
 
 public class FormLoginVM extends ViewModel {
@@ -86,7 +84,7 @@ public class FormLoginVM extends ViewModel {
         return inputType;
     }
 
-    public void implementarModelo() {
+    public void implementModel() {
     }
 
     public void resetTexts(){

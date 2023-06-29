@@ -27,7 +27,7 @@ public class APIServerClientSide {
         return serviceAPIServerClientSide;
     }
 
-    public static void Login(FormLoginVM newFormLoginVM){
+    public static void login(FormLoginVM newFormLoginVM){
         String password = newFormLoginVM.getTextPassword().getValue();
         String user = newFormLoginVM.getTextUser().getValue();
 

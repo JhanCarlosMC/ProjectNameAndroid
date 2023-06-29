@@ -20,7 +20,7 @@ public class UIManager extends ViewModel {
     private Domain theDomain;
     private List<ViewPart> listRegisteredScreens;
 
-    public void implementarModelo() {
+    public void implementModel() {
         //instanciar Hijos
         //OLD -> ContenedorLoginViewModel newContenedorLoginViewModel = racional.app.denuncia.denuncia.denuncia.ui.contenedorformulariologinvm.ContenedorformulariologinvmFactory.eINSTANCE.createContenedorFormularioLoginVM();
         DesktopVM newDesktopVM = new DesktopVM();
@@ -39,7 +39,7 @@ public class UIManager extends ViewModel {
         newDesktopVM.setIdViewModel("DesktopVM");
 
         //implementar el modelo de los hijos "newHijo.implementarModelo();"
-        newDesktopVM.implementarModelo();
+        newDesktopVM.implementModel();
 
         //registrar el viewModel de los hijos " getTheUIManager().registrarViewModel(newHijo.getIdViewModel(), newHijo);
 //        registrarViewModel(newDesktopVM, newDesktopVM.getIdViewModel());
@@ -85,7 +85,7 @@ public class UIManager extends ViewModel {
         return null;
     }
 
-    public void registrarViewPart(ViewVP newViewPart, String newIdViewPart) {
+    public void registerViewPart(ViewVP newViewPart, String newIdViewPart) {
         ViewPart viewPartRegist = new ViewPart();
 
         for(ViewPart tmpViewPart : getListRegisteredScreens()){
@@ -140,7 +140,6 @@ public class UIManager extends ViewModel {
         if (listRegisteredScreens == null){
             listRegisteredScreens = new ArrayList<>();
         }
-
         return listRegisteredScreens;
     }
 
