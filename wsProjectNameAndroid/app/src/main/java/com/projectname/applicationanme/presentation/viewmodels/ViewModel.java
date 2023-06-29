@@ -6,22 +6,19 @@ import com.projectname.applicationanme.navigation.UIManager;
 import java.util.List;
 
 public class ViewModel extends androidx.lifecycle.ViewModel {
-
-    private UIManager theUIManagerVM;
-    private static final String ID_VIEW_MODEL_EDEFAULT = " ";
-    private String idViewModel = ID_VIEW_MODEL_EDEFAULT;
+    private String idViewModel = " ";
+    private UIManager theUIManager;
     private ViewModel ownedBy;
     private List<ViewModel> childs;
+    private ViewVP theViewPart;
 
-    private ViewVP viewPart;
 
-
-    public UIManager getTheUIManagerVM() {
-        return theUIManagerVM;
+    public UIManager getTheUIManager() {
+        return theUIManager;
     }
 
-    public void setTheUIManagerVM(UIManager theUIManagerVM) {
-        this.theUIManagerVM = theUIManagerVM;
+    public void setTheUIManager(UIManager theUIManager) {
+        this.theUIManager = theUIManager;
     }
 
     public String getIdViewModel() {
@@ -48,11 +45,11 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
         this.childs = childs;
     }
 
-    public ViewVP getViewPart() {
-        return viewPart;
+    public ViewVP getTheViewPart() {
+        return theViewPart;
     }
 
-    public void setViewPart(ViewVP viewPart) {
-        this.viewPart = viewPart;
+    public void setTheViewPart(ViewVP theViewPart) {
+        this.theViewPart = theViewPart;
     }
 }

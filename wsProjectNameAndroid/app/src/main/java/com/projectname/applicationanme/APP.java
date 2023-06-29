@@ -1,12 +1,14 @@
 package com.projectname.applicationanme;
 
+import android.app.Application;
+
 import com.projectname.applicationanme.logic.Domain;
 import com.projectname.applicationanme.navigation.DesktopVM;
 import com.projectname.applicationanme.navigation.UIManager;
 import com.projectname.applicationanme.presentation.viewmodels.formloginvm.FormLoginVM;
 
 //Esta clase hace de "ModelFactory" para el  nodo de cliente en el proyecto
-public class APP {
+public class APP extends Application {
 
     private UIManager theUIManager;
     private Domain theDomain;
@@ -24,6 +26,9 @@ public class APP {
         return SingletonHolder.eINSTANCE;
     }
     //------------------------------  Singleton ------------------------------------------------
+    public APP() {
+        implementarModelo();
+    }
 
     public APP implementarModelo() {
         UIManager newUiManager = getTheUIManager();
@@ -60,7 +65,7 @@ public class APP {
     }
 
     public DesktopVM getDesktopVM() {
-        return desktopVM;
+        return desktopVM = getTheUIManager().getTheDesktopVM();
     }
 
     public void setDesktopVM(DesktopVM desktopVM) {
@@ -68,7 +73,7 @@ public class APP {
     }
 
     public FormLoginVM getFormLoginVM() {
-        return formLoginVM;
+        return formLoginVM = getDesktopVM().getFormLoginVM();
     }
 
     public void setFormLoginVM(FormLoginVM formLoginVM) {

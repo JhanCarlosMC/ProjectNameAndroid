@@ -3,23 +3,20 @@ package com.projectname.applicationanme.navigation;
 import com.projectname.applicationanme.kernel.ViewVP;
 import com.projectname.applicationanme.logic.Domain;
 import com.projectname.applicationanme.presentation.viewmodels.ViewModel;
-import com.projectname.applicationanme.presentation.viewmodels.formloginvm.FormLoginVM;
 import com.projectname.applicationanme.presentation.viewparts.ViewPart;
-import com.projectname.applicationanme.presentation.viewparts.formloginvp.FormLoginVP;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UIManager extends ViewModel {
-    //Va la navegacion
+    //Atributos
+    private String uiRendered = "WITHOUTUI";
+    private String lastUiRendered = " ";
+    private String nextNavigationViewPart = " ";
 
-    private static final String UI_RENDERED_EDEFAULT = "WITHOUTUI";
-    private String uiRendered = UI_RENDERED_EDEFAULT;
-    private static final String LAST_UI_RENDERED_EDEFAULT = " ";
-    private String lastUiRendered = LAST_UI_RENDERED_EDEFAULT;
-    private static final String NEXT_NAVIGATION_VIEW_PART_EDEFAULT = " ";
-    private String nextNavigationViewPart = NEXT_NAVIGATION_VIEW_PART_EDEFAULT;
-    private DesktopVM desktop_VM;
-    private FormLoginVM formLoginVM;
+    //Relaciones
+    private DesktopVM theDesktopVM;
+    private DesktopVP theDesktopVP;
     private Domain theDomain;
     private List<ViewPart> listRegisteredScreens;
 
@@ -29,14 +26,14 @@ public class UIManager extends ViewModel {
         DesktopVM newDesktopVM = new DesktopVM();
 
         //enlazar el padre con sus hijos mediante metodos set de la clase que se esta implementando "sethijo(newHijo);
-        setDesktop_VM(newDesktopVM);
+        setTheDesktopVM(newDesktopVM);
 
         //enlazar los hijos con su padre (clase que se esta implementando - "this") "newHijo.setOwnedBy(this);"
         //---------CAMBIAR ESTE METODO PARA QUE RECIBA ES UNA CLASE VIEWMODEL GENERICO POR PARAMETRO-------------------------
         newDesktopVM.setOwnedBy(this);
 
         //enlazar los hijos con con el UIManager "newHijo.setTheUIManager(getTheUIManager());"
-        newDesktopVM.setUIManagerViewModel(this);
+        newDesktopVM.setTheUIManager(this);
 
         //configurar el id de cada hijo  "newHijo.setIdViewModel(getIdViewModel() + ":Tipo<Hijo>");"
         newDesktopVM.setIdViewModel("DesktopVM");
@@ -45,12 +42,12 @@ public class UIManager extends ViewModel {
         newDesktopVM.implementarModelo();
 
         //registrar el viewModel de los hijos " getTheUIManager().registrarViewModel(newHijo.getIdViewModel(), newHijo);
-        registrarViewModel(newDesktopVM, newDesktopVM.getIdViewModel());
+//        registrarViewModel(newDesktopVM, newDesktopVM.getIdViewModel());
     }
 
-    private void registrarViewModel(DesktopVM newDesktopVM, String idViewModel) {
-        //
-    }
+//    private void registrarViewModel(DesktopVM newDesktopVM, String idViewModel) {
+//        //
+//    }
 
     public String navigationMachine(final String evento) {
         String action = "";
@@ -59,43 +56,44 @@ public class UIManager extends ViewModel {
         if (getUiRendered().equals("WITHOUTUI")) {
 
             if (evento.equals("control")) {
-                setUiRendered("ControlPanel_A");
+                setUiRendered("LoginUI");
                 return action;
             }
 
         }
         //--------------------------------------------------------------
         //--------------------------------------------------------------
-        if (getUiRendered().equals("ControlPanel_A") || getUiRendered().equals("HomeUI")
-                || getUiRendered().equals("DenunciarUI_F") || getUiRendered().equals("DenunciasUI_F")
-                || getUiRendered().equals("CuentaUI_F")
-                || getUiRendered().equals("ReservarUI_F")) {
-
-            if (evento.equals("home")) {
-                setNextNavigationViewPart("HomeUI_F");
-                return action;
-            }
-            if (evento.equals("denunciar")) {
-                setNextNavigationViewPart("DenunciarUI_F");
-                return action;
-            }
-
-            if (evento.equals("reservar")) {
-                setNextNavigationViewPart("ReservarUI_F");
-                return action;
-            }
-
+        if (getUiRendered().equals("LoginUI")) {
 
             if (evento.equals("login")) {
-                setLastUiRendered("ControlPanel_A");
-                setUiRendered("LoginUserUI_A");
-                setNextNavigationViewPart("LoginUserUI_A");
+                setUiRendered("LoginUI");
+                setNextNavigationViewPart("LoginUI");
                 return action;
             }
 
         }
         return action;
 
+    }
+
+    public ViewVP getTheNextNavigationViewPart() {
+        for (ViewPart viewPart : getListRegisteredScreens()) {
+            if (viewPart.getIdViewPart().equalsIgnoreCase(getNextNavigationViewPart())) {
+                return viewPart.getViewPart();
+            }
+        }
+        return null;
+    }
+
+    public void registrarViewPart(ViewVP newViewPart, String newIdViewPart) {
+        ViewPart viewPartRegist = new ViewPart();
+
+        for(ViewPart tmpViewPart : getListRegisteredScreens()){
+            if(tmpViewPart.getIdViewPart().equals(newIdViewPart)) return;
+        }
+        viewPartRegist.setViewPart(newViewPart);
+        viewPartRegist.setIdViewPart(newIdViewPart);
+        getListRegisteredScreens().add(viewPartRegist);
     }
 
     public String getUiRendered() {
@@ -122,20 +120,12 @@ public class UIManager extends ViewModel {
         this.nextNavigationViewPart = nextNavigationViewPart;
     }
 
-    public FormLoginVM getFormLoginVM() {
-        return formLoginVM;
+    public DesktopVM getTheDesktopVM() {
+        return theDesktopVM;
     }
 
-    public void setFormLoginVM(FormLoginVM formLoginVM) {
-        this.formLoginVM = formLoginVM;
-    }
-
-    public DesktopVM getDesktop_VM() {
-        return desktop_VM;
-    }
-
-    public void setDesktop_VM(DesktopVM desktop_VM) {
-        this.desktop_VM = desktop_VM;
+    public void setTheDesktopVM(DesktopVM theDesktopVM) {
+        this.theDesktopVM = theDesktopVM;
     }
 
     public Domain getTheDomain() {
@@ -147,30 +137,14 @@ public class UIManager extends ViewModel {
     }
 
     public List<ViewPart> getListRegisteredScreens() {
+        if (listRegisteredScreens == null){
+            listRegisteredScreens = new ArrayList<>();
+        }
+
         return listRegisteredScreens;
     }
 
     public void setListRegisteredScreens(List<ViewPart> listRegisteredScreens) {
         this.listRegisteredScreens = listRegisteredScreens;
-    }
-
-    public ViewVP getTheNextNavigationViewPart() {
-        for (ViewPart viewPart : getListRegisteredScreens()) {
-            if (viewPart.getIdViewPart().equalsIgnoreCase(getNextNavigationViewPart())) {
-                return viewPart.getViewPart();
-            }
-        }
-        return null;
-    }
-
-    public void registrarViewPart(ViewVP newViewPart, String newIdViewPart) {
-        ViewPart viewPartRegist = new ViewPart();
-
-        for(ViewPart tmpViewPart : getListRegisteredScreens()){
-            if(tmpViewPart.getIdViewPart().equals(newIdViewPart)) return;
-        }
-        viewPartRegist.setViewPart(newViewPart);
-        viewPartRegist.setIdViewPart(newIdViewPart);
-        getListRegisteredScreens().add(viewPartRegist);
     }
 }

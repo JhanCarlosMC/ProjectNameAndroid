@@ -66,6 +66,10 @@ public class FormLoginVM extends ViewModel {
         return textPassword;
     }
 
+    public void setTextPassword(String newPassword){
+        textPassword.setValue(newPassword);
+    }
+
     public LiveData<String> getLabelTittleCardView() {
         return labelTitleCardView;
     }
@@ -85,19 +89,9 @@ public class FormLoginVM extends ViewModel {
     public void implementarModelo() {
     }
 
-    public void setOwnedBy(UIManager uiManager) {
-
+    public void resetTexts(){
+        textUser.setValue("pepitoperez@example.com");
+        textPassword.setValue("*********");
     }
 
-    public void setUIManagerViewModel(UIManager uiManager) {
-    }
-
-    public void setIdViewModel(String contenedorFormularioLoginVM) {
-    }
-
-    public void setOwnedBy(DesktopVM desktop_vm) {
-    }
-
-    public void setUIManagerViewModel(DesktopVM desktop_vm) {
-    }
 }

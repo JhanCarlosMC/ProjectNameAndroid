@@ -19,10 +19,10 @@ public class DesktopVM extends ViewModel {
         newFormLoginVM.setOwnedBy(this);
 
         //Enlazar los hijos con con el UIManager "newHijo.setTheUIManager(getTheUIManager());"
-        newFormLoginVM.setUIManagerViewModel(this);
+        newFormLoginVM.setTheUIManager(getTheUIManager());
 
         //Configurar el id de cada hijo  "newHijo.setIdViewModel(getIdViewModel() + ":Tipo<Hijo>");"
-        newFormLoginVM.setIdViewModel("LoginViewModel");
+        newFormLoginVM.setIdViewModel(getIdViewModel() + ":LoginViewModel");
 
         //Implementar el modelo de los hijos "newHijo.implementarModelo();"
         newFormLoginVM.implementarModelo();
@@ -31,20 +31,11 @@ public class DesktopVM extends ViewModel {
 
     }
 
-    public void setIdViewModel(String desktopViewModel) {
-    }
-
     public FormLoginVM getFormLoginVM() {
         return formLoginVM;
     }
 
     public void setFormLoginVM(FormLoginVM formLoginVM) {
         this.formLoginVM = formLoginVM;
-    }
-
-    public void setUIManagerViewModel(UIManager uiManager) {
-    }
-
-    public void setOwnedBy(UIManager uiManager) {
     }
 }
