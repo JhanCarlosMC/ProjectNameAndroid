@@ -20,7 +20,7 @@
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_Jo74Md1BEe2lzp2ogg8XCg"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_Jo74Mt1BEe2lzp2ogg8XCg" fontName="Segoe UI"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_Jo74M91BEe2lzp2ogg8XCg"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jo74NN1BEe2lzp2ogg8XCg" x="395" y="240"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jo74NN1BEe2lzp2ogg8XCg" x="335" y="140" width="226"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_JEdSId1BEe2lzp2ogg8XCg"/>
   </notation:Diagram>
