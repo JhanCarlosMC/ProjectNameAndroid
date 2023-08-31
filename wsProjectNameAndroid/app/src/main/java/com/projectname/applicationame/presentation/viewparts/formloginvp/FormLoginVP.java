@@ -1,6 +1,7 @@
 package com.projectname.applicationame.presentation.viewparts.formloginvp;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -23,7 +25,7 @@ import com.projectname.applicationame.navigation.UIManager;
 import com.projectname.applicationame.presentation.viewmodels.ViewModel;
 import com.projectname.applicationame.presentation.viewmodels.formloginvm.FormLoginVM;
 
-public class FormLoginVP extends Fragment implements ViewVP {
+public class FormLoginVP extends AppCompatActivity implements ViewVP {
     private com.projectname.applicationame.databinding.LoginFormBinding bindingForm;
     private FormLoginVM formLoginVM;
     ViewVP ownedByVP;
@@ -39,44 +41,43 @@ public class FormLoginVP extends Fragment implements ViewVP {
     public TextView labelTitleCardView;
     public CheckBox checkBoxRememberme;
     public Button buttonLogin;
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        formLoginVM = new ViewModelProvider(this).get(FormLoginVM.class);
-
-        bindingForm = LoginFormBinding.inflate(inflater, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        bindingForm = LoginFormBinding.inflate(getLayoutInflater());
         View rootForm = bindingForm.getRoot();
+        setContentView(rootForm);
+
+        formLoginVM = new ViewModelProvider(this).get(FormLoginVM.class);
 
         initComponents();
         settingEvents();
-
-        return rootForm;
     }
 
-    private void initComponents(){
-        //Inicializar Widgets
+    private void initComponents() {
+        // Inicializar Widgets
 
         labelUser = bindingForm.cardviewLogin.userInfo.labelUser;
-        formLoginVM.getLabelUser().observe(getViewLifecycleOwner(), labelUser::setText);
+        formLoginVM.getLabelUser().observe(this, labelUser::setText);
 
         textUser = bindingForm.cardviewLogin.userInfo.textUser;
-        formLoginVM.getTextUser().observe(getViewLifecycleOwner(), textUser::setHint);
+        formLoginVM.getTextUser().observe(this, textUser::setHint);
 
         labelPassword = bindingForm.cardviewLogin.passwordInfo.labelUser;
-        formLoginVM.getLabelPassword().observe(getViewLifecycleOwner(), labelPassword::setText);
+        formLoginVM.getLabelPassword().observe(this, labelPassword::setText);
 
         textPassword = bindingForm.cardviewLogin.passwordInfo.textUser;
-        formLoginVM.getTextPassword().observe(getViewLifecycleOwner(), textPassword::setHint);
-        formLoginVM.getInputType().observe(getViewLifecycleOwner(), textPassword::setInputType);
+        formLoginVM.getTextPassword().observe(this, textPassword::setHint);
+        formLoginVM.getInputType().observe(this, textPassword::setInputType);
 
         labelTitleCardView = bindingForm.cardviewLogin.titleCardview;
-        formLoginVM.getLabelTittleCardView().observe(getViewLifecycleOwner(), labelTitleCardView::setText);
+        formLoginVM.getLabelTittleCardView().observe(this, labelTitleCardView::setText);
 
         checkBoxRememberme = bindingForm.remembermeCheckbox;
-        formLoginVM.getCheckBoxRecuerdame().observe(getViewLifecycleOwner(), checkBoxRememberme::setText);
+        formLoginVM.getCheckBoxRecuerdame().observe(this, checkBoxRememberme::setText);
 
         buttonLogin = bindingForm.buttonLogin;
-        formLoginVM.getButtonLogin().observe(getViewLifecycleOwner(), buttonLogin::setText);
+        formLoginVM.getButtonLogin().observe(this, buttonLogin::setText);
     }
 
     public void settingEvents(){
@@ -102,10 +103,9 @@ public class FormLoginVP extends Fragment implements ViewVP {
             }
         });
     }
-
     @Override
-    public void onDestroyView(){
-        super.onDestroyView();
+    public void onDestroy() {
+        super.onDestroy();
         bindingForm = null;
     }
 

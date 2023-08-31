@@ -22,11 +22,10 @@
         android:theme="@style/Theme.ApplicationName"
         tools:targetApi="31">
         <activity
-            android:name=".navigation.DesktopVP"
+            android:name=".presentation.viewparts.formloginvp.FormLoginVP"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

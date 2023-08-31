@@ -46,7 +46,7 @@ public class UIManager extends ViewModel {
     }
 
 //    private void registrarViewModel(DesktopVM newDesktopVM, String idViewModel) {
-//        //
+//
 //    }
 
     public String navigationMachine(final String evento) {

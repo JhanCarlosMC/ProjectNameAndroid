@@ -1,6 +1,7 @@
 package com.projectname.applicationame.navigation;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -106,7 +107,6 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //---------------------------------Configurar id's de la viewpart-----------------------------------------------------------------------------------------
         //  [x] aplica,  //configurar el idViewPart de la viewPart: setIdViewPart(getOwnedByVP().getIdViewPart() + ":Tipo<Hijo>");
-        //setIdViewPart("paneldecontrolViewPart");
         setIdViewPart("desktopvp");//--> Solo para la ViewPart que se carga de primera
 
         //  [x] aplica,regsitrar ids hijos
@@ -120,10 +120,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //---------------------------------implementarModelo de los hijos-----------------------------------------------------------------------------------------
         //  [] aplica,  //implementar el modelo de los hijos: newHijo.implementarModelo();
-        /*       newContenedorFormularioHomeViewPart.implementarModelo();
-                newContenedorFormularioAjustesViewPart.implementarModelo();
-                newContenedorFormDenunciaViewPart.implementarModelo();
-                newContenedorListaMisDenunciasViewPart.implementarModelo();*/
+
         //---------------------------------implementarModelo de los hijos-----------------------------------------------------------------------------------------
 
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
@@ -149,7 +146,8 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //---------------------------------montar el automata de la interfaz-----------------------------------------------------------------------------------------
         //  [] aplica,  //inicializar el automata: getViewModel().actualizarMaquina("iniciarViewModel");
-        getUIManager().navigationMachine("control");
+//        getUIManager().navigationMachine("control");
+
         //---------------------------------montar el automata de la interfaz-----------------------------------------------------------------------------------------
 
         //---------------------------------enlazar el handler con la viewModel de la viewpart------------------------------------------------------------------------
@@ -179,8 +177,9 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
                     item.setChecked(true);
                     String action = getUIManager().navigationMachine("login");
                     ViewVP nextNavigationVP = getUIManager().getTheNextNavigationViewPart();
-                    if (nextNavigationVP != null)
-                        selectedFragment = (Fragment) nextNavigationVP;
+
+                    Intent intent = new Intent(getApplicationContext(), FormLoginVP.class);
+                    startActivity(intent);
 
                     break;
 
