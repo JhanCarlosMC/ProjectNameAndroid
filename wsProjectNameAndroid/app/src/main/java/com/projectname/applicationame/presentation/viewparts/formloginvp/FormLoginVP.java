@@ -1,29 +1,24 @@
 package com.projectname.applicationame.presentation.viewparts.formloginvp;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.applicationame.APP;
-import com.projectname.applicationame.R;
 import com.projectname.applicationame.databinding.LoginFormBinding;
 import com.projectname.applicationame.kernel.ViewVP;
 import com.projectname.applicationame.navigation.DesktopVP;
 import com.projectname.applicationame.navigation.UIManager;
 import com.projectname.applicationame.presentation.viewmodels.ViewModel;
 import com.projectname.applicationame.presentation.viewmodels.formloginvm.FormLoginVM;
+import com.projectname.applicationame.presentation.viewparts.trackingvp.GPSTracking;
 
 public class FormLoginVP extends AppCompatActivity implements ViewVP {
     private com.projectname.applicationame.databinding.LoginFormBinding bindingForm;
@@ -99,6 +94,20 @@ public class FormLoginVP extends AppCompatActivity implements ViewVP {
                     textUser.setText(null);
                     textPassword.setText(null);
                     formLoginVM.resetTexts();
+
+                    //Cargar Fragment
+//                    Fragment fragment = new InicioRutaVP();
+//
+//                    FragmentManager fragmentManager = getSupportFragmentManager();
+//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//
+//                    fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, fragment);
+//
+//                    fragmentTransaction.commit();
+
+                    //Metodo 2
+                    Intent intent = new Intent(getApplicationContext(), GPSTracking.class);
+                    startActivity(intent);
                 }
             }
         });

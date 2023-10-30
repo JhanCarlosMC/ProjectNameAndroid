@@ -83,6 +83,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         //  [x] aplica,  []---> crear los hijos viewPart de la pantalla [solamnete la creacion desde el recurso]: tipoWidget newWidget = findViewById(R.id.nombreWidgetEnElLayout);
         FormLoginVP newFormLoginVP = new FormLoginVP();
 
+
         //---------------------------------Crear hijos--------------------------------------------------------------------------------------------------------
 
         //---------------------------------Enlazar hijos--------------------------------------------------------------------------------------------------------

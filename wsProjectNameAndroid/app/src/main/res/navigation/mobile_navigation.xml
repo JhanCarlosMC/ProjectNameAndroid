@@ -9,5 +9,13 @@
         android:id="@+id/navigation_login"
         android:name="com.projectname.applicationame.presentation.viewparts.formloginvp.FormLoginVP"
         android:label="@string/title_login"
-        tools:layout="@layout/login_form" />
+        tools:layout="@layout/login_form" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/navigation_tracking"
+        android:name="com.projectname.applicationame.presentation.viewparts.trackingvp.GPSTracking"
+        android:label="@string/nicio_ruta_fragment_label"
+        tools:layout="@layout/tracking_form">
+    </FrameLayout>
 </navigation>
