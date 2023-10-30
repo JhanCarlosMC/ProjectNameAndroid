@@ -2,6 +2,7 @@ package com.projectname.applicationame.presentation.viewparts.formloginvp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -91,23 +92,18 @@ public class FormLoginVP extends AppCompatActivity implements ViewVP {
                     //Log.e("onClick: FormLoginVP", "Info: "+formLoginVM.getTextUser().getValue());
                     DesktopVP.login(newFormLoginVM);
 
+                    //Mandar Info
+                    String userValue = textUser.getText().toString();
+                    Intent intent = new Intent(getApplicationContext(), GPSTracking.class);
+                    intent.putExtra("editTextValue", userValue);
+
+                    //Cargar Activity
+//                    Intent intent = new Intent(getApplicationContext(), GPSTracking.class);
+                    startActivity(intent);
+
                     textUser.setText(null);
                     textPassword.setText(null);
                     formLoginVM.resetTexts();
-
-                    //Cargar Fragment
-//                    Fragment fragment = new InicioRutaVP();
-//
-//                    FragmentManager fragmentManager = getSupportFragmentManager();
-//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
-//                    fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, fragment);
-//
-//                    fragmentTransaction.commit();
-
-                    //Metodo 2
-                    Intent intent = new Intent(getApplicationContext(), GPSTracking.class);
-                    startActivity(intent);
                 }
             }
         });

@@ -23,15 +23,21 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.applicationame.databinding.TrackingFormBinding;
+import com.projectname.applicationame.navigation.DesktopVP;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
-public class GPSTracking extends AppCompatActivity implements LocationListener{
+public class GPSTracking extends AppCompatActivity implements LocationListener {
 
     //Atributos de la actividad
     private TrackingFormBinding binding;
@@ -57,6 +63,13 @@ public class GPSTracking extends AppCompatActivity implements LocationListener{
     private Runnable runnable;
 
     private static final int PERMISSION_REQUEST_CODE = 123;
+
+    double latitud;
+    double longitud;
+
+    String horaDispositivo;
+    String fechaDispositivo;
+    String nombreUsuarioLogin;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -85,14 +98,55 @@ public class GPSTracking extends AppCompatActivity implements LocationListener{
             }
         };
 
-        // Inicia el ciclo del Runnable
-        handler.postDelayed(runnable, intervalo);
+        //Obtener informacion de la actividad anterior
+        Intent intent = getIntent();
 
-//        initGPS();
+                // Comprobar si la intención contiene datos extras (extras)
+        if (intent.hasExtra("editTextValue")) {
+                // Obtener el valor del EditText de la Activity anterior
+            nombreUsuarioLogin = intent.getStringExtra("editTextValue");
+        }
+
+        //Accion del button ---> para ejecutar el metodo de captura de ubicacion
+        binding.buttonTracking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Inicia el ciclo del Runnable
+//                handler.postDelayed(runnable, intervalo);
+
+                // Ejecutar obtner ubicacion una vez
+                initGPS();
+
+                // Obtener Fecha y Hora
+                obtenerDate();
+
+                //Envio de Informacion Tracking To Sheet
+//                DesktopVP.tracking(fechaDispositivo, horaDispositivo, "001", latitud, longitud);
+
+                String estadoReserva = "Solicitada";
+                DesktopVP.trackingUser(fechaDispositivo, horaDispositivo, nombreUsuarioLogin, latitud, longitud, estadoReserva);
+            }
+        });
+
     }
 
-    private void initGPS()  {
+    private void obtenerDate() {
+        // Obtener la fecha y hora actual
+        Calendar calendar = Calendar.getInstance();
+        Date date = calendar.getTime();
 
+        // Formatear la fecha y hora en un formato deseado
+        SimpleDateFormat fecha = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        SimpleDateFormat hora = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
+
+//        Log.e(TAG, "Fecha: "+fecha.format(date));
+//        Log.e(TAG, "Hora: "+hora.format(date));
+
+        horaDispositivo = hora.format(date);
+        fechaDispositivo = fecha.format(date);
+    }
+
+    private void initGPS() {
         locationManager = (LocationManager) getSystemService(Service.LOCATION_SERVICE);
         isGPS = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         isNetwork = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
@@ -171,7 +225,7 @@ public class GPSTracking extends AppCompatActivity implements LocationListener{
 
     private void updateUI(Location loc) {
         //Log.d(TAG, "updateUI");
-        labelGPS = binding.textviewSecond;
+        labelGPS = binding.textviewTracking;
         labelGPS.setText(obtenerDireccion(loc));
     }
 
@@ -181,15 +235,15 @@ public class GPSTracking extends AppCompatActivity implements LocationListener{
 
         if (loc != null) {
 
-            double latitud = loc.getLatitude();
-            double longitud = loc.getLongitude();
+            latitud = loc.getLatitude();
+            longitud = loc.getLongitude();
 //es_CO
             Locale locale;
             locale = Locale.forLanguageTag("es_CO");
-            String pais = "";
-            String departamento = "";
-            String ciudad = "";
-            String calle = "";
+//            String pais = "";
+//            String departamento = "";
+//            String ciudad = "";
+//            String calle = "";
             Address returnedAddress;
 
             Geocoder geocoder = new Geocoder(this, locale);
@@ -230,9 +284,9 @@ public class GPSTracking extends AppCompatActivity implements LocationListener{
 
         Log.e(TAG, "obtenerDireccion: " + lugar);
 
-
         return lugar;
     }
+
     private void getLastLocation() {
         try {
             Criteria criteria = new Criteria();
@@ -248,6 +302,7 @@ public class GPSTracking extends AppCompatActivity implements LocationListener{
             e.printStackTrace();
         }
     }
+
     public void showSettingsAlert() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle("GPS is not Enabled!");

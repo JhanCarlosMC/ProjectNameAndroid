@@ -6,4 +6,6 @@
     <string name="title_login">Login</string>
     <string name="nicio_ruta_fragment_label">GPS</string>
     <string name="iniciar_ruta">Iniciar Ruta</string>
+    <string name="reservar">Reservar</string>
+    <string name="textTracking_hint">Tu Ubicacion</string>
 </resources>

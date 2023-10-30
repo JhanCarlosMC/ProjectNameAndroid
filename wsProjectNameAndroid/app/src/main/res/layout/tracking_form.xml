@@ -5,29 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textview_second"
-            android:layout_width="1000px"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:background="@drawable/campos"
-            android:hint="Ubicacion..."
-            android:padding="10dp"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@id/button_second"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/label_tracking"
+        android:layout_width="1000px"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="@string/textTracking_hint"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/textview_tracking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916" />
+
+    <TextView
+        android:id="@+id/textview_tracking"
+        android:layout_width="1000px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/campos"
+        android:hint="Ubicacion..."
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/button_tracking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_second"
+        android:id="@+id/button_tracking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/iniciar_ruta"
+        android:text="@string/reservar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+        app:layout_constraintTop_toBottomOf="@id/textview_tracking" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

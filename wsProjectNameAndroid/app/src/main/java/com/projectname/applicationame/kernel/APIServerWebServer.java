@@ -10,4 +10,7 @@ public interface APIServerWebServer {
     @POST("s/AKfycbzauO5eXzJCEZd15dbRZxOknUMVL4RgdGUnW02tZYrSbLDI3uq6oPaZiwiPOdiVtPbukQ/exec")
     Call <Void> login(@Body RequestGoogle requestBody);
 
+    @Headers({"Content-Type: application/json"})
+    @POST("s/AKfycbzauO5eXzJCEZd15dbRZxOknUMVL4RgdGUnW02tZYrSbLDI3uq6oPaZiwiPOdiVtPbukQ/exec")
+    Call<Void> tracking(@Body RequestGoogle requestData);
 }

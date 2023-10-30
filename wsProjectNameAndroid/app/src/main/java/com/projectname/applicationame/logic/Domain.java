@@ -14,6 +14,14 @@ public class Domain {
         ServiceManager.login(newFormLoginVM);
     }
 
+    public static void tracking(String fechaDispositivo, String horaDispositivo, String movil, double latitud, double longitud) {
+        ServiceManager.tracking(fechaDispositivo, horaDispositivo, movil, latitud, longitud);
+    }
+
+    public static void trackingUser(String fechaDispositivo, String horaDispositivo, String userName, double latitud, double longitud, String estadoReserva) {
+        ServiceManager.trackingUser(fechaDispositivo, horaDispositivo, userName, latitud, longitud, estadoReserva);
+    }
+
     public UIManager getTheUIManager() {
         return theUIManager;
     }
