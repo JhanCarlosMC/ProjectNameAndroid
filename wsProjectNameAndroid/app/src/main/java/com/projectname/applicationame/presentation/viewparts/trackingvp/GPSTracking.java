@@ -112,6 +112,14 @@ public class GPSTracking extends AppCompatActivity implements LocationListener {
             }
         });
 
+        binding.buttonTrackingStop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Para detener el Runnable, simplemente llama a removeCallbacks en el Handler
+                handler.removeCallbacks(runnable);
+            }
+        });
+
     }
 
     private void obtenerDate() {
