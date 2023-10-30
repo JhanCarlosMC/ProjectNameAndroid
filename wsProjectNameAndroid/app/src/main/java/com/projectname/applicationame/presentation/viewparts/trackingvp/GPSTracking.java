@@ -88,16 +88,6 @@ public class GPSTracking extends AppCompatActivity implements LocationListener {
                     PERMISSION_REQUEST_CODE);
         }
 
-        runnable = new Runnable() {
-            @Override
-            public void run() {
-                // Llama al método que deseas ejecutar aquí
-                initGPS();
-                // Programa el próximo ciclo del Runnable después del intervalo
-                handler.postDelayed(this, intervalo);
-            }
-        };
-
         //Obtener informacion de la actividad anterior
         Intent intent = getIntent();
 
@@ -111,17 +101,11 @@ public class GPSTracking extends AppCompatActivity implements LocationListener {
         binding.buttonTracking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Inicia el ciclo del Runnable
-//                handler.postDelayed(runnable, intervalo);
-
                 // Ejecutar obtner ubicacion una vez
                 initGPS();
 
                 // Obtener Fecha y Hora
                 obtenerDate();
-
-                //Envio de Informacion Tracking To Sheet
-//                DesktopVP.tracking(fechaDispositivo, horaDispositivo, "001", latitud, longitud);
 
                 String estadoReserva = "Solicitada";
                 DesktopVP.trackingUser(fechaDispositivo, horaDispositivo, nombreUsuarioLogin, latitud, longitud, estadoReserva);
@@ -138,9 +122,6 @@ public class GPSTracking extends AppCompatActivity implements LocationListener {
         // Formatear la fecha y hora en un formato deseado
         SimpleDateFormat fecha = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         SimpleDateFormat hora = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
-
-//        Log.e(TAG, "Fecha: "+fecha.format(date));
-//        Log.e(TAG, "Hora: "+hora.format(date));
 
         horaDispositivo = hora.format(date);
         fechaDispositivo = fecha.format(date);

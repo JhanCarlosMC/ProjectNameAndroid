@@ -49,10 +49,6 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         Domain.login(newFormLoginVM);
     }
 
-    public static void tracking(String fechaDispositivo, String horaDispositivo, String movil, double latitud, double longitud) {
-        Domain.tracking(fechaDispositivo, horaDispositivo, movil, latitud, longitud);
-    }
-
     public static void trackingUser(String fechaDispositivo, String horaDispositivo, String userName, double latitud, double longitud, String estadoReserva) {
         Domain.trackingUser(fechaDispositivo, horaDispositivo, userName, latitud, longitud, estadoReserva);
     }

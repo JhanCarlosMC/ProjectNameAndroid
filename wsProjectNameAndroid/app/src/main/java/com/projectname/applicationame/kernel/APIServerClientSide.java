@@ -2,7 +2,6 @@ package com.projectname.applicationame.kernel;
 
 import android.util.Log;
 
-import com.projectname.applicationame.logic.TrackingMovil;
 import com.projectname.applicationame.logic.TrackingUser;
 import com.projectname.applicationame.logic.User;
 import com.projectname.applicationame.presentation.viewmodels.formloginvm.FormLoginVM;
@@ -57,34 +56,6 @@ public class APIServerClientSide {
         });
 
         Log.e("Kernel","user: "+ user +"\nPassword: " + password);
-    }
-
-    public static void tracking(String fechaDispositivo, String horaDispositivo, String movil, double latitud, double longitud) {
-
-        TrackingMovil newTrackingMovil = new TrackingMovil();
-        newTrackingMovil.setFecha(fechaDispositivo);
-        newTrackingMovil.setHora(horaDispositivo);
-        newTrackingMovil.setMovil(movil);
-        newTrackingMovil.setLatitud(latitud);
-        newTrackingMovil.setLongitud(longitud);
-
-        RequestGoogle requestData = new RequestGoogle();
-        requestData.setCommand("create");
-        requestData.setEntityName("Tracking");
-        requestData.setEntity(newTrackingMovil);
-
-        Call<Void> callerApi = APIServerClientSide.getServices().tracking(requestData);
-        callerApi.enqueue(new retrofit2.Callback<Void>() {
-            @Override
-            public void onResponse(retrofit2.Call<Void> call, retrofit2.Response<Void> response) {
-                Object a= response.body();
-                Log.e("Service", String.valueOf(a));
-            }
-            @Override
-            public void onFailure(retrofit2.Call<Void> call, Throwable t) {
-                t.printStackTrace();
-            }
-        });
     }
 
     public static void trackingUser(String fechaDispositivo, String horaDispositivo, String userName, double latitud, double longitud, String estadoReserva) {

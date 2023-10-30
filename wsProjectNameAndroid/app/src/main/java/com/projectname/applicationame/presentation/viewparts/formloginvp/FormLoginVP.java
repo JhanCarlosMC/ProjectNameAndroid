@@ -89,7 +89,6 @@ public class FormLoginVP extends AppCompatActivity implements ViewVP {
                     newFormLoginVM.setTextUser(textUser.getText().toString());
                     newFormLoginVM.setTextPassword(textPassword.getText().toString());
 
-                    //Log.e("onClick: FormLoginVP", "Info: "+formLoginVM.getTextUser().getValue());
                     DesktopVP.login(newFormLoginVM);
 
                     //Mandar Info
@@ -98,7 +97,6 @@ public class FormLoginVP extends AppCompatActivity implements ViewVP {
                     intent.putExtra("editTextValue", userValue);
 
                     //Cargar Activity
-//                    Intent intent = new Intent(getApplicationContext(), GPSTracking.class);
                     startActivity(intent);
 
                     textUser.setText(null);
