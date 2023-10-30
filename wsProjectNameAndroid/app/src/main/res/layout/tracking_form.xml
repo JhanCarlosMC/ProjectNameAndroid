@@ -38,11 +38,24 @@
         android:id="@+id/button_tracking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/reservar"
+        android:text="@string/iniciar_ruta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_tracking" />
+
+    <Button
+        android:id="@+id/button_tracking_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detener_ruta"
+        android:background="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_tracking" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

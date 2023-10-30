@@ -53,10 +53,6 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         Domain.tracking(fechaDispositivo, horaDispositivo, movil, latitud, longitud);
     }
 
-    public static void trackingUser(String fechaDispositivo, String horaDispositivo, String userName, double latitud, double longitud, String estadoReserva) {
-        Domain.trackingUser(fechaDispositivo, horaDispositivo, userName, latitud, longitud, estadoReserva);
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //---------------------------------Capturar el contexto grafico de la ViewPart-----------------------------------------------------------------------------------------

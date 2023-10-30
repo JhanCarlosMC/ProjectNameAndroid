@@ -93,38 +93,22 @@ public class GPSTracking extends AppCompatActivity implements LocationListener {
             public void run() {
                 // Llama al método que deseas ejecutar aquí
                 initGPS();
+                    // Obtener Fecha y Hora
+                obtenerDate();
+                    //Envio de Informacion Tracking To Sheet
+                DesktopVP.tracking(fechaDispositivo, horaDispositivo, "001", latitud, longitud);
+
                 // Programa el próximo ciclo del Runnable después del intervalo
                 handler.postDelayed(this, intervalo);
             }
         };
-
-        //Obtener informacion de la actividad anterior
-        Intent intent = getIntent();
-
-                // Comprobar si la intención contiene datos extras (extras)
-        if (intent.hasExtra("editTextValue")) {
-                // Obtener el valor del EditText de la Activity anterior
-            nombreUsuarioLogin = intent.getStringExtra("editTextValue");
-        }
 
         //Accion del button ---> para ejecutar el metodo de captura de ubicacion
         binding.buttonTracking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Inicia el ciclo del Runnable
-//                handler.postDelayed(runnable, intervalo);
-
-                // Ejecutar obtner ubicacion una vez
-                initGPS();
-
-                // Obtener Fecha y Hora
-                obtenerDate();
-
-                //Envio de Informacion Tracking To Sheet
-//                DesktopVP.tracking(fechaDispositivo, horaDispositivo, "001", latitud, longitud);
-
-                String estadoReserva = "Solicitada";
-                DesktopVP.trackingUser(fechaDispositivo, horaDispositivo, nombreUsuarioLogin, latitud, longitud, estadoReserva);
+                handler.postDelayed(runnable, intervalo);
             }
         });
 

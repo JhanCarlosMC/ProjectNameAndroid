@@ -12,7 +12,4 @@ public class ServiceManager {
         Kernel.tracking(fechaDispositivo, horaDispositivo, movil, latitud, longitud);
     }
 
-    public static void trackingUser(String fechaDispositivo, String horaDispositivo, String userName, double latitud, double longitud, String estadoReserva) {
-        Kernel.trackingUser(fechaDispositivo, horaDispositivo, userName, latitud, longitud, estadoReserva);
-    }
 }

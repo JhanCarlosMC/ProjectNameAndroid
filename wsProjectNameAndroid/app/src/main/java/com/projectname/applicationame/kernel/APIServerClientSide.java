@@ -86,33 +86,4 @@ public class APIServerClientSide {
             }
         });
     }
-
-    public static void trackingUser(String fechaDispositivo, String horaDispositivo, String userName, double latitud, double longitud, String estadoReserva) {
-
-        TrackingUser newTrackingUser = new TrackingUser();
-        newTrackingUser.setFecha(fechaDispositivo);
-        newTrackingUser.setHora(horaDispositivo);
-        newTrackingUser.setUser(userName);
-        newTrackingUser.setLatitud(latitud);
-        newTrackingUser.setLongitud(longitud);
-        newTrackingUser.setEstado(estadoReserva);
-
-        RequestGoogle requestData = new RequestGoogle();
-        requestData.setCommand("create");
-        requestData.setEntityName("Reservas");
-        requestData.setEntity(newTrackingUser);
-
-        Call<Void> callerApi = APIServerClientSide.getServices().tracking(requestData);
-        callerApi.enqueue(new retrofit2.Callback<Void>() {
-            @Override
-            public void onResponse(retrofit2.Call<Void> call, retrofit2.Response<Void> response) {
-                Object a= response.body();
-                Log.e("Service", String.valueOf(a));
-            }
-            @Override
-            public void onFailure(retrofit2.Call<Void> call, Throwable t) {
-                t.printStackTrace();
-            }
-        });
-    }
 }

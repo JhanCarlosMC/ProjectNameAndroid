@@ -8,4 +8,5 @@
     <string name="iniciar_ruta">Iniciar Ruta</string>
     <string name="reservar">Reservar</string>
     <string name="textTracking_hint">Tu Ubicacion</string>
+    <string name="detener_ruta">Finalizar Ruta</string>
 </resources>
