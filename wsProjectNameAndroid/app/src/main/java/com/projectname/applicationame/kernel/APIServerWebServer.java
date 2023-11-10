@@ -7,7 +7,7 @@ import retrofit2.http.POST;
 
 public interface APIServerWebServer {
     @Headers({"Content-Type: application/json"})
-    @POST("/s/AKfycbwUFMCG5K8DHfYpiCiRmJUsWkfAby93QJffgQ61w9ZkYcR3392Le0Zm8J6qP2xrtG1BzQ/exec")
+    @POST("s/AKfycbzauO5eXzJCEZd15dbRZxOknUMVL4RgdGUnW02tZYrSbLDI3uq6oPaZiwiPOdiVtPbukQ/exec")
     Call <Void> login(@Body RequestGoogle requestBody);
 
 }
