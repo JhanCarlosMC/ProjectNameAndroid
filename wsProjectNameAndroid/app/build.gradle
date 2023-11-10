@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.projectname.applicationame'
+    namespace 'com.projectname.appestructurada'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.projectname.applicationame"
+        applicationId "com.projectname.appestructurada"
         minSdk 26
         targetSdk 33
         versionCode 1

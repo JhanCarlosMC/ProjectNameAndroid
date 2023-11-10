@@ -19,7 +19,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ApplicationName"
+        android:theme="@style/Theme.AppEstructurada"
         tools:targetApi="31">
         <activity
             android:name=".presentation.viewparts.formloginvp.FormLoginVP"

@@ -7,7 +7,7 @@
 
     <FrameLayout
         android:id="@+id/navigation_login"
-        android:name="com.projectname.applicationame.presentation.viewparts.formloginvp.FormLoginVP"
+        android:name="com.projectname.appestructurada.presentation.viewparts.formloginvp.FormLoginVP"
         android:label="@string/title_login"
         tools:layout="@layout/login_form" />
 </navigation>
