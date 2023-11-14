@@ -6,6 +6,7 @@ import com.projectname.appestructurada.logic.Domain;
 import com.projectname.appestructurada.navigation.DesktopVM;
 import com.projectname.appestructurada.navigation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.formloginvm.FormLoginVM;
+import com.projectname.appestructurada.presentation.viewmodels.homevm.HomeVM;
 
 //Esta clase hace de "ModelFactory" para el  nodo de cliente en el proyecto
 public class APP extends Application {
@@ -14,6 +15,8 @@ public class APP extends Application {
     private Domain theDomain;
     DesktopVM desktopVM;
     FormLoginVM formLoginVM;
+    HomeVM homeVM;
+
 
 
     //------------------------------  Singleton ------------------------------------------------
@@ -78,5 +81,13 @@ public class APP extends Application {
 
     public void setFormLoginVM(FormLoginVM formLoginVM) {
         this.formLoginVM = formLoginVM;
+    }
+
+    public HomeVM getHomeVM() {
+        return homeVM = getDesktopVM().getHomeVM();
+    }
+
+    public void setHomeVM(HomeVM homeVM) {
+        this.homeVM = homeVM;
     }
 }

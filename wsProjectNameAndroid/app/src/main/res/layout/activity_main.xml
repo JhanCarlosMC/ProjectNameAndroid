@@ -25,7 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="56dp"
-        android:windowSoftInputMode="adjustPan">
+        android:windowSoftInputMode="adjustPan"
+        app:navGraph="@navigation/mobile_navigation">
 
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

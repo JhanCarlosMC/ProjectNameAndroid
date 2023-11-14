@@ -63,11 +63,16 @@ public class UIManager extends ViewModel {
         }
         //--------------------------------------------------------------
         //--------------------------------------------------------------
-        if (getUiRendered().equals("LoginUI")) {
+        if (getUiRendered().equals("HomeUI") || getUiRendered().equals("LoginUI")) {
 
             if (evento.equals("login")) {
                 setUiRendered("LoginUI");
                 setNextNavigationViewPart("LoginUI");
+                return action;
+            }
+
+            if (evento.equals("home")) {
+                setNextNavigationViewPart("HomeUI");
                 return action;
             }
 

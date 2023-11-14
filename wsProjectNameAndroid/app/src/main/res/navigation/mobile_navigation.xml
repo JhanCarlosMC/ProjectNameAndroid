@@ -3,11 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_login">
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.projectname.appestructurada.presentation.viewparts.homevp.HomeVP"
+        android:label="@string/title_home"
+        tools:layout="@layout/home" />
 
     <FrameLayout
         android:id="@+id/navigation_login"
         android:name="com.projectname.appestructurada.presentation.viewparts.formloginvp.FormLoginVP"
         android:label="@string/title_login"
         tools:layout="@layout/login_form" />
+
 </navigation>
