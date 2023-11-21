@@ -5,8 +5,9 @@ import android.app.Application;
 import com.projectname.appestructurada.logic.Domain;
 import com.projectname.appestructurada.navigation.DesktopVM;
 import com.projectname.appestructurada.navigation.UIManager;
+import com.projectname.appestructurada.presentation.viewmodels.formdenunciavm.FormDenunciaVM;
 import com.projectname.appestructurada.presentation.viewmodels.formloginvm.FormLoginVM;
-import com.projectname.appestructurada.presentation.viewmodels.homevm.HomeVM;
+import com.projectname.appestructurada.presentation.viewmodels.formhomevm.FormHomeVM;
 
 //Esta clase hace de "ModelFactory" para el  nodo de cliente en el proyecto
 public class APP extends Application {
@@ -15,8 +16,8 @@ public class APP extends Application {
     private Domain theDomain;
     DesktopVM desktopVM;
     FormLoginVM formLoginVM;
-    HomeVM homeVM;
-
+    FormHomeVM formHomeVM;
+    FormDenunciaVM formDenunciaVM;
 
 
     //------------------------------  Singleton ------------------------------------------------
@@ -83,11 +84,19 @@ public class APP extends Application {
         this.formLoginVM = formLoginVM;
     }
 
-    public HomeVM getHomeVM() {
-        return homeVM = getDesktopVM().getHomeVM();
+    public FormHomeVM getHomeVM() {
+        return formHomeVM = getDesktopVM().getHomeVM();
     }
 
-    public void setHomeVM(HomeVM homeVM) {
-        this.homeVM = homeVM;
+    public void setHomeVM(FormHomeVM formHomeVM) {
+        this.formHomeVM = formHomeVM;
+    }
+
+    public FormDenunciaVM getDenunciaVM() {
+        return formDenunciaVM = getDesktopVM().getDenunciaVM();
+    }
+
+    public void setDenunciaVM(FormDenunciaVM formDenunciaVM) {
+        this.formDenunciaVM = formDenunciaVM;
     }
 }

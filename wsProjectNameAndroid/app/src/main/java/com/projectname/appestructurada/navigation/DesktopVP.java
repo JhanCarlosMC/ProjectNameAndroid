@@ -15,10 +15,12 @@ import com.projectname.appestructurada.R;
 import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.logic.Domain;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
+import com.projectname.appestructurada.presentation.viewmodels.formdenunciavm.FormDenunciaVM;
 import com.projectname.appestructurada.presentation.viewmodels.formloginvm.FormLoginVM;
-import com.projectname.appestructurada.presentation.viewmodels.homevm.HomeVM;
-import com.projectname.appestructurada.presentation.viewparts.formloginvp.FormLoginVP;
-import com.projectname.appestructurada.presentation.viewparts.homevp.HomeVP;
+import com.projectname.appestructurada.presentation.viewmodels.formhomevm.FormHomeVM;
+import com.projectname.appestructurada.presentation.viewparts.denunciavp.FormDenunciaVP;
+import com.projectname.appestructurada.presentation.viewparts.loginvp.FormLoginVP;
+import com.projectname.appestructurada.presentation.viewparts.homevp.FormHomeVP;
 
 public class DesktopVP extends AppCompatActivity implements ViewVP {
 
@@ -31,7 +33,8 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
     ViewModel viewModel;
     DesktopVM desktopVM;
     FormLoginVM formLoginVM;
-    HomeVM homeVM;
+    FormHomeVM formHomeVM;
+    FormDenunciaVM formDenunciaVM;
 
     //Internal_context
     Boolean isRendered;
@@ -42,7 +45,8 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
     //Internal_context-ViewParts
     DesktopVP desktopVP;
     FormLoginVP formLoginVP;
-    HomeVP homeVP;
+    FormHomeVP formHomeVP;
+    FormDenunciaVP formDenunciaVP;
 
     //Internal_context-Widgets
     BottomNavigationView navigationButton;
@@ -86,18 +90,21 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         //---------------------------------Crear hijos--------------------------------------------------------------------------------------------------------
         //  [x] aplica,  []---> crear los hijos viewPart de la pantalla [solamnete la creacion desde el recurso]: tipoWidget newWidget = findViewById(R.id.nombreWidgetEnElLayout);
         FormLoginVP newFormLoginVP = new FormLoginVP();
-        HomeVP newHomeVP = new HomeVP();
+        FormHomeVP newFormHomeVP = new FormHomeVP();
+        FormDenunciaVP newFormDenunciaVP = new FormDenunciaVP();
 
         //---------------------------------Crear hijos--------------------------------------------------------------------------------------------------------
 
         //---------------------------------Enlazar hijos--------------------------------------------------------------------------------------------------------
         //  [x] aplica,  //enlazar el padre con sus hijos mediante metodos set de la clase que se esta implementando: sethijo(newHijo);
         setFormLoginVP(newFormLoginVP);
-        setHomeVP(newHomeVP);
+        setHomeVP(newFormHomeVP);
+        setDenunciaVP(newFormDenunciaVP);
 
         //  [x] aplica,  //enlazar los hijos con su padre (clase que se esta implementando - "this"): newHijo.setOwnedByVP(this);
         newFormLoginVP.setOwnedByVP(this);
-        newHomeVP.setOwnedByVP(this);
+        newFormHomeVP.setOwnedByVP(this);
+        newFormDenunciaVP.setOwnedByVP(this);
 
         //---------------------------------Enlazar hijos--------------------------------------------------------------------------------------------------------
 
@@ -105,22 +112,25 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         //  [x] aplica,  //enlazar a cada hijo viewPart su respectivo viewModel:  newHijoViewPart.setViewModel(getContenedorHijoVM());
         setViewModel(getDesktopVM());
         newFormLoginVP.setTheViewModel(getFormLoginVM());
-        newHomeVP.setTheViewModel(getHomeVM());
+        newFormHomeVP.setTheViewModel(getHomeVM());
+        newFormDenunciaVP.setTheViewModel(getDenunciaVM());
 
         //  [x] aplica,  //enlazar cada viewModel de cada hijo a el mismo:  getContenedorHijoVM().setViewPart(newHijoViewPart);
         getViewModel().setTheViewPart(this);
         getFormLoginVM().setTheViewPart(newFormLoginVP);
-        getHomeVM().setTheViewPart(newHomeVP);
+        getHomeVM().setTheViewPart(newFormHomeVP);
+        getDenunciaVM().setTheViewPart(newFormDenunciaVP);
 
         //---------------------------------Enlazar ViewModels con ViewParts-----------------------------------------------------------------------------------------
 
         //---------------------------------Configurar id's de la viewpart-----------------------------------------------------------------------------------------
         //  [x] aplica,  //configurar el idViewPart de la viewPart: setIdViewPart(getOwnedByVP().getIdViewPart() + ":Tipo<Hijo>");
-        setIdViewPart("desktopvp");//--> Solo para la ViewPart que se carga de primera
+        setIdViewPart("Desktop_A");//--> Solo para la ViewPart que se carga de primera
 
         //  [x] aplica,regsitrar ids hijos
         newFormLoginVP.setIdViewPart("LoginUI");
-        newHomeVP.setIdViewPart("HomeUI");
+        newFormHomeVP.setIdViewPart("HomeUI");
+        newFormDenunciaVP.setIdViewPart("DenunciaUI");
 
         //---------------------------------Configurar id's de la viewpart-----------------------------------------------------------------------------------------
 
@@ -136,7 +146,8 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
         //  [x] aplica,  //registrar el viewPart de los hijos: getTheUIManager().registrarViewPart(newHijo.getIIdViewPart(), newHijo);
         getUIManager().registerViewPart(newFormLoginVP, "LoginUI");
-        getUiManager().registerViewPart(newHomeVP, "HomeUI");
+        getUiManager().registerViewPart(newFormHomeVP, "HomeUI");
+        getUIManager().registerViewPart(newFormDenunciaVP, "DenunciaUI");
 
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
 
@@ -159,6 +170,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         //  [] aplica,  //inicializar el automata: getViewModel().actualizarMaquina("iniciarViewModel");
         getUIManager().navigationMachine("control");
         String action = getUIManager().navigationMachine("home");
+/*        action = getUIManager().navigationMachine("denuncia");*/
 
         //---------------------------------montar el automata de la interfaz-----------------------------------------------------------------------------------------
 
@@ -202,6 +214,15 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
                     if (nextNavigationVP != null)
                         selectedFragment = (Fragment) nextNavigationVP;
                     break;
+
+                case R.id.navigation_denuncia:
+                    item.setChecked(true);
+                    action = getUIManager().navigationMachine("denuncia");
+                    nextNavigationVP = getUIManager().getTheNextNavigationViewPart();
+                    if (nextNavigationVP != null)
+                        selectedFragment = (Fragment) nextNavigationVP;
+                    break;
+
             }
             if (selectedFragment != null) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_activity_main, selectedFragment).commit();
@@ -238,10 +259,15 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //-----------------------------------------------------
         //obtener el contexto:homeVM
-        HomeVM hvm = getApp().getHomeVM();
+        FormHomeVM hvm = getApp().getHomeVM();
         //setear la homeVM
         setHomeVM(hvm);
 
+        //-----------------------------------------------------
+        //obtener el contexto:denunciaVM
+        FormDenunciaVM dvm = getApp().getDenunciaVM();
+        //setear la denunciaVM
+        setDenunciaVM(dvm);
 
         //-----------------------------------------------------
         //montar el handler
@@ -364,9 +390,12 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         return idViewPart;
     }
 
-    public void setOwnedByVP(ViewVP newViewVP) {
+    @Override
+    public void setOwnedByVP(DesktopVP desktopVP) {
 
     }
+
+
     public ViewVP getOwnedByVP() {
         return null;
     }
@@ -374,19 +403,35 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         return uiManager;
     }
 
-    public HomeVM getHomeVM() {
-        return homeVM;
+    public FormHomeVM getHomeVM() {
+        return formHomeVM;
     }
 
-    public void setHomeVM(HomeVM homeVM) {
-        this.homeVM = homeVM;
+    public void setHomeVM(FormHomeVM formHomeVM) {
+        this.formHomeVM = formHomeVM;
     }
 
-    public HomeVP getHomeVP() {
-        return homeVP;
+    public FormHomeVP getHomeVP() {
+        return formHomeVP;
     }
 
-    public void setHomeVP(HomeVP homeVP) {
-        this.homeVP = homeVP;
+    public void setHomeVP(FormHomeVP formHomeVP) {
+        this.formHomeVP = formHomeVP;
+    }
+
+    public FormDenunciaVM getDenunciaVM() {
+        return formDenunciaVM;
+    }
+
+    public void setDenunciaVM(FormDenunciaVM formDenunciaVM) {
+        this.formDenunciaVM = formDenunciaVM;
+    }
+
+    public FormDenunciaVP getDenunciaVP() {
+        return formDenunciaVP;
+    }
+
+    public void setDenunciaVP(FormDenunciaVP formDenunciaVP) {
+        this.formDenunciaVP = formDenunciaVP;
     }
 }

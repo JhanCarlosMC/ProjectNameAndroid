@@ -1,15 +1,15 @@
-package com.projectname.appestructurada.presentation.viewmodels.homevm;
+package com.projectname.appestructurada.presentation.viewmodels.formhomevm;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
 
-public class HomeVM extends ViewModel {
+public class FormHomeVM extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HomeVM() {
+    public FormHomeVM() {
         mText = new MutableLiveData<>();
         mText.setValue("This is home fragment");
     }
@@ -18,7 +18,7 @@ public class HomeVM extends ViewModel {
         return mText;
     }
 
-    public void implementarModelo() {
+    public void implementModel() {
     }
 
 }

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -16,35 +17,47 @@ import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.navigation.DesktopVP;
 import com.projectname.appestructurada.navigation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
-import com.projectname.appestructurada.presentation.viewmodels.homevm.HomeVM;
+import com.projectname.appestructurada.presentation.viewmodels.formhomevm.FormHomeVM;
 
 
-public class HomeVP extends Fragment implements ViewVP {
+public class FormHomeVP extends Fragment implements ViewVP {
 
-    private HomeBinding binding;
+    private HomeBinding bindingHome;
+    private FormHomeVM formHomeVM;
     ViewVP ownedByVP;
     APP app = APP.getInstance();
     UIManager theUIManager;
     String idViewPart;
     ViewModel theViewModel;
 
+    /*Layouts Elements*/
+    public TextView textView;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeVM homeVM =
-                new ViewModelProvider(this).get(HomeVM.class);
+        bindingHome = HomeBinding.inflate(inflater, container, false);
+        View root = bindingHome.getRoot();
+        formHomeVM = new ViewModelProvider(this).get(FormHomeVM.class);
 
-        binding = HomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        /*Carga de informacion desde la VM a la VP*/
+        initComponents();
 
-        final TextView textView = binding.textHome;
-        homeVM.getText().observe(getViewLifecycleOwner(), textView::setText);
+        // Ocultar la ActionBar
+        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
         return root;
+    }
+
+    private void initComponents() {
+        // Inicializar Widgets
+
+        textView = bindingHome.textHome;
+        formHomeVM.getText().observe(getViewLifecycleOwner(), textView::setText);
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
+        bindingHome = null;
     }
 
     public APP getApp() {
@@ -75,7 +88,7 @@ public class HomeVP extends Fragment implements ViewVP {
         theUIManager = app.getTheUIManager();
         return theUIManager;
     }
-
+    @Override
     public void setOwnedByVP(DesktopVP desktopVP) {
         ownedByVP = desktopVP;
     }
@@ -85,8 +98,6 @@ public class HomeVP extends Fragment implements ViewVP {
         return ownedByVP;
     }
 
-    @Override
-    public void setOwnedByVP(ViewVP ownedByVP) {
-        this.ownedByVP = ownedByVP;
-    }
+
+
 }

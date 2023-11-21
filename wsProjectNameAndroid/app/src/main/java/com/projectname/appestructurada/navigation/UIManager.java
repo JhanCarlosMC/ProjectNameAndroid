@@ -16,7 +16,6 @@ public class UIManager extends ViewModel {
 
     //Relaciones
     private DesktopVM theDesktopVM;
-    private DesktopVP theDesktopVP;
     private Domain theDomain;
     private List<ViewPart> listRegisteredScreens;
 
@@ -56,17 +55,17 @@ public class UIManager extends ViewModel {
         if (getUiRendered().equals("WITHOUTUI")) {
 
             if (evento.equals("control")) {
-                setUiRendered("LoginUI");
+                setUiRendered("Desktop_A");
                 return action;
             }
 
         }
         //--------------------------------------------------------------
         //--------------------------------------------------------------
-        if (getUiRendered().equals("HomeUI") || getUiRendered().equals("LoginUI")) {
+        if (getUiRendered().equals("Desktop_A") || getUiRendered().equals("HomeUI") || getUiRendered().equals("LoginUI") || getUiRendered().equals("DenunciaUI")) {
 
             if (evento.equals("login")) {
-                setUiRendered("LoginUI");
+//                setUiRendered("LoginUI");
                 setNextNavigationViewPart("LoginUI");
                 return action;
             }
@@ -76,6 +75,10 @@ public class UIManager extends ViewModel {
                 return action;
             }
 
+            if (evento.equals("denuncia")) {
+                setNextNavigationViewPart("DenunciaUI");
+                return action;
+            }
         }
         return action;
 

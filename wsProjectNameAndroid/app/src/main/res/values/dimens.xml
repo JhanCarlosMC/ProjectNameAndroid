@@ -2,4 +2,89 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--dimensiones height, width-->
+    <dimen name="layout_height_cuenta">135dp</dimen>
+    <dimen name="layout_height_5dp">5dp</dimen>
+    <dimen name="layout_height_10dp">10dp</dimen>
+
+
+    <!--dimensiones margin-->
+    <dimen name="marginTop_10dp">10dp</dimen>
+    <dimen name="marginTop_3dp">3dp</dimen>
+    <dimen name="marginLeft_10dp">10dp</dimen>
+    <dimen name="marginLeft_5dp">5dp</dimen>
+    <dimen name="marginRight_10dp">10dp</dimen>
+    <dimen name="marginRight_5dp">5dp</dimen>
+    <dimen name="marginBottom_5dp">5dp</dimen>
+    <dimen name="marginBottom_10dp">10dp</dimen>
+    <dimen name="layout_margin_15dp">15dp</dimen>
+    <dimen name="layout_margin_10dp">10dp</dimen>
+    <dimen name="layout_margin_5dp">5dp</dimen>
+    <dimen name="marginTop_5dp">5dp</dimen>
+    <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="padding_5dp">5dp</dimen>
+    <dimen name="layout_height_titulo_contenedor">35dp</dimen>
+    <dimen name="layout_height_titulo_subcontenedor">30dp</dimen>
+    <dimen name="linea">1dp</dimen>
+    <dimen name="margin_CardView">3dp</dimen>
+    <dimen name="contenedor_nav">56dp</dimen>
+    <dimen name="width_button">220dp</dimen>
+
+    <dimen name="pop_up_button">150dp</dimen>
+    <dimen name="marginRight_25dp">25dp</dimen>
+
+
+
+
+    <!--dimensiones imageView-->
+    <dimen name="imageView_iconos">25dp</dimen>
+    <dimen name="imageView_atras">25dp</dimen>
+    <dimen name="imageView_iconos_contenedor">24dp</dimen>
+    <dimen name="imageView_icono_user">80dp</dimen>
+    <dimen name="imageView_icono_ir">20dp</dimen>
+    <dimen name="imageView_icono_slider">50dp</dimen>
+    <dimen name="slider_notcias">200dp</dimen>
+    <dimen name="img_login">250dp</dimen>
+    <dimen name="button">60dp</dimen>
+    <dimen name="imageView_icono">40dp</dimen>
+
+
+    <!--dimensiones elevation-->
+    <dimen name="elevation_5dp">5dp</dimen>
+
+
+    <!--dimensiones textos-->
+    <dimen name="titulo_contenedor">9pt</dimen>
+    <dimen name="titulo_contenido">8pt</dimen>
+    <dimen name="contenido">7pt</dimen>
+    <dimen name="titulo_principal">11pt</dimen>
+
+
+    <!--dimensiones CardView-->
+    <dimen name="cardCornerRadius">8dp</dimen>
+    <dimen name="cardCornerRadius_subcontenido">3dp</dimen>
+    <dimen name="cardElevation">3dp</dimen>
+
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="item_width">200dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="marginLeft_20dp">20dp</dimen>
+    <dimen name="popup_button_200dp">200dp</dimen>
+    <dimen name="default_collapsed_image_size">45dp</dimen>
+    <dimen name="preview_noticia_width">250dp</dimen>
+    <dimen name="preview_noticia_height">150dp</dimen>
+    <dimen name="img_mis_denuncias">150dp</dimen>
+    <dimen name="marginBottom_30dp">30dp</dimen>
+    <dimen name="img_preview_categoria">165dp</dimen>
+    <dimen name="img_form_detail_home_preview">220dp</dimen>
+    <dimen name="top_7dp">7dp</dimen>
+    <dimen name="img_mis_denuncias_170dp">170dp</dimen>
+    <dimen name="img_atras">56dp</dimen>
+    <dimen name="paddind_15dp">15dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="imgIcon_ayuda">30dp</dimen>
+    <dimen name="img_detail_home">165dp</dimen>
 </resources>
