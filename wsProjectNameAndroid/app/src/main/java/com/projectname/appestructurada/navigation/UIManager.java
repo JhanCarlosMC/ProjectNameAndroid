@@ -13,11 +13,12 @@ public class UIManager extends ViewModel {
     private String uiRendered = "WITHOUTUI";
     private String lastUiRendered = " ";
     private String nextNavigationViewPart = " ";
+    private List<ViewPart> listRegisteredScreens;
+
 
     //Relaciones
     private DesktopVM theDesktopVM;
     private Domain theDomain;
-    private List<ViewPart> listRegisteredScreens;
 
     public void implementModel() {
         //instanciar Hijos

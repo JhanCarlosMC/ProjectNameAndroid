@@ -3,7 +3,7 @@ package com.projectname.appestructurada.presentation.viewparts;
 import com.projectname.appestructurada.kernel.ViewVP;
 
 public class ViewPart {
-    private String idViewPart = " ";
+    private String idViewPart = "";
     private ViewVP viewPart = null;
 
     public ViewVP getViewPart() {

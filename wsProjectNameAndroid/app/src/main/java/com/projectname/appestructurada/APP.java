@@ -12,8 +12,11 @@ import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHome
 //Esta clase hace de "ModelFactory" para el  nodo de cliente en el proyecto
 public class APP extends Application {
 
+    //Variables propias
     private UIManager theUIManager;
     private Domain theDomain;
+
+    //Variables de contexto
     DesktopVM desktopVM;
     CntLoginVM cntLoginVM;
     CntHomeVM cntHomeVM;

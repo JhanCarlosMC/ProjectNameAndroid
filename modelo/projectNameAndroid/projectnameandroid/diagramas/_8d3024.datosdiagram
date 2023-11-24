@@ -7,20 +7,20 @@
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IqkgEuq2Ee2BeO-e7bu-aQ" name="settingEvents" id="_Vp9eIeOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.ui.viewParts" typeElement="Operation"/>
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IqkgE-q2Ee2BeO-e7bu-aQ" name="updateViewPartContext" id="_ZSlKoOOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.ui.viewParts" typeElement="Operation"/>
     </listClase>
-    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_Nd6TQOq2Ee2BeO-e7bu-aQ" name="FormLoginVP" id="_p_T_EN1AEe2lzp2ogg8XCg" type="System" description="" pathElementRoot="projectnameandroid.ui.viewParts.formloginvp" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: formloginvp)" nameSpaceElement="(from: formloginvp)" nombreArchivo="" listaAtributosBinding="_LTnL0fwCEe2nGeZ8j_wHXA _PBM34fwCEe2nGeZ8j_wHXA">
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_Nd6TQOq2Ee2BeO-e7bu-aQ" name="CntLoginVP" id="_p_T_EN1AEe2lzp2ogg8XCg" type="System" description="" pathElementRoot="projectnameandroid.ui.viewParts.cntloginvp" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="viewParts" nombreArchivo="" listaAtributosBinding="_LTnL0fwCEe2nGeZ8j_wHXA _PBM34fwCEe2nGeZ8j_wHXA">
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_LTnL0fwCEe2nGeZ8j_wHXA" name="idViewPart" id="_LTny4PwCEe2nGeZ8j_wHXA" type="String" typeElement="Attribute" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Atributo.gif" valueDefault="" namePresentation="idViewPart:String" Clase="_Nd6TQOq2Ee2BeO-e7bu-aQ"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_PBM34fwCEe2nGeZ8j_wHXA" name="ownedByvp" id="_PBM34vwCEe2nGeZ8j_wHXA" type="ViewVP" typeElement="Attribute" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Atributo.gif" valueDefault="" namePresentation="ownedByvp:ViewVP" Clase="_Nd6TQOq2Ee2BeO-e7bu-aQ"/>
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_hM0cEBUiEe6tKNDG9JXOUw" name="initComponents" id="_hI4XQRUiEe6tKNDG9JXOUw" typeElement="Operation"/>
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_jZ3icBUiEe6tKNDG9JXOUw" name="settingEvents" id="_jYx9UBUiEe6tKNDG9JXOUw" typeElement="Operation"/>
     </listClase>
-    <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_NeY0YOq2Ee2BeO-e7bu-aQ" id="_jrDWQN1BEe2lzp2ogg8XCg" aRol="ownedByDesktopViewPart" bRol="theFormLoginVP" aMultiplicidad="_1" bMultiplicidad="_1" multiplicidadB="1" multiplicidadA=" " bContainment="si" bAgregacion="si" source="_Ip_RQOq2Ee2BeO-e7bu-aQ" target="_Nd6TQOq2Ee2BeO-e7bu-aQ"/>
-    <listPackageParent xmi:type="tooldataform.core:Package" xmi:id="_UEFocN1BEe2lzp2ogg8XCg" name="formloginvp" id="_MqxRgN1BEe2lzp2ogg8XCg" type="System" pathElementRoot="projectnameandroid.ui.viewParts" typeElement="Package" nameSpace=""/>
+    <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_NeY0YOq2Ee2BeO-e7bu-aQ" id="_jrDWQN1BEe2lzp2ogg8XCg" aRol="ownedByDesktopViewPart" bRol="theCntLoginVP" aMultiplicidad="_1" bMultiplicidad="_1" multiplicidadB="1" multiplicidadA=" " bContainment="si" bAgregacion="si" source="_Ip_RQOq2Ee2BeO-e7bu-aQ" target="_Nd6TQOq2Ee2BeO-e7bu-aQ"/>
+    <listPackageParent xmi:type="tooldataform.core:Package" xmi:id="_UEFocN1BEe2lzp2ogg8XCg" name="cntloginvp" id="_MqxRgN1BEe2lzp2ogg8XCg" type="System" pathElementRoot="projectnameandroid.ui.viewParts" typeElement="Package" nameSpace=""/>
   </tooldataform.core:Datos_Diagram>
   <notation:Diagram xmi:id="_ImSAwM89Ee2LAs71B-KWxw" type="MetamodelodataformDatosDiagram" element="_ImQyoM89Ee2LAs71B-KWxw" name="containment" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_UEHdoN1BEe2lzp2ogg8XCg" type="2001" element="_UEFocN1BEe2lzp2ogg8XCg" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_UEHdot1BEe2lzp2ogg8XCg" type="5001"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_UEIEsN1BEe2lzp2ogg8XCg" type="5002"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEHdod1BEe2lzp2ogg8XCg" x="335" y="420"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEHdod1BEe2lzp2ogg8XCg" x="300" y="415"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_IqBGcOq2Ee2BeO-e7bu-aQ" type="2002" element="_Ip_RQOq2Ee2BeO-e7bu-aQ">
       <children xmi:type="notation:DecorationNode" xmi:id="_IqBGdeq2Ee2BeO-e7bu-aQ" type="5003"/>

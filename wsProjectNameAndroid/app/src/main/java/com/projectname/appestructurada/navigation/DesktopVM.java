@@ -7,9 +7,9 @@ import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHome
 
 public class DesktopVM extends ViewModel {
 
-    private CntLoginVM cntLoginVM;
-    private CntHomeVM cntHomeVM;
-    private CntDenunciaVM cntDenunciaVM;
+    private CntLoginVM theCntLoginVM;
+    private CntHomeVM theCntHomeVM;
+    private CntDenunciaVM theCntDenunciaVM;
 
     public void implementModel() {
         //Instanciar Hijos
@@ -48,26 +48,26 @@ public class DesktopVM extends ViewModel {
     }
 
     public CntLoginVM getFormLoginVM() {
-        return cntLoginVM;
+        return theCntLoginVM;
     }
 
     public void setFormLoginVM(CntLoginVM cntLoginVM) {
-        this.cntLoginVM = cntLoginVM;
+        this.theCntLoginVM = cntLoginVM;
     }
 
     public CntHomeVM getHomeVM() {
-        return cntHomeVM;
+        return theCntHomeVM;
     }
 
     public void setHomeVM(CntHomeVM cntHomeVM) {
-        this.cntHomeVM = cntHomeVM;
+        this.theCntHomeVM = cntHomeVM;
     }
 
     public CntDenunciaVM getDenunciaVM() {
-        return cntDenunciaVM;
+        return theCntDenunciaVM;
     }
 
     public void setDenunciaVM(CntDenunciaVM cntDenunciaVM) {
-        this.cntDenunciaVM = cntDenunciaVM;
+        this.theCntDenunciaVM = cntDenunciaVM;
     }
 }

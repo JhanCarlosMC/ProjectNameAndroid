@@ -6,7 +6,7 @@ import com.projectname.appestructurada.navigation.UIManager;
 import java.util.List;
 
 public class ViewModel extends androidx.lifecycle.ViewModel {
-    private String idViewModel = " ";
+    private String idViewModel = "";
     private UIManager theUIManager;
     private ViewModel ownedBy;
     private List<ViewModel> childs;
