@@ -15,12 +15,12 @@ import com.projectname.appestructurada.R;
 import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.logic.Domain;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
-import com.projectname.appestructurada.presentation.viewmodels.formdenunciavm.FormDenunciaVM;
-import com.projectname.appestructurada.presentation.viewmodels.formloginvm.FormLoginVM;
-import com.projectname.appestructurada.presentation.viewmodels.formhomevm.FormHomeVM;
-import com.projectname.appestructurada.presentation.viewparts.denunciavp.FormDenunciaVP;
-import com.projectname.appestructurada.presentation.viewparts.loginvp.FormLoginVP;
-import com.projectname.appestructurada.presentation.viewparts.homevp.FormHomeVP;
+import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
+import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHomeVM;
+import com.projectname.appestructurada.presentation.viewparts.cntdenunciavp.CntDenunciaVP;
+import com.projectname.appestructurada.presentation.viewparts.cntloginvp.CntLoginVP;
+import com.projectname.appestructurada.presentation.viewparts.cnthomevp.CntHomeVP;
 
 public class DesktopVP extends AppCompatActivity implements ViewVP {
 
@@ -32,9 +32,9 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
     //external_context-ViewModels
     ViewModel viewModel;
     DesktopVM desktopVM;
-    FormLoginVM formLoginVM;
-    FormHomeVM formHomeVM;
-    FormDenunciaVM formDenunciaVM;
+    CntLoginVM cntLoginVM;
+    CntHomeVM cntHomeVM;
+    CntDenunciaVM cntDenunciaVM;
 
     //Internal_context
     Boolean isRendered;
@@ -44,17 +44,17 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
     //Internal_context-ViewParts
     DesktopVP desktopVP;
-    FormLoginVP formLoginVP;
-    FormHomeVP formHomeVP;
-    FormDenunciaVP formDenunciaVP;
+    CntLoginVP cntLoginVP;
+    CntHomeVP cntHomeVP;
+    CntDenunciaVP cntDenunciaVP;
 
     //Internal_context-Widgets
     BottomNavigationView navigationButton;
     Handler theHandler;
     BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
 
-    public static void login(FormLoginVM newFormLoginVM) {
-        Domain.login(newFormLoginVM);
+    public static void login(CntLoginVM newCntLoginVM) {
+        Domain.login(newCntLoginVM);
     }
 
     @Override
@@ -89,37 +89,37 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //---------------------------------Crear hijos--------------------------------------------------------------------------------------------------------
         //  [x] aplica,  []---> crear los hijos viewPart de la pantalla [solamnete la creacion desde el recurso]: tipoWidget newWidget = findViewById(R.id.nombreWidgetEnElLayout);
-        FormLoginVP newFormLoginVP = new FormLoginVP();
-        FormHomeVP newFormHomeVP = new FormHomeVP();
-        FormDenunciaVP newFormDenunciaVP = new FormDenunciaVP();
+        CntLoginVP newCntLoginVP = new CntLoginVP();
+        CntHomeVP newCntHomeVP = new CntHomeVP();
+        CntDenunciaVP newCntDenunciaVP = new CntDenunciaVP();
 
         //---------------------------------Crear hijos--------------------------------------------------------------------------------------------------------
 
         //---------------------------------Enlazar hijos--------------------------------------------------------------------------------------------------------
         //  [x] aplica,  //enlazar el padre con sus hijos mediante metodos set de la clase que se esta implementando: sethijo(newHijo);
-        setFormLoginVP(newFormLoginVP);
-        setHomeVP(newFormHomeVP);
-        setDenunciaVP(newFormDenunciaVP);
+        setFormLoginVP(newCntLoginVP);
+        setHomeVP(newCntHomeVP);
+        setDenunciaVP(newCntDenunciaVP);
 
         //  [x] aplica,  //enlazar los hijos con su padre (clase que se esta implementando - "this"): newHijo.setOwnedByVP(this);
-        newFormLoginVP.setOwnedByVP(this);
-        newFormHomeVP.setOwnedByVP(this);
-        newFormDenunciaVP.setOwnedByVP(this);
+        newCntLoginVP.setOwnedByVP(this);
+        newCntHomeVP.setOwnedByVP(this);
+        newCntDenunciaVP.setOwnedByVP(this);
 
         //---------------------------------Enlazar hijos--------------------------------------------------------------------------------------------------------
 
         //---------------------------------Enlazar ViewModels con ViewParts-----------------------------------------------------------------------------------------
         //  [x] aplica,  //enlazar a cada hijo viewPart su respectivo viewModel:  newHijoViewPart.setViewModel(getContenedorHijoVM());
         setViewModel(getDesktopVM());
-        newFormLoginVP.setTheViewModel(getFormLoginVM());
-        newFormHomeVP.setTheViewModel(getHomeVM());
-        newFormDenunciaVP.setTheViewModel(getDenunciaVM());
+        newCntLoginVP.setTheViewModel(getFormLoginVM());
+        newCntHomeVP.setTheViewModel(getHomeVM());
+        newCntDenunciaVP.setTheViewModel(getDenunciaVM());
 
         //  [x] aplica,  //enlazar cada viewModel de cada hijo a el mismo:  getContenedorHijoVM().setViewPart(newHijoViewPart);
         getViewModel().setTheViewPart(this);
-        getFormLoginVM().setTheViewPart(newFormLoginVP);
-        getHomeVM().setTheViewPart(newFormHomeVP);
-        getDenunciaVM().setTheViewPart(newFormDenunciaVP);
+        getFormLoginVM().setTheViewPart(newCntLoginVP);
+        getHomeVM().setTheViewPart(newCntHomeVP);
+        getDenunciaVM().setTheViewPart(newCntDenunciaVP);
 
         //---------------------------------Enlazar ViewModels con ViewParts-----------------------------------------------------------------------------------------
 
@@ -128,9 +128,9 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         setIdViewPart("Desktop_A");//--> Solo para la ViewPart que se carga de primera
 
         //  [x] aplica,regsitrar ids hijos
-        newFormLoginVP.setIdViewPart("LoginUI");
-        newFormHomeVP.setIdViewPart("HomeUI");
-        newFormDenunciaVP.setIdViewPart("DenunciaUI");
+        newCntLoginVP.setIdViewPart("LoginUI");
+        newCntHomeVP.setIdViewPart("HomeUI");
+        newCntDenunciaVP.setIdViewPart("DenunciaUI");
 
         //---------------------------------Configurar id's de la viewpart-----------------------------------------------------------------------------------------
 
@@ -145,9 +145,9 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
         //  [x] aplica,  //registrar el viewPart de los hijos: getTheUIManager().registrarViewPart(newHijo.getIIdViewPart(), newHijo);
-        getUIManager().registerViewPart(newFormLoginVP, "LoginUI");
-        getUiManager().registerViewPart(newFormHomeVP, "HomeUI");
-        getUIManager().registerViewPart(newFormDenunciaVP, "DenunciaUI");
+        getUIManager().registerViewPart(newCntLoginVP, "LoginUI");
+        getUiManager().registerViewPart(newCntHomeVP, "HomeUI");
+        getUIManager().registerViewPart(newCntDenunciaVP, "DenunciaUI");
 
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
 
@@ -202,7 +202,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
                     String action = getUIManager().navigationMachine("login");
                     ViewVP nextNavigationVP = getUIManager().getTheNextNavigationViewPart();
 
-                    Intent intent = new Intent(getApplicationContext(), FormLoginVP.class);
+                    Intent intent = new Intent(getApplicationContext(), CntLoginVP.class);
                     startActivity(intent);
 
                     break;
@@ -254,18 +254,18 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //-----------------------------------------------------
         //obtener el contexto y set:formLoginVM
-        FormLoginVM flvm = getApp().getFormLoginVM();
+        CntLoginVM flvm = getApp().getFormLoginVM();
         setFormLoginVM(flvm);
 
         //-----------------------------------------------------
         //obtener el contexto:homeVM
-        FormHomeVM hvm = getApp().getHomeVM();
+        CntHomeVM hvm = getApp().getHomeVM();
         //setear la homeVM
         setHomeVM(hvm);
 
         //-----------------------------------------------------
         //obtener el contexto:denunciaVM
-        FormDenunciaVM dvm = getApp().getDenunciaVM();
+        CntDenunciaVM dvm = getApp().getDenunciaVM();
         //setear la denunciaVM
         setDenunciaVM(dvm);
 
@@ -318,12 +318,12 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         this.desktopVM = desktopVM;
     }
 
-    public FormLoginVM getFormLoginVM() {
-        return formLoginVM;
+    public CntLoginVM getFormLoginVM() {
+        return cntLoginVM;
     }
 
-    public void setFormLoginVM(FormLoginVM formLoginVM) {
-        this.formLoginVM = formLoginVM;
+    public void setFormLoginVM(CntLoginVM cntLoginVM) {
+        this.cntLoginVM = cntLoginVM;
     }
 
     public Boolean getRendered() {
@@ -358,12 +358,12 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         this.desktopVP = desktopVP;
     }
 
-    public FormLoginVP getFormLoginVP() {
-        return formLoginVP;
+    public CntLoginVP getFormLoginVP() {
+        return cntLoginVP;
     }
 
-    public void setFormLoginVP(FormLoginVP formLoginVP) {
-        this.formLoginVP = formLoginVP;
+    public void setFormLoginVP(CntLoginVP cntLoginVP) {
+        this.cntLoginVP = cntLoginVP;
     }
 
     public BottomNavigationView getNavigationButton() {
@@ -403,35 +403,35 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         return uiManager;
     }
 
-    public FormHomeVM getHomeVM() {
-        return formHomeVM;
+    public CntHomeVM getHomeVM() {
+        return cntHomeVM;
     }
 
-    public void setHomeVM(FormHomeVM formHomeVM) {
-        this.formHomeVM = formHomeVM;
+    public void setHomeVM(CntHomeVM cntHomeVM) {
+        this.cntHomeVM = cntHomeVM;
     }
 
-    public FormHomeVP getHomeVP() {
-        return formHomeVP;
+    public CntHomeVP getHomeVP() {
+        return cntHomeVP;
     }
 
-    public void setHomeVP(FormHomeVP formHomeVP) {
-        this.formHomeVP = formHomeVP;
+    public void setHomeVP(CntHomeVP cntHomeVP) {
+        this.cntHomeVP = cntHomeVP;
     }
 
-    public FormDenunciaVM getDenunciaVM() {
-        return formDenunciaVM;
+    public CntDenunciaVM getDenunciaVM() {
+        return cntDenunciaVM;
     }
 
-    public void setDenunciaVM(FormDenunciaVM formDenunciaVM) {
-        this.formDenunciaVM = formDenunciaVM;
+    public void setDenunciaVM(CntDenunciaVM cntDenunciaVM) {
+        this.cntDenunciaVM = cntDenunciaVM;
     }
 
-    public FormDenunciaVP getDenunciaVP() {
-        return formDenunciaVP;
+    public CntDenunciaVP getDenunciaVP() {
+        return cntDenunciaVP;
     }
 
-    public void setDenunciaVP(FormDenunciaVP formDenunciaVP) {
-        this.formDenunciaVP = formDenunciaVP;
+    public void setDenunciaVP(CntDenunciaVP cntDenunciaVP) {
+        this.cntDenunciaVP = cntDenunciaVP;
     }
 }

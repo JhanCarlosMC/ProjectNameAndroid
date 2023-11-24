@@ -2,7 +2,7 @@ package com.projectname.appestructurada.logic;
 
 import com.projectname.appestructurada.navigation.UIManager;
 import com.projectname.appestructurada.persistence.Persistence;
-import com.projectname.appestructurada.presentation.viewmodels.formloginvm.FormLoginVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
 import com.projectname.appestructurada.services.ServiceManager;
 
 public class Domain {
@@ -10,8 +10,8 @@ public class Domain {
     private UIManager theUIManager;
     private Persistence thePersistence;
 
-    public static void login(FormLoginVM newFormLoginVM) {
-        ServiceManager.login(newFormLoginVM);
+    public static void login(CntLoginVM newCntLoginVM) {
+        ServiceManager.login(newCntLoginVM);
     }
 
     public UIManager getTheUIManager() {

@@ -7,20 +7,20 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.projectname.appestructurada.presentation.viewparts.homevp.FormHomeVP"
+        android:name="com.projectname.appestructurada.presentation.viewparts.cnthomevp.CntHomeVP"
         android:label="@string/title_home"
         tools:layout="@layout/home" />
 
     <FrameLayout
         android:id="@+id/navigation_login"
-        android:name="com.projectname.appestructurada.presentation.viewparts.loginvp.FormLoginVP"
+        android:name="com.projectname.appestructurada.presentation.viewparts.cntloginvp.CntLoginVP"
         android:label="@string/title_login"
         tools:layout="@layout/login_form" />
 
     <fragment
         android:id="@+id/navigation_denuncia"
-        android:name="com.projectname.appestructurada.presentation.viewparts.denunciavp.FormDenunciaVP"
+        android:name="com.projectname.appestructurada.presentation.viewparts.cntdenunciavp.CntDenunciaVP"
         android:label="@string/title_denuncia"
-        tools:layout="@layout/denuncia_form" />
+        tools:layout="@layout/denuncia" />
 
 </navigation>

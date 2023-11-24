@@ -5,9 +5,9 @@ import android.app.Application;
 import com.projectname.appestructurada.logic.Domain;
 import com.projectname.appestructurada.navigation.DesktopVM;
 import com.projectname.appestructurada.navigation.UIManager;
-import com.projectname.appestructurada.presentation.viewmodels.formdenunciavm.FormDenunciaVM;
-import com.projectname.appestructurada.presentation.viewmodels.formloginvm.FormLoginVM;
-import com.projectname.appestructurada.presentation.viewmodels.formhomevm.FormHomeVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
+import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHomeVM;
 
 //Esta clase hace de "ModelFactory" para el  nodo de cliente en el proyecto
 public class APP extends Application {
@@ -15,9 +15,9 @@ public class APP extends Application {
     private UIManager theUIManager;
     private Domain theDomain;
     DesktopVM desktopVM;
-    FormLoginVM formLoginVM;
-    FormHomeVM formHomeVM;
-    FormDenunciaVM formDenunciaVM;
+    CntLoginVM cntLoginVM;
+    CntHomeVM cntHomeVM;
+    CntDenunciaVM cntDenunciaVM;
 
 
     //------------------------------  Singleton ------------------------------------------------
@@ -76,27 +76,27 @@ public class APP extends Application {
         this.desktopVM = desktopVM;
     }
 
-    public FormLoginVM getFormLoginVM() {
-        return formLoginVM = getDesktopVM().getFormLoginVM();
+    public CntLoginVM getFormLoginVM() {
+        return cntLoginVM = getDesktopVM().getFormLoginVM();
     }
 
-    public void setFormLoginVM(FormLoginVM formLoginVM) {
-        this.formLoginVM = formLoginVM;
+    public void setFormLoginVM(CntLoginVM cntLoginVM) {
+        this.cntLoginVM = cntLoginVM;
     }
 
-    public FormHomeVM getHomeVM() {
-        return formHomeVM = getDesktopVM().getHomeVM();
+    public CntHomeVM getHomeVM() {
+        return cntHomeVM = getDesktopVM().getHomeVM();
     }
 
-    public void setHomeVM(FormHomeVM formHomeVM) {
-        this.formHomeVM = formHomeVM;
+    public void setHomeVM(CntHomeVM cntHomeVM) {
+        this.cntHomeVM = cntHomeVM;
     }
 
-    public FormDenunciaVM getDenunciaVM() {
-        return formDenunciaVM = getDesktopVM().getDenunciaVM();
+    public CntDenunciaVM getDenunciaVM() {
+        return cntDenunciaVM = getDesktopVM().getDenunciaVM();
     }
 
-    public void setDenunciaVM(FormDenunciaVM formDenunciaVM) {
-        this.formDenunciaVM = formDenunciaVM;
+    public void setDenunciaVM(CntDenunciaVM cntDenunciaVM) {
+        this.cntDenunciaVM = cntDenunciaVM;
     }
 }

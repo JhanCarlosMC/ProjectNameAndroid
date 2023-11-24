@@ -3,7 +3,7 @@ package com.projectname.appestructurada.kernel;
 import android.util.Log;
 
 import com.projectname.appestructurada.logic.User;
-import com.projectname.appestructurada.presentation.viewmodels.formloginvm.FormLoginVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -27,9 +27,9 @@ public class APIServerClientSide {
         return serviceAPIServerClientSide;
     }
 
-    public static void login(FormLoginVM newFormLoginVM){
-        String password = newFormLoginVM.getTextPassword().getValue();
-        String user = newFormLoginVM.getTextUser().getValue();
+    public static void login(CntLoginVM newCntLoginVM){
+        String password = newCntLoginVM.getTextPassword().getValue();
+        String user = newCntLoginVM.getTextUser().getValue();
 
         User newUser = new User();
         newUser.setPassword(password);

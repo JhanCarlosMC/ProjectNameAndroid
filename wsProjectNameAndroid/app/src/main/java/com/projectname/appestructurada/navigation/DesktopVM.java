@@ -1,73 +1,73 @@
 package com.projectname.appestructurada.navigation;
 
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
-import com.projectname.appestructurada.presentation.viewmodels.formdenunciavm.FormDenunciaVM;
-import com.projectname.appestructurada.presentation.viewmodels.formloginvm.FormLoginVM;
-import com.projectname.appestructurada.presentation.viewmodels.formhomevm.FormHomeVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
+import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHomeVM;
 
 public class DesktopVM extends ViewModel {
 
-    private FormLoginVM formLoginVM;
-    private FormHomeVM formHomeVM;
-    private FormDenunciaVM formDenunciaVM;
+    private CntLoginVM cntLoginVM;
+    private CntHomeVM cntHomeVM;
+    private CntDenunciaVM cntDenunciaVM;
 
     public void implementModel() {
         //Instanciar Hijos
         //OLD -> ContenedorLoginViewModel newContenedorLoginViewModel = racional.app.denuncia.denuncia.denuncia.ui.contenedorformulariologinvm.ContenedorformulariologinvmFactory.eINSTANCE.createContenedorFormularioLoginVM();
-        FormLoginVM newFormLoginVM = new FormLoginVM();
-        FormHomeVM newFormHomeVM = new FormHomeVM();
-        FormDenunciaVM newFormDenunciaVM = new FormDenunciaVM();
+        CntLoginVM newCntLoginVM = new CntLoginVM();
+        CntHomeVM newCntHomeVM = new CntHomeVM();
+        CntDenunciaVM newCntDenunciaVM = new CntDenunciaVM();
 
         //Enlazar el padre con sus hijos mediante metodos set de la clase que se esta implementando "sethijo(newHijo);
-        setFormLoginVM(newFormLoginVM);
-        setHomeVM(newFormHomeVM);
-        setDenunciaVM(newFormDenunciaVM);
+        setFormLoginVM(newCntLoginVM);
+        setHomeVM(newCntHomeVM);
+        setDenunciaVM(newCntDenunciaVM);
 
         //Enlazar los hijos con su padre (clase que se esta implementando - "this") "newHijo.setOwnedBy(this);"
-        newFormLoginVM.setOwnedBy(this);
-        newFormHomeVM.setOwnedBy(this);
-        newFormDenunciaVM.setOwnedBy(this);
+        newCntLoginVM.setOwnedBy(this);
+        newCntHomeVM.setOwnedBy(this);
+        newCntDenunciaVM.setOwnedBy(this);
 
         //Enlazar los hijos con con el UIManager "newHijo.setTheUIManager(getTheUIManager());"
-        newFormLoginVM.setTheUIManager(getTheUIManager());
-        newFormHomeVM.setTheUIManager(getTheUIManager());
-        newFormDenunciaVM.setTheUIManager(getTheUIManager());
+        newCntLoginVM.setTheUIManager(getTheUIManager());
+        newCntHomeVM.setTheUIManager(getTheUIManager());
+        newCntDenunciaVM.setTheUIManager(getTheUIManager());
 
         //Configurar el id de cada hijo  "newHijo.setIdViewModel(getIdViewModel() + ":Tipo<Hijo>");"
-        newFormLoginVM.setIdViewModel(getIdViewModel() + ":LoginViewModel");
-        newFormHomeVM.setIdViewModel(getIdViewModel() + ":HomeViewModel");
-        newFormDenunciaVM.setIdViewModel(getIdViewModel() + "DenunciaViewModel");
+        newCntLoginVM.setIdViewModel(getIdViewModel() + ":LoginViewModel");
+        newCntHomeVM.setIdViewModel(getIdViewModel() + ":HomeViewModel");
+        newCntDenunciaVM.setIdViewModel(getIdViewModel() + "DenunciaViewModel");
 
         //Implementar el modelo de los hijos "newHijo.implementarModelo();"
-        newFormLoginVM.implementModel();
-        newFormHomeVM.implementModel();
-        newFormDenunciaVM.implementModel();
+        newCntLoginVM.implementModel();
+        newCntHomeVM.implementModel();
+        newCntDenunciaVM.implementModel();
 
         //Registrar viewVM
 
     }
 
-    public FormLoginVM getFormLoginVM() {
-        return formLoginVM;
+    public CntLoginVM getFormLoginVM() {
+        return cntLoginVM;
     }
 
-    public void setFormLoginVM(FormLoginVM formLoginVM) {
-        this.formLoginVM = formLoginVM;
+    public void setFormLoginVM(CntLoginVM cntLoginVM) {
+        this.cntLoginVM = cntLoginVM;
     }
 
-    public FormHomeVM getHomeVM() {
-        return formHomeVM;
+    public CntHomeVM getHomeVM() {
+        return cntHomeVM;
     }
 
-    public void setHomeVM(FormHomeVM formHomeVM) {
-        this.formHomeVM = formHomeVM;
+    public void setHomeVM(CntHomeVM cntHomeVM) {
+        this.cntHomeVM = cntHomeVM;
     }
 
-    public FormDenunciaVM getDenunciaVM() {
-        return formDenunciaVM;
+    public CntDenunciaVM getDenunciaVM() {
+        return cntDenunciaVM;
     }
 
-    public void setDenunciaVM(FormDenunciaVM formDenunciaVM) {
-        this.formDenunciaVM = formDenunciaVM;
+    public void setDenunciaVM(CntDenunciaVM cntDenunciaVM) {
+        this.cntDenunciaVM = cntDenunciaVM;
     }
 }

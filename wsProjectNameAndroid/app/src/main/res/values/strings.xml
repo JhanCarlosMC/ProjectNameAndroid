@@ -5,9 +5,6 @@
     <string name="next">Next</string>
     <string name="title_login">Login</string>
     <string name="denunciar">Denunciar</string>
-    <string name="feedback_denuncia">Selecciona la ruta y en la ubicacion en la cual quieres viajar</string>
-    <string name="text_volumen_residuo">Volumen Residuo</string>
-    <string name="seleccion_volumen_residuo">Seleccione el volumen del residuo</string>
     <string name="title_denuncia">Denuncia</string>
     <string name="limpiar">Limpiar</string>
 </resources>
