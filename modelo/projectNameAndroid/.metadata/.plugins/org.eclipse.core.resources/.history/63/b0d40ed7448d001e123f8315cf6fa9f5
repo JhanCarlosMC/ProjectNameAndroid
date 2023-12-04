@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xsi:schemaLocation="http:///tooldataform/core.ecore http:///tooldataform.ecore#//core http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo">
+  <tooldataform.core:Datos_Diagram xmi:id="_d99LkI1AEe60wezZQL3yXg">
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_fhKDsI1AEe60wezZQL3yXg" name="DesktopVP" id="_FE83AN0-Ee2VU6ZfEZ22YQ" type="System" description="" pathElementRoot="projectnameandroid.client.navigation" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: navigation)" nameSpaceElement="(from: navigation)" nombreArchivo="" listaMetodosBinding="_fiIUEI1AEe60wezZQL3yXg _fiIUEY1AEe60wezZQL3yXg _fiIUEo1AEe60wezZQL3yXg _fiIUE41AEe60wezZQL3yXg" listaAtributosBinding="_iFxOIY1DEe60wezZQL3yXg _jxCdIY1DEe60wezZQL3yXg _2skTAY1DEe60wezZQL3yXg _vcqhUI1EEe60wezZQL3yXg">
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_iFxOIY1DEe60wezZQL3yXg" name="isRendered" id="_iFxOIo1DEe60wezZQL3yXg" type="Boolean" typeElement="Attribute" urlIcon="platform:/plugin/tdmbuid.datosdiagram/icons/Atributo.gif" valueDefault="" namePresentation="isRendered:Boolean" Clase="_fhKDsI1AEe60wezZQL3yXg"/>
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_jxCdIY1DEe60wezZQL3yXg" name="idViewPart" id="_jxCdIo1DEe60wezZQL3yXg" type="String" typeElement="Attribute" urlIcon="platform:/plugin/tdmbuid.datosdiagram/icons/Atributo.gif" valueDefault="" namePresentation="idViewPart:String" Clase="_fhKDsI1AEe60wezZQL3yXg"/>
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_2skTAY1DEe60wezZQL3yXg" name="theContext" id="_2skTAo1DEe60wezZQL3yXg" type="android.content.Context" typeElement="Attribute" urlIcon="platform:/plugin/tdmbuid.datosdiagram/icons/Atributo.gif" valueDefault="" namePresentation="theContext:android.content.Context" Clase="_fhKDsI1AEe60wezZQL3yXg"/>
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_vcqhUI1EEe60wezZQL3yXg" name="theView" id="_vcqhUY1EEe60wezZQL3yXg" type="android.view.View" typeElement="Attribute" urlIcon="platform:/plugin/tdmbuid.datosdiagram/icons/Atributo.gif" valueDefault="" namePresentation="theView:android.view.View" Clase="_fhKDsI1AEe60wezZQL3yXg"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_fiIUEI1AEe60wezZQL3yXg" name="implementModel" id="_RBLVIeOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation" typeElement="Operation" theClaseBinding="_fhKDsI1AEe60wezZQL3yXg"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_fiIUEY1AEe60wezZQL3yXg" name="implementWidgets" id="_TkEIoeOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation" typeElement="Operation" theClaseBinding="_fhKDsI1AEe60wezZQL3yXg"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_fiIUEo1AEe60wezZQL3yXg" name="settingEvents" id="_Vp9eIeOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation" typeElement="Operation" theClaseBinding="_fhKDsI1AEe60wezZQL3yXg"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_fiIUE41AEe60wezZQL3yXg" name="updateViewPartContext" id="_ZSlKoOOkEe2FpK-t18oFvw" pathElementRoot="projectnameandroid.client.navigation" typeElement="Operation" theClaseBinding="_fhKDsI1AEe60wezZQL3yXg"/>
+    </listClase>
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_0A8sMI1BEe60wezZQL3yXg" name="ViewModel" id="_BefMwM8_Ee2LAs71B-KWxw" type="System" pathElementRoot="projectnameandroid.ui.viewModels" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: viewModels)" nameSpaceElement="(from: viewModels)">
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_0CPFoI1BEe60wezZQL3yXg" name="idViewModel" id="_Zi0n4ONpEe2ETZLsx0OkvA" type="String" pathElementRoot="projectnameandroid.ui.viewModels" namePresentation="idViewModel:String"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_0CPFoY1BEe60wezZQL3yXg" name="setTheViewPart" id="_bhxA0eNpEe2ETZLsx0OkvA" pathElementRoot="projectnameandroid.ui.viewModels" typeElement="Operation"/>
+    </listClase>
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_18jdQI1BEe60wezZQL3yXg" name="DesktopVM" id="_fTwW0OOMEe2FpK-t18oFvw" type="System" description="" pathElementRoot="projectnameandroid.client.navigation" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: navigation)" nameSpaceElement="(from: navigation)" nombreArchivo="">
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_1-J_wI1BEe60wezZQL3yXg" name="implementModel" id="_NmTwwOOkEe2FpK-t18oFvw" description="" pathElementRoot="projectnameandroid.client.navigation" typeElement="Operation" body="void" returnTypeMethod=""/>
+    </listClase>
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_2yCTwI1BEe60wezZQL3yXg" name="CntLoginVM" id="_rZIHIN0_Ee2lzp2ogg8XCg" type="System" pathElementRoot="projectnameandroid.ui.viewModels.cntloginvm" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: cntloginvm)" nameSpaceElement="(from: cntloginvm)">
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_2zY-oI1BEe60wezZQL3yXg" name="implementarModelo" id="_G9wAIPWyEe2mdOX5y2I4KA" pathElementRoot="projectnameandroid.ui.viewModels.cntloginvm" typeElement="Operation"/>
+    </listClase>
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_1wQmUI1EEe60wezZQL3yXg" name="CntLoginVP" id="_p_T_EN1AEe2lzp2ogg8XCg" type="System" description="" pathElementRoot="projectnameandroid.ui.viewParts.cntloginvp" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: cntloginvp)" nameSpaceElement="(from: cntloginvp)" nombreArchivo=""/>
+    <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_1wcMgI1EEe60wezZQL3yXg" id="_jrDWQN1BEe2lzp2ogg8XCg" aRol="ownedByDesktopViewPart" bRol="theCntLoginVP" aMultiplicidad="_1" bMultiplicidad="_1" multiplicidadB="1" multiplicidadA=" " bContainment="si" bAgregacion="si" source="_fhKDsI1AEe60wezZQL3yXg" target="_1wQmUI1EEe60wezZQL3yXg"/>
+  </tooldataform.core:Datos_Diagram>
+  <notation:Diagram xmi:id="_d-O4YI1AEe60wezZQL3yXg" type="MetamodelodataformDatosDiagram" element="_d99LkI1AEe60wezZQL3yXg" name="newDiagram1" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_fhUbwI1AEe60wezZQL3yXg" type="2002" element="_fhKDsI1AEe60wezZQL3yXg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_fhUbxY1AEe60wezZQL3yXg" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_fhUbxo1AEe60wezZQL3yXg" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_fhUbx41AEe60wezZQL3yXg" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_fhUbyI1AEe60wezZQL3yXg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_fhUbyY1AEe60wezZQL3yXg"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_fhUbyo1AEe60wezZQL3yXg" type="7002">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_fhUby41AEe60wezZQL3yXg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_fhUbzI1AEe60wezZQL3yXg"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_fhUbwY1AEe60wezZQL3yXg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_fhUbwo1AEe60wezZQL3yXg" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_fhUbw41AEe60wezZQL3yXg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fhUbxI1AEe60wezZQL3yXg" x="410" y="70" height="196"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_0A9TQI1BEe60wezZQL3yXg" type="2002" element="_0A8sMI1BEe60wezZQL3yXg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_0A96UI1BEe60wezZQL3yXg" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_0A96UY1BEe60wezZQL3yXg" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_0A96Uo1BEe60wezZQL3yXg" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_0A96U41BEe60wezZQL3yXg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_0A96VI1BEe60wezZQL3yXg"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_0A96VY1BEe60wezZQL3yXg" type="7002">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_0A96Vo1BEe60wezZQL3yXg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_0A96V41BEe60wezZQL3yXg"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_0A9TQY1BEe60wezZQL3yXg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_0A9TQo1BEe60wezZQL3yXg" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_0A9TQ41BEe60wezZQL3yXg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0A9TRI1BEe60wezZQL3yXg" x="55" y="50" height="101"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_18kEUI1BEe60wezZQL3yXg" type="2002" element="_18jdQI1BEe60wezZQL3yXg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_18kEVY1BEe60wezZQL3yXg" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_18kEVo1BEe60wezZQL3yXg" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_18kEV41BEe60wezZQL3yXg" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_18kEWI1BEe60wezZQL3yXg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_18kEWY1BEe60wezZQL3yXg"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_18kEWo1BEe60wezZQL3yXg" type="7002">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_18kEW41BEe60wezZQL3yXg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_18kEXI1BEe60wezZQL3yXg"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_18kEUY1BEe60wezZQL3yXg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_18kEUo1BEe60wezZQL3yXg" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_18kEU41BEe60wezZQL3yXg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_18kEVI1BEe60wezZQL3yXg" x="55" y="210" height="91"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2yCTwY1BEe60wezZQL3yXg" type="2002" element="_2yCTwI1BEe60wezZQL3yXg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_2yCTxo1BEe60wezZQL3yXg" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_2yCTx41BEe60wezZQL3yXg" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_2yCTyI1BEe60wezZQL3yXg" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_2yCTyY1BEe60wezZQL3yXg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_2yCTyo1BEe60wezZQL3yXg"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_2yCTy41BEe60wezZQL3yXg" type="7002">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_2yCTzI1BEe60wezZQL3yXg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_2yCTzY1BEe60wezZQL3yXg"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_2yCTwo1BEe60wezZQL3yXg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_2yCTw41BEe60wezZQL3yXg" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_2yCTxI1BEe60wezZQL3yXg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2yCTxY1BEe60wezZQL3yXg" x="50" y="355" height="86"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_1wRNYI1EEe60wezZQL3yXg" type="2002" element="_1wQmUI1EEe60wezZQL3yXg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_1wRNZY1EEe60wezZQL3yXg" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_1wRNZo1EEe60wezZQL3yXg" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_1wRNZ41EEe60wezZQL3yXg" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_1wRNaI1EEe60wezZQL3yXg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_1wRNaY1EEe60wezZQL3yXg"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_1wRNao1EEe60wezZQL3yXg" type="7002">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_1wRNa41EEe60wezZQL3yXg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_1wRNbI1EEe60wezZQL3yXg"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_1wRNYY1EEe60wezZQL3yXg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_1wRNYo1EEe60wezZQL3yXg" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_1wRNY41EEe60wezZQL3yXg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1wRNZI1EEe60wezZQL3yXg" x="781" y="154"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_d-O4YY1AEe60wezZQL3yXg"/>
+  </notation:Diagram>
+</xmi:XMI>

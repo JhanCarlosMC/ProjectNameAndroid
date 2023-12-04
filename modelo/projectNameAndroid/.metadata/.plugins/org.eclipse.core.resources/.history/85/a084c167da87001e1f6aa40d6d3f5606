@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.statemachine.abstract="http:///tooldataform/statemachine/abstract.ecore" xsi:schemaLocation="http:///tooldataform/statemachine/abstract.ecore http:///tooldataform.ecore#//abstract">
-  <tooldataform.statemachine.abstract:StateChartDiagram xmi:id="_eyRl4YfZEe6hSpI4iFp3kQ"/>
-  <notation:Diagram xmi:id="_eyUCIIfZEe6hSpI4iFp3kQ" type="MetamodelodataformStateChartDiagram" element="_eyRl4YfZEe6hSpI4iFp3kQ" name="navigationMachine" measurementUnit="Pixel">
-    <styles xmi:type="notation:DiagramStyle" xmi:id="_eyUCIYfZEe6hSpI4iFp3kQ"/>
-  </notation:Diagram>
-</xmi:XMI>

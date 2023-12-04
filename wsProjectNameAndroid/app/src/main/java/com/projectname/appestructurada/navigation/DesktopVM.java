@@ -34,17 +34,19 @@ public class DesktopVM extends ViewModel {
         newCntDenunciaVM.setTheUIManager(getTheUIManager());
 
         //Configurar el id de cada hijo  "newHijo.setIdViewModel(getIdViewModel() + ":Tipo<Hijo>");"
-        newCntLoginVM.setIdViewModel(getIdViewModel() + ":LoginViewModel");
-        newCntHomeVM.setIdViewModel(getIdViewModel() + ":HomeViewModel");
-        newCntDenunciaVM.setIdViewModel(getIdViewModel() + "DenunciaViewModel");
+        newCntLoginVM.setIdViewModel(getIdViewModel() + ":CntLoginVM");
+        newCntHomeVM.setIdViewModel(getIdViewModel() + ":CntHomeVM");
+        newCntDenunciaVM.setIdViewModel(getIdViewModel() + "CntDenunciaVM");
 
         //Implementar el modelo de los hijos "newHijo.implementarModelo();"
         newCntLoginVM.implementModel();
         newCntHomeVM.implementModel();
         newCntDenunciaVM.implementModel();
 
-        //Registrar viewVM
-
+        //Registrar el viewModel de los hijos " getTheUIManager().registrarViewModel(newHijo.getIdViewModel(), newHijo);
+        getTheUIManager().registerViewModel(newCntLoginVM.getIdViewModel(), newCntLoginVM);
+        getTheUIManager().registerViewModel(newCntHomeVM.getIdViewModel(), newCntHomeVM);
+        getTheUIManager().registerViewModel(newCntDenunciaVM.getIdViewModel(), newCntDenunciaVM);
     }
 
     public CntLoginVM getFormLoginVM() {

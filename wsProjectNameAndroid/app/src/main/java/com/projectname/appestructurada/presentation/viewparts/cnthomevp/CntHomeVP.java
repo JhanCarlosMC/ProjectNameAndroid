@@ -12,17 +12,17 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
-import com.projectname.appestructurada.databinding.HomeBinding;
-import com.projectname.appestructurada.kernel.ViewVP;
+import com.projectname.appestructurada.databinding.FragmentHomeBinding;
+import com.projectname.appestructurada.data.ViewVP;
 import com.projectname.appestructurada.navigation.DesktopVP;
-import com.projectname.appestructurada.navigation.UIManager;
+import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
 import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHomeVM;
 
 
 public class CntHomeVP extends Fragment implements ViewVP {
 
-    private HomeBinding bindingHome;
+    private FragmentHomeBinding bindingHome;
     private CntHomeVM cntHomeVM;
     ViewVP ownedByVP;
     APP app = APP.getInstance();
@@ -35,7 +35,7 @@ public class CntHomeVP extends Fragment implements ViewVP {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        bindingHome = HomeBinding.inflate(inflater, container, false);
+        bindingHome = FragmentHomeBinding.inflate(inflater, container, false);
         View root = bindingHome.getRoot();
         cntHomeVM = new ViewModelProvider(this).get(CntHomeVM.class);
 
@@ -50,7 +50,7 @@ public class CntHomeVP extends Fragment implements ViewVP {
     private void initComponents() {
         // Inicializar Widgets
 
-        textView = bindingHome.textHome;
+        textView = bindingHome.txtHome;
         cntHomeVM.getText().observe(getViewLifecycleOwner(), textView::setText);
     }
 

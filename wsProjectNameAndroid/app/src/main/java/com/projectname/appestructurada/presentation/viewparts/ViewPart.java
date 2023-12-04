@@ -1,6 +1,6 @@
 package com.projectname.appestructurada.presentation.viewparts;
 
-import com.projectname.appestructurada.kernel.ViewVP;
+import com.projectname.appestructurada.data.ViewVP;
 
 public class ViewPart {
     private String idViewPart = "";

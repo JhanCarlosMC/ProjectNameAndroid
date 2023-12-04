@@ -3,7 +3,6 @@ package com.projectname.appestructurada.navigation;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +11,9 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.projectname.appestructurada.APP;
 import com.projectname.appestructurada.R;
-import com.projectname.appestructurada.kernel.ViewVP;
-import com.projectname.appestructurada.logic.Domain;
+import com.projectname.appestructurada.data.ViewVP;
+import com.projectname.appestructurada.logic.Logic;
+import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
 import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
 import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
@@ -50,11 +50,10 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
     //Internal_context-Widgets
     BottomNavigationView navigationButton;
-    Handler theHandler;
     BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
 
     public static void login(CntLoginVM newCntLoginVM) {
-        Domain.login(newCntLoginVM);
+        Logic.login(newCntLoginVM);
     }
 
     @Override
@@ -128,9 +127,9 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         setIdViewPart("Desktop_A");//--> Solo para la ViewPart que se carga de primera
 
         //  [x] aplica,regsitrar ids hijos
-        newCntLoginVP.setIdViewPart("LoginUI");
-        newCntHomeVP.setIdViewPart("HomeUI");
-        newCntDenunciaVP.setIdViewPart("DenunciaUI");
+        newCntLoginVP.setIdViewPart("LoginUI_A");
+        newCntHomeVP.setIdViewPart("HomeUI_F");
+        newCntDenunciaVP.setIdViewPart("DenunciaUI_F");
 
         //---------------------------------Configurar id's de la viewpart-----------------------------------------------------------------------------------------
 
@@ -145,11 +144,20 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
         //  [x] aplica,  //registrar el viewPart de los hijos: getTheUIManager().registrarViewPart(newHijo.getIIdViewPart(), newHijo);
-        getUIManager().registerViewPart(newCntLoginVP, "LoginUI");
-        getUiManager().registerViewPart(newCntHomeVP, "HomeUI");
-        getUIManager().registerViewPart(newCntDenunciaVP, "DenunciaUI");
+        getUIManager().registerViewPart(newCntLoginVP, "LoginUI_A");
+        getUiManager().registerViewPart(newCntHomeVP, "HomeUI_F");
+        getUIManager().registerViewPart(newCntDenunciaVP, "DenunciaUI_F");
 
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
+
+        //---------------------------------registrar viewmodel de los hijos-----------------------------------------------------------------------------------------
+        //  [x] aplica,  //registrar el viewmodel de los hijos: getTheUIManager().registrarViewModel(newHijo.getIIdViewModel(), newHijo);
+        getUIManager().registerViewPart(newCntLoginVP, "LoginUI_A");
+        getUiManager().registerViewPart(newCntHomeVP, "HomeUI_F");
+        getUIManager().registerViewPart(newCntDenunciaVP, "DenunciaUI_F");
+
+        //---------------------------------registrar viewmodel de los hijos-----------------------------------------------------------------------------------------
+
 
         //---------------------------------Implementar los widgets de la ViewPart-----------------------------------------------------------------------------------------
         //  [x] aplica,  []---> crear los widgets de la pantalla [solamente la creacion desde el recurso]: tipoWidget newWidget = findViewById(R.id.nombreWidgetEnElLayout);
@@ -170,7 +178,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         //  [] aplica,  //inicializar el automata: getViewModel().actualizarMaquina("iniciarViewModel");
         getUIManager().navigationMachine("control");
         String action = getUIManager().navigationMachine("home");
-/*        action = getUIManager().navigationMachine("denuncia");*/
+        /*        action = getUIManager().navigationMachine("denuncia");*/
 
         //---------------------------------montar el automata de la interfaz-----------------------------------------------------------------------------------------
 
@@ -235,7 +243,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
     }
 
     public void updateViewPartContext() {
- ///obtener el contexto:context
+        ///obtener el contexto:context
         //-----------------------------------------------------
         //-----------------------------------------------------
         //obtener el contexto y set:APP
@@ -249,7 +257,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //-----------------------------------------------------
         //obtener el contexto y set:desktopVM
-        DesktopVM deskvm = getApp().getDesktopVM();
+        DesktopVM deskvm = getApp().getTheDesktopVM();
         setDesktopVM(deskvm);
 
         //-----------------------------------------------------
@@ -269,17 +277,6 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         //setear la denunciaVM
         setDenunciaVM(dvm);
 
-        //-----------------------------------------------------
-        //montar el handler
-        //crear el handler
-        Handler h = new Handler() {
-
-
-        };
-        //setear el handler
-        setTheHandler(h);
-        //montar el handler
-        //-----------------------------------------------------
         //-----------------------------------------------------
         setRendered(true);
         //-----------------------------------------------------
@@ -374,14 +371,6 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         this.navigationButton = navigationButton;
     }
 
-    public Handler getTheHandler() {
-        return theHandler;
-    }
-
-    public void setTheHandler(Handler theHandler) {
-        this.theHandler = theHandler;
-    }
-
     public void setIdViewPart(String newIdViewPart) {
         idViewPart = newIdViewPart;
     }
@@ -395,10 +384,10 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
     }
 
-
     public ViewVP getOwnedByVP() {
         return null;
     }
+
     public UIManager getUIManager() {
         return uiManager;
     }

@@ -9,18 +9,18 @@
         android:id="@+id/navigation_home"
         android:name="com.projectname.appestructurada.presentation.viewparts.cnthomevp.CntHomeVP"
         android:label="@string/title_home"
-        tools:layout="@layout/home" />
+        tools:layout="@layout/fragment_home" />
 
     <FrameLayout
         android:id="@+id/navigation_login"
         android:name="com.projectname.appestructurada.presentation.viewparts.cntloginvp.CntLoginVP"
         android:label="@string/title_login"
-        tools:layout="@layout/login_form" />
+        tools:layout="@layout/activity_login" />
 
     <fragment
         android:id="@+id/navigation_denuncia"
         android:name="com.projectname.appestructurada.presentation.viewparts.cntdenunciavp.CntDenunciaVP"
         android:label="@string/title_denuncia"
-        tools:layout="@layout/denuncia" />
+        tools:layout="@layout/fragment_denuncia" />
 
 </navigation>

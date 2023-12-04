@@ -2,9 +2,12 @@ package com.projectname.appestructurada;
 
 import android.app.Application;
 
-import com.projectname.appestructurada.logic.Domain;
+import com.projectname.appestructurada.domain.Domain;
+import com.projectname.appestructurada.data.Kernel;
+import com.projectname.appestructurada.logic.Logic;
 import com.projectname.appestructurada.navigation.DesktopVM;
-import com.projectname.appestructurada.navigation.UIManager;
+import com.projectname.appestructurada.persistence.Persistence;
+import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
 import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
 import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHomeVM;
@@ -15,9 +18,12 @@ public class APP extends Application {
     //Variables propias
     private UIManager theUIManager;
     private Domain theDomain;
+    private Persistence thePersistence;
+    private Logic theLogic;
+    private Kernel theKernel;
 
     //Variables de contexto
-    DesktopVM desktopVM;
+    DesktopVM theDesktopVM;
     CntLoginVM cntLoginVM;
     CntHomeVM cntHomeVM;
     CntDenunciaVM cntDenunciaVM;
@@ -32,7 +38,8 @@ public class APP extends Application {
     public static APP getInstance() {
         return SingletonHolder.eINSTANCE;
     }
-    //------------------------------  Singleton ------------------------------------------------
+    //------------------------------  Singleton -------------------------------------------------
+
     public APP() {
         implementModel();
     }
@@ -40,6 +47,10 @@ public class APP extends Application {
     public APP implementModel() {
         UIManager newUiManager = getTheUIManager();
         Domain newDomain = getTheDomain();
+        Persistence newPersistence = getThePersistence();
+
+        Logic newLogic = getTheLogic();
+        Kernel newKernel = getTheKernel();
 
         if(newUiManager == null){
             newUiManager = new UIManager();
@@ -50,6 +61,22 @@ public class APP extends Application {
             setTheDomain(newDomain);
         }
 
+        if(newPersistence == null){
+            newPersistence = new Persistence();
+            setThePersistence(newPersistence);
+        }
+
+        if(newLogic == null){
+            newLogic = new Logic();
+            setTheLogic(newLogic);
+        }
+
+        if(newKernel == null){
+            newKernel = new Kernel();
+            setTheKernel(newKernel);
+        }
+
+        getTheDomain().setThePersistence(getThePersistence());
         getTheDomain().setTheUIManager(getTheUIManager());
         getTheUIManager().implementModel();
         return this;
@@ -71,16 +98,40 @@ public class APP extends Application {
         this.theDomain = theDomain;
     }
 
-    public DesktopVM getDesktopVM() {
-        return desktopVM = getTheUIManager().getTheDesktopVM();
+    public Persistence getThePersistence() {
+        return thePersistence;
     }
 
-    public void setDesktopVM(DesktopVM desktopVM) {
-        this.desktopVM = desktopVM;
+    public void setThePersistence(Persistence thePersistence) {
+        this.thePersistence = thePersistence;
+    }
+
+    public Logic getTheLogic() {
+        return theLogic;
+    }
+
+    public void setTheLogic(Logic theLogic) {
+        this.theLogic = theLogic;
+    }
+
+    public Kernel getTheKernel() {
+        return theKernel;
+    }
+
+    public void setTheKernel(Kernel theKernel) {
+        this.theKernel = theKernel;
+    }
+
+    public DesktopVM getTheDesktopVM() {
+        return theDesktopVM = getTheUIManager().getTheDesktopVM();
+    }
+
+    public void setTheDesktopVM(DesktopVM theDesktopVM) {
+        this.theDesktopVM = theDesktopVM;
     }
 
     public CntLoginVM getFormLoginVM() {
-        return cntLoginVM = getDesktopVM().getFormLoginVM();
+        return cntLoginVM = getTheDesktopVM().getFormLoginVM();
     }
 
     public void setFormLoginVM(CntLoginVM cntLoginVM) {
@@ -88,7 +139,7 @@ public class APP extends Application {
     }
 
     public CntHomeVM getHomeVM() {
-        return cntHomeVM = getDesktopVM().getHomeVM();
+        return cntHomeVM = getTheDesktopVM().getHomeVM();
     }
 
     public void setHomeVM(CntHomeVM cntHomeVM) {
@@ -96,7 +147,7 @@ public class APP extends Application {
     }
 
     public CntDenunciaVM getDenunciaVM() {
-        return cntDenunciaVM = getDesktopVM().getDenunciaVM();
+        return cntDenunciaVM = getTheDesktopVM().getDenunciaVM();
     }
 
     public void setDenunciaVM(CntDenunciaVM cntDenunciaVM) {

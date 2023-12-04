@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tooldataform.ui:UI_Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui" xmi:id="_iNWSAJBSEe6zlpcS7w3k4w" name="ViewPart: Dd">
+  <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_iNW5EJBSEe6zlpcS7w3k4w" nameVar="Dd" type="View Modal" width="200" height="300" positionX="0" positionY="0" idWidget="_iNO9QJBSEe6zlpcS7w3k4w">
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_iNW5EZBSEe6zlpcS7w3k4w" name="viewPartLoadedAction" id="_iNO9QZBSEe6zlpcS7w3k4w" typeElement="Operation" urlIcon="" visible="true"/>
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_iNW5EpBSEe6zlpcS7w3k4w" name="constructorNameViewPart" id="_iNO9QpBSEe6zlpcS7w3k4w" typeElement="Operation" urlIcon="" visible="true"/>
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_iNW5E5BSEe6zlpcS7w3k4w" name="reboot" id="_iNO9Q5BSEe6zlpcS7w3k4w" typeElement="Operation" urlIcon="" visible="true"/>
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_iNW5FJBSEe6zlpcS7w3k4w" name="syncModel" id="_iNO9RJBSEe6zlpcS7w3k4w" typeElement="Operation" urlIcon="" visible="true"/>
+  </theUserInterface>
+</tooldataform.ui:UI_Diagram>

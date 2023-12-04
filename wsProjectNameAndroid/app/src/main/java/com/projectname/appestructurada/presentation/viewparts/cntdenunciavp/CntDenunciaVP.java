@@ -22,16 +22,16 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
 import com.projectname.appestructurada.R;
-import com.projectname.appestructurada.databinding.DenunciaBinding;
-import com.projectname.appestructurada.kernel.ViewVP;
+import com.projectname.appestructurada.databinding.FragmentDenunciaBinding;
+import com.projectname.appestructurada.data.ViewVP;
 import com.projectname.appestructurada.navigation.DesktopVP;
-import com.projectname.appestructurada.navigation.UIManager;
+import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
 import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
 
 public class CntDenunciaVP extends Fragment implements ViewVP {
 
-    private DenunciaBinding bindingDenuncia;
+    private FragmentDenunciaBinding bindingDenuncia;
     private CntDenunciaVM cntDenunciaVM;
     ViewVP ownedByVP;
     APP app = APP.getInstance();
@@ -61,7 +61,7 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         cntDenunciaVM = new ViewModelProvider(this).get(CntDenunciaVM.class);
-        bindingDenuncia = DenunciaBinding.inflate(inflater, container, false);
+        bindingDenuncia = FragmentDenunciaBinding.inflate(inflater, container, false);
         View root = bindingDenuncia.getRoot();
 
         /*Carga de informacion desde la VM a la VP*/
@@ -99,51 +99,51 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
     private void initComponents() {
         // Inicializar Widgets
-        labelContexto = bindingDenuncia.contextoDenuncia;
+        labelContexto = bindingDenuncia.txtContext;
         cntDenunciaVM.getLabelContexto().observe(this, labelContexto::setText);
 
-        labelVolumenResiduo = bindingDenuncia.fragmentVolumenResiduo.textviewCartTittle;
+        labelVolumenResiduo = bindingDenuncia.includeVolumenResiduo.txtCartTitle;
         cntDenunciaVM.getLabelVolumenResiduo().observe(this, labelVolumenResiduo::setText);
 
-        labelVolumenResiduoSeleccionado = bindingDenuncia.fragmentVolumenResiduo.textviewCartSeleccionado;
+        labelVolumenResiduoSeleccionado = bindingDenuncia.includeVolumenResiduo.txtSelected;
         cntDenunciaVM.getLabelVolumenResiduoSeleccionado().observe(this, labelVolumenResiduoSeleccionado::setText);
 
-            labelVolumenResiduoFeedback = bindingDenuncia.fragmentVolumenResiduo.cartFeedback;
+            labelVolumenResiduoFeedback = bindingDenuncia.includeVolumenResiduo.txtFeedback;
             cntDenunciaVM.getLabelVolumenResiduoFeedback().observe(this, labelVolumenResiduoFeedback::setText);
             cntDenunciaVM.getLabelVolumenResiduoFeedbackColor().observe(this, labelVolumenResiduoFeedback::setTextColor);
             labelVolumenResiduoFeedback.setTextColor(getResources().getColor(R.color.colorRojo));
 
-        labelTipoResiduo = bindingDenuncia.fragmentTipoResiduo.textviewCartTittle;
+        labelTipoResiduo = bindingDenuncia.includeTipoResiduo.txtCartTitle;
         cntDenunciaVM.getLabelTipoResiduo().observe(this, labelTipoResiduo::setText);
 
-        labelTipoResiduoSeleccionado = bindingDenuncia.fragmentTipoResiduo.textviewCartSeleccionado;
+        labelTipoResiduoSeleccionado = bindingDenuncia.includeTipoResiduo.txtSelected;
         cntDenunciaVM.getLabelTipoResiduoSeleccionado().observe(this, labelTipoResiduoSeleccionado::setText);
 
-            labelTipoResiduoFeedback = bindingDenuncia.fragmentTipoResiduo.cartFeedback;
+            labelTipoResiduoFeedback = bindingDenuncia.includeTipoResiduo.txtFeedback;
             cntDenunciaVM.getLabelTipoResiduoFeedback().observe(this,labelTipoResiduoFeedback::setText);
 
-        labelInformacionAdicional = bindingDenuncia.fragmentInformacionAdicional.textviewCartTittle;
+        labelInformacionAdicional = bindingDenuncia.includeInformacionAdicional.txtCartTitle;
         cntDenunciaVM.getLabelInformacionAdicional().observe(this, labelInformacionAdicional::setText);
 
-        labelInformacionAdicionalSeleccionado = bindingDenuncia.fragmentInformacionAdicional.textviewCartSeleccionado;
+        labelInformacionAdicionalSeleccionado = bindingDenuncia.includeInformacionAdicional.txtSelected;
         cntDenunciaVM.getLabelInformacionAdicionalSeleccionado().observe(this, labelInformacionAdicionalSeleccionado::setText);
 
-            labelInformacionAdicionalFeedback = bindingDenuncia.fragmentInformacionAdicional.cartFeedback;
+            labelInformacionAdicionalFeedback = bindingDenuncia.includeInformacionAdicional.txtFeedback;
             cntDenunciaVM.getLabelInformacionAdicionalFeedback().observe(this,labelInformacionAdicionalFeedback::setText);
 
-        labelTipoDenuncia = bindingDenuncia.fragmentTipoDenuncia.textviewCartTittle;
+        labelTipoDenuncia = bindingDenuncia.includeTipoDenuncia.txtCartTitle;
         cntDenunciaVM.getLabelTipoDenuncia().observe(this,labelTipoDenuncia::setText);
 
-        radioButtonPublica = bindingDenuncia.fragmentTipoDenuncia.radioGroupOptionUno;
+        radioButtonPublica = bindingDenuncia.includeTipoDenuncia.rgOptionOne;
         cntDenunciaVM.getRadioLabelPublica().observe(this,radioButtonPublica::setText);
 
-        radioButtonAnonima = bindingDenuncia.fragmentTipoDenuncia.radioGroupOptionDos;
+        radioButtonAnonima = bindingDenuncia.includeTipoDenuncia.rgOptionTwo;
         cntDenunciaVM.getRadioLabelAnonima().observe(this,radioButtonAnonima::setText);
 
-        checkBoxTerminosCondiciones = bindingDenuncia.fragmentTerminosCondicionesDenuncia.checkboxTerminosCondiciones;
+        checkBoxTerminosCondiciones = bindingDenuncia.includeTerminosCondicionesDenuncia.cbxCheckbox;
         cntDenunciaVM.getCheckBoxTerminosCondiciones().observe(this, checkBoxTerminosCondiciones::setText);
 
-        labelVerTerminosCondiciones = bindingDenuncia.fragmentTerminosCondicionesDenuncia.verTerminosCondiciones;
+        labelVerTerminosCondiciones = bindingDenuncia.includeTerminosCondicionesDenuncia.txtText;
         cntDenunciaVM.getLabelVerTerminosCondiciones().observe(this, labelVerTerminosCondiciones::setText);
 
     }

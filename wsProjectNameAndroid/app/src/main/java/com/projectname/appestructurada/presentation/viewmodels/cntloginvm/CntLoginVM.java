@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
+import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
+import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHomeVM;
 
 public class CntLoginVM extends ViewModel {
     private final MutableLiveData<String> labelUser;
@@ -17,7 +19,7 @@ public class CntLoginVM extends ViewModel {
     private final MutableLiveData<String> buttonLogin;
     private final MutableLiveData<Integer> inputType;
 
-    public CntLoginVM(){
+    public CntLoginVM() {
         labelUser = new MutableLiveData<>();
         labelUser.setValue("User");
 
@@ -43,11 +45,28 @@ public class CntLoginVM extends ViewModel {
         inputType.setValue(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
     }
 
-    public LiveData<String> getLabelUser(){
+    public void implementModel() {
+        //Instanciar Hijos --> HijoVM newHijo = new HijoVM();
+
+        //Enlazar el padre con sus hijos mediante metodos set de la clase que se esta implementando "sethijo(newHijo);
+
+        //Enlazar los hijos con su padre (clase que se esta implementando - "this") "newHijo.setOwnedBy(this);"
+
+        //Enlazar los hijos con con el UIManager "newHijo.setTheUIManager(getTheUIManager());"
+
+        //Configurar el id de cada hijo  "newHijo.setIdViewModel(getIdViewModel() + ":Tipo<Hijo>");"
+
+        //Implementar el modelo de los hijos "newHijo.implementarModelo();"
+
+        //Registrar el viewModel de los hijos " getTheUIManager().registrarViewModel(newHijo.getIdViewModel(), newHijo);
+
+    }
+
+    public LiveData<String> getLabelUser() {
         return labelUser;
     }
 
-    public LiveData<String> getTextUser(){
+    public LiveData<String> getTextUser() {
         return textUser;
     }
 
@@ -64,7 +83,7 @@ public class CntLoginVM extends ViewModel {
         return textPassword;
     }
 
-    public void setTextPassword(String newPassword){
+    public void setTextPassword(String newPassword) {
         textPassword.setValue(newPassword);
     }
 
@@ -80,14 +99,13 @@ public class CntLoginVM extends ViewModel {
         return buttonLogin;
     }
 
-    public LiveData<Integer> getInputType(){
+    public LiveData<Integer> getInputType() {
         return inputType;
     }
 
-    public void implementModel() {
-    }
 
-    public void resetTexts(){
+
+    public void resetTexts() {
         textUser.setValue("pepitoperez@example.com");
         textPassword.setValue("*********");
     }

@@ -12,15 +12,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
-import com.projectname.appestructurada.databinding.LoginBinding;
-import com.projectname.appestructurada.kernel.ViewVP;
+import com.projectname.appestructurada.databinding.ActivityLoginBinding;
+import com.projectname.appestructurada.data.ViewVP;
 import com.projectname.appestructurada.navigation.DesktopVP;
-import com.projectname.appestructurada.navigation.UIManager;
+import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
 import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
 
 public class CntLoginVP extends AppCompatActivity implements ViewVP {
-    private LoginBinding bindingLogin;
+    private ActivityLoginBinding bindingLogin;
     private CntLoginVM cntLoginVM;
     ViewVP ownedByVP;
     APP app = APP.getInstance();
@@ -70,16 +70,16 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     private void initComponents() {
         // Inicializar Widgets
 
-        labelUser = bindingLogin.cardviewLogin.fragmentUserInfo.labelUser;
+        labelUser = bindingLogin.cardviewLogin.includeUserInfo.txtTitle;
         cntLoginVM.getLabelUser().observe(this, labelUser::setText);
 
-        textUser = bindingLogin.cardviewLogin.fragmentUserInfo.textUser;
+        textUser = bindingLogin.cardviewLogin.includeUserInfo.etInput;
         cntLoginVM.getTextUser().observe(this, textUser::setHint);
 
-        labelPassword = bindingLogin.cardviewLogin.fragmentPasswordInfo.labelUser;
+        labelPassword = bindingLogin.cardviewLogin.includePasswordInfo.txtTitle;
         cntLoginVM.getLabelPassword().observe(this, labelPassword::setText);
 
-        textPassword = bindingLogin.cardviewLogin.fragmentPasswordInfo.textUser;
+        textPassword = bindingLogin.cardviewLogin.includePasswordInfo.etInput;
         cntLoginVM.getTextPassword().observe(this, textPassword::setHint);
         cntLoginVM.getInputType().observe(this, textPassword::setInputType);
 
@@ -89,7 +89,7 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
         checkBoxRememberme = bindingLogin.remembermeCheckbox;
         cntLoginVM.getCheckBoxRecuerdame().observe(this, checkBoxRememberme::setText);
 
-        buttonLogin = bindingLogin.buttonLogin;
+        buttonLogin = bindingLogin.btnLogin;
         cntLoginVM.getButtonLogin().observe(this, buttonLogin::setText);
     }
 
