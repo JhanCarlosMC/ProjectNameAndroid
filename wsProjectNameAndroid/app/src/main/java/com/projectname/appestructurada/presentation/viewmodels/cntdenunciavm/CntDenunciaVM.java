@@ -1,5 +1,9 @@
 package com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm;
 
+import android.content.res.Resources;
+import android.util.Log;
+
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.MutableLiveData;
 
 import com.projectname.appestructurada.R;
@@ -65,7 +69,8 @@ public class CntDenunciaVM extends ViewModel {
         labelVolumenResiduoFeedback.setValue("Completar");
 
         labelVolumenResiduoFeedbackColor = new MutableLiveData<>();
-        labelVolumenResiduoFeedbackColor.setValue(R.color.colorRojo);
+//        Log.e("Color: ", ""+R.color.colorRojo);
+        labelVolumenResiduoFeedbackColor.setValue(R.color.color_verde);
 
         labelTipoResiduoFeedback = new MutableLiveData<>();
         labelTipoResiduoFeedback.setValue("Completar");

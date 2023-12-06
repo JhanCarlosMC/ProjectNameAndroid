@@ -1,5 +1,7 @@
 package com.projectname.appestructurada.presentation;
 
+import android.util.Log;
+
 import com.projectname.appestructurada.data.ViewVP;
 import com.projectname.appestructurada.domain.Domain;
 import com.projectname.appestructurada.navigation.DesktopVM;
@@ -14,11 +16,10 @@ public class UIManager extends ViewModel {
     private String uiRendered = "NOT_INITIALIZED";
     private String lastUiRendered = " ";
     private String nextNavigationViewPart = " ";
-    private List<ViewPart> listRegisteredScreens;
-    private List<ViewModel> listViewModels;
-
     private String state = "NOT_INITIALIZED";
 
+    private List<ViewPart> listRegisteredScreens;
+    private List<ViewModel> listViewModels;
     //Relaciones
     private DesktopVM theDesktopVM;
     private Domain theDomain;
@@ -107,13 +108,13 @@ public class UIManager extends ViewModel {
 
     public void registerViewModel(String idViewModel, ViewModel newViewModel) {
         //VERIFICAR CONTENIDO
-//
-//        for (ViewModel tmpViewModel : getListViewModels()) {
-//            if (tmpViewModel.getIdViewModel().equals(idViewModel)) return;
-//        }
-//
-//        newViewModel.setIdViewModel(idViewModel);
-//        getListViewModels().add(newViewModel);
+
+        for (ViewModel tmpViewModel : getListViewModels()) {
+            if (tmpViewModel.getIdViewModel().equals(idViewModel)) return;
+        }
+
+        newViewModel.setIdViewModel(idViewModel);
+        getListViewModels().add(newViewModel);
     }
 
     public String getUiRendered() {
@@ -138,14 +139,6 @@ public class UIManager extends ViewModel {
 
     public void setNextNavigationViewPart(String nextNavigationViewPart) {
         this.nextNavigationViewPart = nextNavigationViewPart;
-    }
-
-    public List<ViewModel> getListViewModels() {
-        return listViewModels;
-    }
-
-    public void setListViewModels(List<ViewModel> listViewModels) {
-        this.listViewModels = listViewModels;
     }
 
     public DesktopVM getTheDesktopVM() {
@@ -173,5 +166,16 @@ public class UIManager extends ViewModel {
 
     public void setListRegisteredScreens(List<ViewPart> listRegisteredScreens) {
         this.listRegisteredScreens = listRegisteredScreens;
+    }
+
+    public List<ViewModel> getListViewModels() {
+        if (listViewModels == null){
+            listViewModels = new ArrayList<>();
+        }
+        return listViewModels;
+    }
+
+    public void setListViewModels(List<ViewModel> listViewModels) {
+        this.listViewModels = listViewModels;
     }
 }

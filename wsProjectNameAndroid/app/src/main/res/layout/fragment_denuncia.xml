@@ -14,6 +14,10 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
+        <include
+            android:id="@+id/include_toolbar_vermas"
+            layout="@layout/widget_toolbar_vermas" />
+
         <TextView
             android:id="@+id/txt_context"
             android:layout_width="match_parent"
@@ -34,30 +38,30 @@
             app:cardPreventCornerOverlap="false"
             app:cardUseCompatPadding="true">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/marginTop_10dp"
-                    android:orientation="vertical"
-                    android:paddingBottom="@dimen/layout_margin_10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/marginTop_10dp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/layout_margin_10dp">
 
-                    <!--Includes Reutilizables-->
-                    <include
-                        android:id="@+id/include_volumen_residuo"
-                        layout="@layout/widget_cardview_summary" />
+                <!--Includes Reutilizables-->
+                <include
+                    android:id="@+id/include_volumen_residuo"
+                    layout="@layout/widget_cardview_summary" />
 
-                    <include
-                        android:id="@+id/include_tipo_residuo"
-                        layout="@layout/widget_cardview_summary" />
+                <include
+                    android:id="@+id/include_tipo_residuo"
+                    layout="@layout/widget_cardview_summary" />
 
-                    <include
-                        android:id="@+id/include_informacion_adicional"
-                        layout="@layout/widget_cardview_summary" />
+                <include
+                    android:id="@+id/include_informacion_adicional"
+                    layout="@layout/widget_cardview_summary" />
 
-                    <include
-                        android:id="@+id/include_tipo_denuncia"
-                        layout="@layout/widget_cardview_radio" />
-                    <!--Includes Reutilizables-->
+                <include
+                    android:id="@+id/include_tipo_denuncia"
+                    layout="@layout/widget_cardview_radio" />
+                <!--Includes Reutilizables-->
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -65,7 +69,7 @@
         <!--Includes Reutilizables-->
         <include
             android:id="@+id/include_terminos_condiciones_denuncia"
-            layout="@layout/widget_checkbox_text"/>
+            layout="@layout/widget_checkbox_text" />
 
         <!--Includes Reutilizables-->
 
@@ -84,13 +88,13 @@
                 android:id="@+id/btn_limpiar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:textAllCaps="false"
-                android:layout_weight="1"
-                android:enabled="false"
-                android:textSize="@dimen/titulo_contenedor"
                 android:layout_centerInParent="true"
-                android:text="@string/limpiar"/>
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:enabled="false"
+                android:text="@string/limpiar"
+                android:textAllCaps="false"
+                android:textSize="@dimen/titulo_contenedor" />
 
             <Button
                 android:id="@+id/btn_denunciar"

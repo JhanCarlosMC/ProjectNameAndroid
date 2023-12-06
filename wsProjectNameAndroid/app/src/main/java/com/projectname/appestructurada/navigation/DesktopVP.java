@@ -150,15 +150,6 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
 
-        //---------------------------------registrar viewmodel de los hijos-----------------------------------------------------------------------------------------
-        //  [x] aplica,  //registrar el viewmodel de los hijos: getTheUIManager().registrarViewModel(newHijo.getIIdViewModel(), newHijo);
-        getUIManager().registerViewPart(newCntLoginVP, "LoginUI_A");
-        getUiManager().registerViewPart(newCntHomeVP, "HomeUI_F");
-        getUIManager().registerViewPart(newCntDenunciaVP, "DenunciaUI_F");
-
-        //---------------------------------registrar viewmodel de los hijos-----------------------------------------------------------------------------------------
-
-
         //---------------------------------Implementar los widgets de la ViewPart-----------------------------------------------------------------------------------------
         //  [x] aplica,  []---> crear los widgets de la pantalla [solamente la creacion desde el recurso]: tipoWidget newWidget = findViewById(R.id.nombreWidgetEnElLayout);
         implementWidgets();

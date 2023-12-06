@@ -68,13 +68,6 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         initComponents();
         settingEvents();
 
-        //COMO NOMBRAR ESTA SECCION(PONERLO DENTRO DE OTRO METODO O PUEDE IR EN SETTINGSEVENTS)
-        ((AppCompatActivity) getActivity()).getSupportActionBar().show();
-        requireActivity().setTitle("Denuncia");
-
-        //indica que el Fragment tiene opciones de menú
-        setHasOptionsMenu(true);
-
         return root;
     }
 
@@ -110,8 +103,8 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
             labelVolumenResiduoFeedback = bindingDenuncia.includeVolumenResiduo.txtFeedback;
             cntDenunciaVM.getLabelVolumenResiduoFeedback().observe(this, labelVolumenResiduoFeedback::setText);
-            cntDenunciaVM.getLabelVolumenResiduoFeedbackColor().observe(this, labelVolumenResiduoFeedback::setTextColor);
-            labelVolumenResiduoFeedback.setTextColor(getResources().getColor(R.color.colorRojo));
+            cntDenunciaVM.getLabelVolumenResiduoFeedbackColor().observe(this, labelVolumenResiduoFeedback::setBackgroundColor);
+//            labelVolumenResiduoFeedback.setTextColor(getResources().getColor(R.color.colorRojo));
 
         labelTipoResiduo = bindingDenuncia.includeTipoResiduo.txtCartTitle;
         cntDenunciaVM.getLabelTipoResiduo().observe(this, labelTipoResiduo::setText);

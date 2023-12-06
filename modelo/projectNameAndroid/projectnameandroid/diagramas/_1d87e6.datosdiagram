@@ -4,15 +4,16 @@
     <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_hgplsIRxEemeoZLzaonNpw" name="APP" id="_v0Q98Bc7EeiSj8tKu3ogxw" pathElementRoot="projectnameandroid.ui" nameSpace="(from: client)" nameSpaceElement="(from: client)">
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_QvyVQGsbEeqv98S2YDhvpQ" name="implementModel" id="_QvhPgGsbEeqv98S2YDhvpQ" description="" body="void"/>
     </listClase>
-    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_3EyVYM87Ee2LAs71B-KWxw" name="UIManager" id="_ncaSUM87Ee2LAs71B-KWxw" type="System" description="" pathElementRoot="projectnameandroid.client.presentation" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: presentation)" nameSpaceElement="(from: presentation)" nombreArchivo="" listaMetodosBinding="_gOZ7QN4oEe2g7rgyMitujA _yPHHoN4oEe2g7rgyMitujA _zg5foN4oEe2g7rgyMitujA _YNUr8OtpEe2BeO-e7bu-aQ" listaAtributosBinding="_3Xpw8N43Ee2g7rgyMitujA _537VUd43Ee2g7rgyMitujA _7TZ00d43Ee2g7rgyMitujA _pDedYfW0Ee2mdOX5y2I4KA">
-      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_3Xpw8N43Ee2g7rgyMitujA" name="UiRendered" id="_3Xpw8d43Ee2g7rgyMitujA" type="String" typeElement="Attribute" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Atributo.gif" valueDefault="WITHOUTUI" namePresentation="UiRendered:String=WITHOUTUI" Clase="_3EyVYM87Ee2LAs71B-KWxw"/>
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_3EyVYM87Ee2LAs71B-KWxw" name="UIManager" id="_ncaSUM87Ee2LAs71B-KWxw" type="System" description="" pathElementRoot="projectnameandroid.client.presentation" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: presentation)" nameSpaceElement="(from: presentation)" nombreArchivo="" listaMetodosBinding="_gOZ7QN4oEe2g7rgyMitujA _yPHHoN4oEe2g7rgyMitujA _zg5foN4oEe2g7rgyMitujA _YNUr8OtpEe2BeO-e7bu-aQ" listaAtributosBinding="_3Xpw8N43Ee2g7rgyMitujA _537VUd43Ee2g7rgyMitujA _7TZ00d43Ee2g7rgyMitujA">
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_3Xpw8N43Ee2g7rgyMitujA" name="UiRendered" id="_3Xpw8d43Ee2g7rgyMitujA" type="String" typeElement="Attribute" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Atributo.gif" valueDefault="NOT_INITIALIZED" namePresentation="UiRendered:String=NOT_INITIALIZED" Clase="_3EyVYM87Ee2LAs71B-KWxw"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_537VUd43Ee2g7rgyMitujA" name="lastUiRendered" id="_5378YN43Ee2g7rgyMitujA" type="String" typeElement="Attribute" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Atributo.gif" valueDefault="" namePresentation="lastUiRendered:String" Clase="_3EyVYM87Ee2LAs71B-KWxw"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_7TZ00d43Ee2g7rgyMitujA" name="nextNavigationViewPart" id="_7TZ00t43Ee2g7rgyMitujA" type="String" typeElement="Attribute" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Atributo.gif" valueDefault="" namePresentation="nextNavigationViewPart:String" Clase="_3EyVYM87Ee2LAs71B-KWxw"/>
-      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_pDedYfW0Ee2mdOX5y2I4KA" name="listRegisteredScreens" id="_pDfEcPW0Ee2mdOX5y2I4KA" type="ArrayList" typeElement="Attribute" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Atributo.gif" valueDefault="" namePresentation="listRegisteredScreens:ArrayList" Clase="_3EyVYM87Ee2LAs71B-KWxw"/>
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_8UDR0JRHEe69XNXd_L51SQ" name="state" id="_8QEwwpRHEe69XNXd_L51SQ" type="String" pathElementRoot="projectnameandroid.client.navigation" valueDefault="NOT_INITIALIZED" namePresentation="state:String=NOT_INITIALIZED"/>
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_gOZ7QN4oEe2g7rgyMitujA" name="getTheNextNavigationViewPart" id="_gObJYN4oEe2g7rgyMitujA" description="" typeElement="Operation" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Metodo.gif" body="void" returnTypeMethod="" theClaseBinding="_3EyVYM87Ee2LAs71B-KWxw"/>
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_yPHHoN4oEe2g7rgyMitujA" name="implementModel" id="_yPIVwN4oEe2g7rgyMitujA" description="" typeElement="Operation" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Metodo.gif" body="void" returnTypeMethod="" theClaseBinding="_3EyVYM87Ee2LAs71B-KWxw"/>
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_zg5foN4oEe2g7rgyMitujA" name="navigationMachine" id="_zg6twN4oEe2g7rgyMitujA" description="" typeElement="Operation" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Metodo.gif" body="void" returnTypeMethod="" theClaseBinding="_3EyVYM87Ee2LAs71B-KWxw"/>
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_YNUr8OtpEe2BeO-e7bu-aQ" name="registerViewPart" id="_YMXpsetpEe2BeO-e7bu-aQ" description="" typeElement="Operation" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Metodo.gif" body="void" returnTypeMethod="" theClaseBinding="_3EyVYM87Ee2LAs71B-KWxw"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_riiqMJRMEe69XNXd_L51SQ" name="registerViewModel" id="_rfrjcZRMEe69XNXd_L51SQ" typeElement="Operation"/>
     </listClase>
     <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_6_X7oM87Ee2LAs71B-KWxw" name="Domain" id="_5eG9MM87Ee2LAs71B-KWxw" type="System" description="" pathElementRoot="projectnameandroid.client.domain" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="(from: domain)" nameSpaceElement="(from: domain)" nombreArchivo="" listaMetodosBinding="_g0gnEN4qEe2g7rgyMitujA">
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_g0gnEN4qEe2g7rgyMitujA" name="implementModel" id="_g0h1MN4qEe2g7rgyMitujA" description="" typeElement="Operation" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Metodo.gif" body="void" returnTypeMethod="" theClaseBinding="_6_X7oM87Ee2LAs71B-KWxw"/>
@@ -54,27 +55,27 @@
     <children xmi:type="notation:Shape" xmi:id="_eYgB0M87Ee2LAs71B-KWxw" type="2001" element="_eYT0kM87Ee2LAs71B-KWxw" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_eYgB0s87Ee2LAs71B-KWxw" type="5001"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_eYgB0887Ee2LAs71B-KWxw" type="5002"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eYgB0c87Ee2LAs71B-KWxw" x="415" y="390" width="176"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eYgB0c87Ee2LAs71B-KWxw" x="610" y="380" width="176"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_lx54UM87Ee2LAs71B-KWxw" type="2001" element="_lxx8gM87Ee2LAs71B-KWxw" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_lx54Us87Ee2LAs71B-KWxw" type="5001"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_lx54U887Ee2LAs71B-KWxw" type="5002"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lx54Uc87Ee2LAs71B-KWxw" x="415" y="455" width="176"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lx54Uc87Ee2LAs71B-KWxw" x="610" y="445" width="176"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_p9w0wM87Ee2LAs71B-KWxw" type="2001" element="_p9pgAM87Ee2LAs71B-KWxw" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_p9xb0M87Ee2LAs71B-KWxw" type="5001"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_p9xb0c87Ee2LAs71B-KWxw" type="5002"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9w0wc87Ee2LAs71B-KWxw" x="415" y="520" width="176"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9w0wc87Ee2LAs71B-KWxw" x="610" y="510" width="176"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_r7tIIM87Ee2LAs71B-KWxw" type="2001" element="_r7macM87Ee2LAs71B-KWxw" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_r7tIIs87Ee2LAs71B-KWxw" type="5001"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_r7tvMM87Ee2LAs71B-KWxw" type="5002"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r7tIIc87Ee2LAs71B-KWxw" x="415" y="655" width="176"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r7tIIc87Ee2LAs71B-KWxw" x="610" y="645" width="176"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_x9AjQM87Ee2LAs71B-KWxw" type="2001" element="_x85OgM87Ee2LAs71B-KWxw" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_x9AjQs87Ee2LAs71B-KWxw" type="5001"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_x9AjQ887Ee2LAs71B-KWxw" type="5002"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x9AjQc87Ee2LAs71B-KWxw" x="415" y="725" width="176"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x9AjQc87Ee2LAs71B-KWxw" x="610" y="715" width="176"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_3EzjgM87Ee2LAs71B-KWxw" type="2002" element="_3EyVYM87Ee2LAs71B-KWxw">
       <children xmi:type="notation:DecorationNode" xmi:id="_3Ezjhc87Ee2LAs71B-KWxw" type="5003"/>
@@ -127,7 +128,7 @@
     <children xmi:type="notation:Shape" xmi:id="_zgWdUI4BEe6rTaQM3kpsjg" type="2001" element="_zgKQEI4BEe6rTaQM3kpsjg" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_zgWdUo4BEe6rTaQM3kpsjg" type="5001"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_zgWdU44BEe6rTaQM3kpsjg" type="5002"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zgWdUY4BEe6rTaQM3kpsjg" x="415" y="585" width="176"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zgWdUY4BEe6rTaQM3kpsjg" x="610" y="575" width="176"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_E02rAI4CEe6rTaQM3kpsjg" type="2002" element="_E02D8I4CEe6rTaQM3kpsjg">
       <children xmi:type="notation:DecorationNode" xmi:id="_E02rBY4CEe6rTaQM3kpsjg" type="5003"/>

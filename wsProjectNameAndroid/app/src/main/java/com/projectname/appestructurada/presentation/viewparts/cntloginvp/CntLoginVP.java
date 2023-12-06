@@ -48,11 +48,10 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
         initComponents();
         settingEvents();
 
-        // Cambiar el título de la actividad
-        setTitle("Login");
-
-        // Habilitar el botón de retroceso en el ActionBar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        // Cambiar el título de la actividad
+//        setTitle("Login");
+//        // Habilitar el botón de retroceso en el ActionBar
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
