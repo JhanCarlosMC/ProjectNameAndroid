@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui">
+  <tooldataform.ui:UI_Diagram xmi:id="_UPBjgJUUEe6NQcjiqhb02g" name="ViewPart: WidgetCardviewSummary">
+    <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_UPCxoJUUEe6NQcjiqhb02g" nameVar="WidgetCardviewSummary" type="View Modal" width="200" height="300" positionX="0" positionY="0" idWidget="_UOxE0JUUEe6NQcjiqhb02g">
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_UPCxoZUUEe6NQcjiqhb02g" name="viewPartLoadedAction" id="_UOxE0ZUUEe6NQcjiqhb02g" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_UPCxopUUEe6NQcjiqhb02g" name="constructorNameViewPart" id="_UOxE0pUUEe6NQcjiqhb02g" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_UPCxo5UUEe6NQcjiqhb02g" name="reboot" id="_UOxE05UUEe6NQcjiqhb02g" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_UPCxpJUUEe6NQcjiqhb02g" name="syncModel" id="_UOxE1JUUEe6NQcjiqhb02g" typeElement="Operation" urlIcon="" visible="true"/>
+    </theUserInterface>
+  </tooldataform.ui:UI_Diagram>
+  <notation:Diagram xmi:id="_URRmQJUUEe6NQcjiqhb02g" type="MetamodelodataformUIdiagram" element="_UPBjgJUUEe6NQcjiqhb02g" name="ViewPart: WidgetCardviewSummary" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_URRmQZUUEe6NQcjiqhb02g"/>
+  </notation:Diagram>
+</xmi:XMI>

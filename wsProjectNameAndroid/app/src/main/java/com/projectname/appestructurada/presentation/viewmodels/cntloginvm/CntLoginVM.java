@@ -10,6 +10,7 @@ import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.Cnt
 import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHomeVM;
 
 public class CntLoginVM extends ViewModel {
+    private final MutableLiveData<String> labelTitleToolbar;
     private final MutableLiveData<String> labelUser;
     private final MutableLiveData<String> textUser;
     private final MutableLiveData<String> labelTitleCardView;
@@ -20,6 +21,9 @@ public class CntLoginVM extends ViewModel {
     private final MutableLiveData<Integer> inputType;
 
     public CntLoginVM() {
+        labelTitleToolbar = new MutableLiveData<>();
+        labelTitleToolbar.setValue("Login");
+
         labelUser = new MutableLiveData<>();
         labelUser.setValue("User");
 
@@ -33,7 +37,7 @@ public class CntLoginVM extends ViewModel {
         textPassword.setValue("*********");
 
         labelTitleCardView = new MutableLiveData<>();
-        labelTitleCardView.setValue("LoginForm");
+        labelTitleCardView.setValue("Login");
 
         checkBoxRememberme = new MutableLiveData<>();
         checkBoxRememberme.setValue("Remember Me");
@@ -60,6 +64,18 @@ public class CntLoginVM extends ViewModel {
 
         //Registrar el viewModel de los hijos " getTheUIManager().registrarViewModel(newHijo.getIdViewModel(), newHijo);
 
+    }
+
+    public MutableLiveData<String> getLabelTitleToolbar() {
+        return labelTitleToolbar;
+    }
+
+    public MutableLiveData<String> getLabelTitleCardView() {
+        return labelTitleCardView;
+    }
+
+    public MutableLiveData<String> getCheckBoxRememberme() {
+        return checkBoxRememberme;
     }
 
     public LiveData<String> getLabelUser() {

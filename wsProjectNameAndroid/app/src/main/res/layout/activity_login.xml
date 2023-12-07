@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,24 +15,60 @@
         tools:ignore="MissingConstraints">
 
         <!--Includes Reutilizables-->
-
         <include
-            android:id="@+id/cardview_login"
-            layout="@layout/component_login" />
+            android:id="@+id/include_toolbar_login"
+            layout="@layout/widget_toolbar" />
         <!--Includes Reutilizables-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/my_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_title_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <!--Includes Reutilizables-->
+                <include
+                    android:id="@+id/include_login_user"
+                    layout="@layout/widget_text_input" />
+
+                <include
+                    android:id="@+id/include_login_password"
+                    layout="@layout/widget_text_input" />
+                <!--Includes Reutilizables-->
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <CheckBox
             android:id="@+id/rememberme_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:textAlignment="center" />
 
     </LinearLayout>
 

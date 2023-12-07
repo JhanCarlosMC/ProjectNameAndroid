@@ -14,14 +14,18 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
+        <!--Includes Reutilizables-->
         <include
-            android:id="@+id/include_toolbar_vermas"
+            android:id="@+id/include_toolbar_denuncia"
             layout="@layout/widget_toolbar_vermas" />
+        <!--Includes Reutilizables-->
+
 
         <TextView
             android:id="@+id/txt_context"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="@dimen/titulo_contenedor"
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="@dimen/titulo_contenido" />

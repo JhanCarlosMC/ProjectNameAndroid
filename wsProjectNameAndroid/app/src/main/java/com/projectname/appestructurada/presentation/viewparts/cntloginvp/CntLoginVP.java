@@ -29,6 +29,7 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     ViewModel theViewModel;
 
     /*Layouts Elements*/
+    public TextView labelTitleToolbar;
     public TextView labelUser;
     public EditText textUser;
     public TextView labelPassword;
@@ -36,6 +37,7 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     public TextView labelTitleCardView;
     public CheckBox checkBoxRememberme;
     public Button buttonLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +50,8 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
         initComponents();
         settingEvents();
 
-//        // Cambiar el título de la actividad
-//        setTitle("Login");
-//        // Habilitar el botón de retroceso en el ActionBar
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Ocultar la ActionBar
+        getSupportActionBar().hide();
     }
 
     @Override
@@ -68,21 +68,23 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
 
     private void initComponents() {
         // Inicializar Widgets
+        labelTitleToolbar = bindingLogin.includeToolbarLogin.txtTitleToolbar;
+        cntLoginVM.getLabelTitleToolbar().observe(this, labelTitleToolbar::setText);
 
-        labelUser = bindingLogin.cardviewLogin.includeUserInfo.txtTitle;
+        labelUser = bindingLogin.includeLoginUser.txtTitle;
         cntLoginVM.getLabelUser().observe(this, labelUser::setText);
 
-        textUser = bindingLogin.cardviewLogin.includeUserInfo.etInput;
+        textUser = bindingLogin.includeLoginUser.etInput;
         cntLoginVM.getTextUser().observe(this, textUser::setHint);
 
-        labelPassword = bindingLogin.cardviewLogin.includePasswordInfo.txtTitle;
+        labelPassword = bindingLogin.includeLoginPassword.txtTitle;
         cntLoginVM.getLabelPassword().observe(this, labelPassword::setText);
 
-        textPassword = bindingLogin.cardviewLogin.includePasswordInfo.etInput;
+        textPassword = bindingLogin.includeLoginPassword.etInput;
         cntLoginVM.getTextPassword().observe(this, textPassword::setHint);
         cntLoginVM.getInputType().observe(this, textPassword::setInputType);
 
-        labelTitleCardView = bindingLogin.cardviewLogin.titleCardview;
+        labelTitleCardView = bindingLogin.txtTitleCardview;
         cntLoginVM.getLabelTittleCardView().observe(this, labelTitleCardView::setText);
 
         checkBoxRememberme = bindingLogin.remembermeCheckbox;
@@ -92,7 +94,7 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
         cntLoginVM.getButtonLogin().observe(this, buttonLogin::setText);
     }
 
-    public void settingEvents(){
+    public void settingEvents() {
         //Antiguo montarEventos()
 
         getButtonLogin().setOnClickListener(new View.OnClickListener() {
@@ -115,6 +117,7 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
             }
         });
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -155,6 +158,7 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     public void setOwnedByVP(DesktopVP desktopVP) {
         ownedByVP = desktopVP;
     }
+
     @Override
     public ViewVP getOwnedByVP() {
         return ownedByVP;
@@ -164,6 +168,7 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     public Button getButtonLogin() {
         return buttonLogin;
     }
+
     public void setButtonLogin(String buttonLogin) {
         this.buttonLogin.setText(buttonLogin);
     }

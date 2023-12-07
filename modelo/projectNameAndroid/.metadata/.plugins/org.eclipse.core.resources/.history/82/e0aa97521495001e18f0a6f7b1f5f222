@@ -387,7 +387,7 @@
           </listPresentationModel>
           <listaPresentationModelPackage name="components" id="_LYrN4JUUEe6NQcjiqhb02g" typeElement="PresentationModelPackage" ownedSystemElements="//@theRootProjectDF/@theProjectDF">
             <listaPresentationModel name="WidgetCardviewSummary" id="_TpLrgJUUEe6NQcjiqhb02g" typeElement="PresentationModel" ownedSystemElements="//@theRootProjectDF/@theProjectDF">
-              <theUIDiagramCore name="ViewPart: WidgetCardviewSummary" id="_UOxE1ZUUEe6NQcjiqhb02g" typeElement="ViewPart" urlIcon="platform:/plugin/tdmbuid.uidiagram/icons/obj16/UiDiagramFile.gif" ownedSystemElements="//@theRootProjectDF/@theProjectDF" urlDiagramCore="platform:/resource/projectnameandroid/diagramas/_e72fd9.uidiagram" modelId="MetamodelodataformUIdiagram" editorID="tooldataform.uidiagram.part.MetamodelodataformDiagramEditorID" idPath="_e72fd9.uidiagram" extension="uidiagram"/>
+              <theUIDiagramCore name="ViewPart: WidgetCardviewSummary" typeElement="ViewPartDiagram" urlIcon="platform:/plugin/tdmbuid.uidiagram/icons/UiDiagramFile.gif" ownedSystemElements="//@theRootProjectDF/@theProjectDF"/>
               <theStateChartDiagramCore name="Dialog: WidgetCardviewSummary" typeElement="StateChartDiagram" urlIcon="platform:/plugin/tdmbuid.statechartdiagram/icons/StateChartDiagram.gif" ownedSystemElements="//@theRootProjectDF/@theProjectDF"/>
               <DomainPresentationCore name="Datos: WidgetCardviewSummary" typeElement="Class Diagram" urlIcon="platform:/plugin/tdmbuid.datosdiagram/icons/DataModel.gif" ownedSystemElements="//@theRootProjectDF/@theProjectDF"/>
             </listaPresentationModel>

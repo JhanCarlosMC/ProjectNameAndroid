@@ -40,6 +40,7 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
     ViewModel theViewModel;
 
     /*Layouts Elements*/
+    public TextView labelTitleToolbar;
     public TextView labelContexto;
     public TextView labelVolumenResiduo;
     public TextView labelVolumenResiduoSeleccionado;
@@ -92,6 +93,9 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
     private void initComponents() {
         // Inicializar Widgets
+        labelTitleToolbar = bindingDenuncia.includeToolbarDenuncia.txtTitleToolbar;
+        cntDenunciaVM.getLabelTitleToolbar().observe(this,labelTitleToolbar::setText);
+
         labelContexto = bindingDenuncia.txtContext;
         cntDenunciaVM.getLabelContexto().observe(this, labelContexto::setText);
 
@@ -103,8 +107,8 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
             labelVolumenResiduoFeedback = bindingDenuncia.includeVolumenResiduo.txtFeedback;
             cntDenunciaVM.getLabelVolumenResiduoFeedback().observe(this, labelVolumenResiduoFeedback::setText);
-            cntDenunciaVM.getLabelVolumenResiduoFeedbackColor().observe(this, labelVolumenResiduoFeedback::setBackgroundColor);
-//            labelVolumenResiduoFeedback.setTextColor(getResources().getColor(R.color.colorRojo));
+            cntDenunciaVM.getLabelVolumenResiduoFeedbackColor().observe(this, labelVolumenResiduoFeedback::setTextColor);
+//            labelVolumenResiduoFeedback.setTextColor(getResources().getColor(cntDenunciaVM.getLabelVolumenResiduoFeedbackColor().getValue()));
 
         labelTipoResiduo = bindingDenuncia.includeTipoResiduo.txtCartTitle;
         cntDenunciaVM.getLabelTipoResiduo().observe(this, labelTipoResiduo::setText);

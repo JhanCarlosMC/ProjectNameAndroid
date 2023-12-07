@@ -11,6 +11,7 @@ import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
 
 public class CntDenunciaVM extends ViewModel {
 
+    private final MutableLiveData<String> labelTitleToolbar;
     private final MutableLiveData<String> labelContexto;
     private final MutableLiveData<String> labelVolumenResiduo;
     private final MutableLiveData<String> labelVolumenResiduoSeleccionado;
@@ -29,8 +30,11 @@ public class CntDenunciaVM extends ViewModel {
     private final MutableLiveData<String> labelInformacionAdicionalFeedback;
 
     public CntDenunciaVM() {
+        labelTitleToolbar = new MutableLiveData<>();
+        labelTitleToolbar.setValue("Denuncia");
+
         labelContexto = new MutableLiveData<>();
-        labelContexto.setValue("Selecciona la ruta y en la ubicacion en la cual quieres viajar");
+        labelContexto.setValue("Envianos tus denuncias para conseguir un ordenamiento ambiental sostenible");
 
         labelVolumenResiduo = new MutableLiveData<>();
         labelVolumenResiduo.setValue("Volumen Residuo");
@@ -69,8 +73,7 @@ public class CntDenunciaVM extends ViewModel {
         labelVolumenResiduoFeedback.setValue("Completar");
 
         labelVolumenResiduoFeedbackColor = new MutableLiveData<>();
-//        Log.e("Color: ", ""+R.color.colorRojo);
-        labelVolumenResiduoFeedbackColor.setValue(R.color.color_verde);
+        labelVolumenResiduoFeedbackColor.setValue(R.color.colorRojo);
 
         labelTipoResiduoFeedback = new MutableLiveData<>();
         labelTipoResiduoFeedback.setValue("Completar");
@@ -95,6 +98,10 @@ public class CntDenunciaVM extends ViewModel {
 
         //Registrar el viewModel de los hijos " getTheUIManager().registrarViewModel(newHijo.getIdViewModel(), newHijo);
 
+    }
+
+    public MutableLiveData<String> getLabelTitleToolbar() {
+        return labelTitleToolbar;
     }
 
     public MutableLiveData<String> getLabelVolumenResiduo() {
@@ -159,6 +166,7 @@ public class CntDenunciaVM extends ViewModel {
 
 
     public MutableLiveData<Integer> getLabelVolumenResiduoFeedbackColor() {
+        Log.e("getLabelVolumenResiduoFeedbackColor: ", labelVolumenResiduoFeedbackColor+"");
         return labelVolumenResiduoFeedbackColor;
     }
 }
