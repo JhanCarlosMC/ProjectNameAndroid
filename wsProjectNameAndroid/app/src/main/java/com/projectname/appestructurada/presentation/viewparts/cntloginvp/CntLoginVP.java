@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,7 +39,7 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     public TextView labelTitleCardView;
     public CheckBox checkBoxRememberme;
     public Button buttonLogin;
-    public ImageView imgBack;
+    public RelativeLayout imgBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,10 +134,15 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        CntLoginVM newCntLoginVM = getCntLoginVM();
         getUIManager().navigationMachine("back");
+
+//        CntLoginVM newCntLoginVM = getCntLoginVM();
 //        getCntLoginVM().updateDialogMachine("back");
 
+//        if (!newCntLoginVM.getState().equals("Completado")){
+//
+//        }
+//        setCntLoginVM(newCntLoginVM);
     }
 
     @Override
@@ -257,12 +263,11 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
         this.buttonLogin = buttonLogin;
     }
 
-    public ImageView getImgBack() {
+    public RelativeLayout getImgBack() {
         return imgBack;
     }
 
-    public void setImgBack(ImageView imgBack) {
+    public void setImgBack(RelativeLayout imgBack) {
         this.imgBack = imgBack;
     }
-
 }

@@ -36,7 +36,7 @@ public class DesktopVM extends ViewModel {
         //Configurar el id de cada hijo  "newHijo.setIdViewModel(getIdViewModel() + ":Tipo<Hijo>");"
         newCntLoginVM.setIdViewModel(getIdViewModel() + ":CntLoginVM");
         newCntHomeVM.setIdViewModel(getIdViewModel() + ":CntHomeVM");
-        newCntDenunciaVM.setIdViewModel(getIdViewModel() + "CntDenunciaVM");
+        newCntDenunciaVM.setIdViewModel(getIdViewModel() + ":CntDenunciaVM");
 
         //Implementar el modelo de los hijos "newHijo.implementarModelo();"
         newCntLoginVM.implementModel();
