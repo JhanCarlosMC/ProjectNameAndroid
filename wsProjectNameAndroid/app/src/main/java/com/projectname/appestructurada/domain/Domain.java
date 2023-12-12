@@ -1,6 +1,6 @@
 package com.projectname.appestructurada.domain;
 
-import com.projectname.appestructurada.data.Kernel;
+import com.projectname.appestructurada.kernel.Kernel;
 import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.persistence.Persistence;
 import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;

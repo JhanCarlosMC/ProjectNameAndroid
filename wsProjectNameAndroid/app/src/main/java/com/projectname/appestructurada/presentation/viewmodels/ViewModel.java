@@ -1,6 +1,6 @@
 package com.projectname.appestructurada.presentation.viewmodels;
 
-import com.projectname.appestructurada.data.ViewVP;
+import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.presentation.UIManager;
 
 import java.util.List;

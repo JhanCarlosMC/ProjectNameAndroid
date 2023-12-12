@@ -3,7 +3,7 @@ package com.projectname.appestructurada;
 import android.app.Application;
 
 import com.projectname.appestructurada.domain.Domain;
-import com.projectname.appestructurada.data.Kernel;
+import com.projectname.appestructurada.kernel.Kernel;
 import com.projectname.appestructurada.logic.Logic;
 import com.projectname.appestructurada.navigation.DesktopVM;
 import com.projectname.appestructurada.persistence.Persistence;

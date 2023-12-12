@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tooldataform.ui:UI_Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui" xmi:id="_IWKiUJUYEe6QMcpLOiIGvA" name="ViewPart: WidgetCardViewRadio">
+  <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_IWKiUZUYEe6QMcpLOiIGvA" nameVar="WidgetCardViewRadio" type="View Modal" width="200" height="300" positionX="0" positionY="0" idWidget="_IWGQ4JUYEe6QMcpLOiIGvA">
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IWKiUpUYEe6QMcpLOiIGvA" name="viewPartLoadedAction" id="_IWGQ4ZUYEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IWKiU5UYEe6QMcpLOiIGvA" name="constructorNameViewPart" id="_IWGQ4pUYEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IWKiVJUYEe6QMcpLOiIGvA" name="reboot" id="_IWGQ45UYEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IWKiVZUYEe6QMcpLOiIGvA" name="syncModel" id="_IWGQ5JUYEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+  </theUserInterface>
+</tooldataform.ui:UI_Diagram>

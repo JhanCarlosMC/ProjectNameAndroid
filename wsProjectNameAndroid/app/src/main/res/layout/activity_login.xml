@@ -14,11 +14,38 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
-        <!--Includes Reutilizables-->
-        <include
-            android:id="@+id/include_toolbar_login"
-            layout="@layout/widget_toolbar" />
-        <!--Includes Reutilizables-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/imageView_icono"
+                android:background="@color/colorAccent">
+
+                <ImageView
+                    android:id="@+id/action_toolbar_atras"
+                    android:layout_width="@dimen/imageView_atras"
+                    android:layout_height="@dimen/imageView_atras"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/ic_atras"
+                    android:backgroundTint="@color/white" />
+
+                <TextView
+                    android:id="@+id/txt_title_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/titulo_principal"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/my_card_view"
@@ -46,11 +73,11 @@
                 <!--Includes Reutilizables-->
                 <include
                     android:id="@+id/include_login_user"
-                    layout="@layout/widget_text_input" />
+                    layout="@layout/component_text_input" />
 
                 <include
                     android:id="@+id/include_login_password"
-                    layout="@layout/widget_text_input" />
+                    layout="@layout/component_text_input" />
                 <!--Includes Reutilizables-->
 
             </LinearLayout>

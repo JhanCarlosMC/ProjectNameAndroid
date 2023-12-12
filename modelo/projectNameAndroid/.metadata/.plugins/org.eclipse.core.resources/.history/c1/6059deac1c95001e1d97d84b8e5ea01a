@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui">
+  <tooldataform.ui:UI_Diagram xmi:id="_226V0JUaEe6QMcpLOiIGvA" name="ViewPart: WidgetTextInput">
+    <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_226V0ZUaEe6QMcpLOiIGvA" name="WidgetTextInput" nameVar="WidgetTextInput" type="View Modal" description="Insert a description" font="Segoe UI" width="525" height="151" positionX="0" positionY="0" nameUserInterfaceReference="" idWidget="_22zoIJUaEe6QMcpLOiIGvA" textColor="0" textSize="9" textStyle="false">
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_226V0pUaEe6QMcpLOiIGvA" name="viewPartLoadedAction" id="_22zoIZUaEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_226V05UaEe6QMcpLOiIGvA" name="constructorNameViewPart" id="_22zoIpUaEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_226V1JUaEe6QMcpLOiIGvA" name="reboot" id="_22zoI5UaEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_226V1ZUaEe6QMcpLOiIGvA" name="syncModel" id="_22zoJJUaEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+      <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_9KGyMJUaEe6QMcpLOiIGvA" name="Title" nameVar="Title" pathImage="11:13:2" font="Segoe UI" width="287" height="25" positionX="-2" positionY="32" idAndroid="ModifyText#" idWidget="_9KGyMZUaEe6QMcpLOiIGvA" textColor="0" textSize="9" textStyle="false"/>
+      <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_T10VIJUbEe6QMcpLOiIGvA" name="Title" nameVar="Title" font="Segoe UI" width="70" height="24" positionX="-2" positionY="0" idWidget="_T10VIZUbEe6QMcpLOiIGvA" textColor="0" textSize="9" textStyle="false"/>
+    </theUserInterface>
+  </tooldataform.ui:UI_Diagram>
+  <notation:Diagram xmi:id="_23IYQJUaEe6QMcpLOiIGvA" type="MetamodelodataformUIdiagram" element="_226V0JUaEe6QMcpLOiIGvA" name="ViewPart: WidgetTextInput" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_24r3cJUaEe6QMcpLOiIGvA" type="2001" element="_226V0ZUaEe6QMcpLOiIGvA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_24r3dZUaEe6QMcpLOiIGvA" type="5028"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_24r3dpUaEe6QMcpLOiIGvA" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_9KHZQJUaEe6QMcpLOiIGvA" type="3023" element="_9KGyMJUaEe6QMcpLOiIGvA">
+          <children xmi:type="notation:DecorationNode" xmi:id="_9KHZRZUaEe6QMcpLOiIGvA" type="5020"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_9KHZQZUaEe6QMcpLOiIGvA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9KHZQpUaEe6QMcpLOiIGvA" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_9KHZQ5UaEe6QMcpLOiIGvA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9KHZRJUaEe6QMcpLOiIGvA" x="-2" y="32" width="287" height="25"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_T108MJUbEe6QMcpLOiIGvA" type="3024" element="_T10VIJUbEe6QMcpLOiIGvA">
+          <children xmi:type="notation:DecorationNode" xmi:id="_T108NZUbEe6QMcpLOiIGvA" type="5021"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_T108MZUbEe6QMcpLOiIGvA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_T108MpUbEe6QMcpLOiIGvA" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_T108M5UbEe6QMcpLOiIGvA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T108NJUbEe6QMcpLOiIGvA" x="-2"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_24r3cZUaEe6QMcpLOiIGvA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_24r3cpUaEe6QMcpLOiIGvA" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_24r3c5UaEe6QMcpLOiIGvA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_24r3dJUaEe6QMcpLOiIGvA" width="525" height="151"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_23IYQZUaEe6QMcpLOiIGvA"/>
+  </notation:Diagram>
+</xmi:XMI>

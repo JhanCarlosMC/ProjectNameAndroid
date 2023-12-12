@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
 import com.projectname.appestructurada.databinding.ActivityLoginBinding;
-import com.projectname.appestructurada.data.ViewVP;
+import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.navigation.DesktopVP;
 import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
@@ -68,7 +68,7 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
 
     private void initComponents() {
         // Inicializar Widgets
-        labelTitleToolbar = bindingLogin.includeToolbarLogin.txtTitleToolbar;
+        labelTitleToolbar = bindingLogin.txtTitleToolbar;
         cntLoginVM.getLabelTitleToolbar().observe(this, labelTitleToolbar::setText);
 
         labelUser = bindingLogin.includeLoginUser.txtTitle;

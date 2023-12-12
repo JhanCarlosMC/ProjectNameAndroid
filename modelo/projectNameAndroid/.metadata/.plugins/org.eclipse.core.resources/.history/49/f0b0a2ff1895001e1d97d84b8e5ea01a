@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui">
+  <tooldataform.ui:UI_Diagram xmi:id="_IWKiUJUYEe6QMcpLOiIGvA" name="ViewPart: WidgetCardViewRadio">
+    <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_IWKiUZUYEe6QMcpLOiIGvA" type="View Modal" font="Segoe UI" width="697" height="299" positionX="-8" positionY="0" idWidget="_IWGQ4JUYEe6QMcpLOiIGvA" textColor="0" textSize="9" textStyle="false">
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IWKiUpUYEe6QMcpLOiIGvA" name="viewPartLoadedAction" id="_IWGQ4ZUYEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IWKiU5UYEe6QMcpLOiIGvA" name="constructorNameViewPart" id="_IWGQ4pUYEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IWKiVJUYEe6QMcpLOiIGvA" name="reboot" id="_IWGQ45UYEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IWKiVZUYEe6QMcpLOiIGvA" name="syncModel" id="_IWGQ5JUYEe6QMcpLOiIGvA" typeElement="Operation" urlIcon="" visible="true"/>
+      <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_SD6aAJUYEe6QMcpLOiIGvA" name="feedback" nameVar="feedback" pathImage="10:50:1" font="Segoe UI" stateFigure="No_mostrarMensaje" width="101" height="22" positionX="210" positionY="8" idAndroid="ModifyText#" idWidget="_SEBuwJUYEe6QMcpLOiIGvA" textColor="0" textSize="9" textStyle="false">
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_SECV0ZUYEe6QMcpLOiIGvA" name="textFeedback_ModifyText_LogicalEvent" id="_SECV0JUYEe6QMcpLOiIGvA" typeElement="Operation" visible="true" returnTypeMethod="void">
+          <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_SECV0pUYEe6QMcpLOiIGvA" name="event" type="String"/>
+        </listModelElementCore>
+      </listIndividualWidge>
+      <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_SEFZIJUYEe6QMcpLOiIGvA" name="resumen" nameVar="resumen" pathImage="10:50:1" font="Segoe UI" stateFigure="No_mostrarMensaje" width="332" height="48" positionX="22" positionY="40" idAndroid="ModifyText#" idWidget="_SEIccJUYEe6QMcpLOiIGvA" textColor="0" textSize="9" textStyle="false">
+        <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_SEIccpUYEe6QMcpLOiIGvA" name="textResumen_ModifyText_LogicalEvent" id="_SEIccZUYEe6QMcpLOiIGvA" typeElement="Operation" visible="true" returnTypeMethod="void">
+          <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_SEIcc5UYEe6QMcpLOiIGvA" name="event" type="String"/>
+        </listModelElementCore>
+      </listIndividualWidge>
+    </theUserInterface>
+  </tooldataform.ui:UI_Diagram>
+  <notation:Diagram xmi:id="_IWWIgJUYEe6QMcpLOiIGvA" type="MetamodelodataformUIdiagram" element="_IWKiUJUYEe6QMcpLOiIGvA" name="ViewPart: WidgetCardViewRadio" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_IYO-4JUYEe6QMcpLOiIGvA" type="2001" element="_IWKiUZUYEe6QMcpLOiIGvA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_IYO-5ZUYEe6QMcpLOiIGvA" type="5028"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_IYO-5pUYEe6QMcpLOiIGvA" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_SD9dUJUYEe6QMcpLOiIGvA" type="3023" element="_SD6aAJUYEe6QMcpLOiIGvA">
+          <children xmi:type="notation:DecorationNode" xmi:id="_SD9dVZUYEe6QMcpLOiIGvA" type="5020"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_SD9dUZUYEe6QMcpLOiIGvA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_SD9dUpUYEe6QMcpLOiIGvA" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_SD9dU5UYEe6QMcpLOiIGvA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SD9dVJUYEe6QMcpLOiIGvA" x="210" y="8" width="101" height="22"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_SEGAMZUYEe6QMcpLOiIGvA" type="3023" element="_SEFZIJUYEe6QMcpLOiIGvA">
+          <children xmi:type="notation:DecorationNode" xmi:id="_SEGANpUYEe6QMcpLOiIGvA" type="5020"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_SEGAMpUYEe6QMcpLOiIGvA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_SEGAM5UYEe6QMcpLOiIGvA" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_SEGANJUYEe6QMcpLOiIGvA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SEGANZUYEe6QMcpLOiIGvA" x="22" y="40" width="332" height="48"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_IYO-4ZUYEe6QMcpLOiIGvA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_IYO-4pUYEe6QMcpLOiIGvA" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_IYO-45UYEe6QMcpLOiIGvA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IYO-5JUYEe6QMcpLOiIGvA" x="-8" width="697"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_IWWIgZUYEe6QMcpLOiIGvA"/>
+  </notation:Diagram>
+</xmi:XMI>

@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
 import com.projectname.appestructurada.databinding.FragmentHomeBinding;
-import com.projectname.appestructurada.data.ViewVP;
+import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.navigation.DesktopVP;
 import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;

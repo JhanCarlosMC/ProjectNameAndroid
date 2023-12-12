@@ -1,8 +1,6 @@
 package com.projectname.appestructurada.presentation;
 
-import android.util.Log;
-
-import com.projectname.appestructurada.data.ViewVP;
+import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.domain.Domain;
 import com.projectname.appestructurada.navigation.DesktopVM;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_volumen_residuo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/imageView_icono"
+                android:background="@color/colorAccent">
+
+                <ImageView
+                    android:id="@+id/action_toolbar_atras"
+                    android:layout_width="@dimen/imageView_atras"
+                    android:layout_height="@dimen/imageView_atras"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/ic_atras"
+                    android:backgroundTint="@color/white" />
+
+                <TextView
+                    android:id="@+id/txt_title_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/titulo_principal"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rg_list_volumen_residuo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/layout_margin_15dp"
+                android:orientation="vertical">
+
+                <!--Includes Reutilizables-->
+                <include
+                    android:id="@+id/include_option_mano"
+                    layout="@layout/component_radiobutton" />
+
+                <include
+                    android:id="@+id/include_option_mochila"
+                    layout="@layout/component_radiobutton" />
+
+                <include
+                    android:id="@+id/include_option_mas_grande"
+                    layout="@layout/component_radiobutton" />
+                <!--Includes Reutilizables-->
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

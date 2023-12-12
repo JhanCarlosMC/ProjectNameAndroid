@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.businessinteration="http:///tooldataform/businessinteration.ecore" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xsi:schemaLocation="http:///tooldataform/businessinteration.ecore http:///tooldataform.ecore#//businessinteration http:///tooldataform/core.ecore http:///tooldataform.ecore#//core">
+  <tooldataform.core:BusinessModel xmi:id="_oW6qwJVUEe6QMcpLOiIGvA" name="ProcessTemplate: projectnameandroid">
+    <listDiagram xmi:type="tooldataform.businessinteration:ProcessTemplate" xmi:id="_pfHB4JVUEe6QMcpLOiIGvA" nameVar="minimizado" widthFigure="171" heightFigure="136" positionXMaximize="60" positionXMinimize="60" withFigureMaximize="956" height="746" positionYMaximize="95" positionYMinimize="95"/>
+    <listDiagram xmi:type="tooldataform.businessinteration:ProcessTemplate" xmi:id="_uSU5QJVUEe6QMcpLOiIGvA" nameVar="minimizado" widthFigure="176" heightFigure="131" positionXMaximize="90" positionXMinimize="365" withFigureMaximize="1041" height="741" positionYMaximize="100" positionYMinimize="525"/>
+    <listDiagram xmi:type="tooldataform.businessinteration:ProcessTemplate" xmi:id="_wcfqwJVUEe6QMcpLOiIGvA" nameVar="minimizado" widthFigure="191" heightFigure="131" positionXMaximize="140" positionXMinimize="650" withFigureMaximize="961" height="741" positionYMaximize="95" positionYMinimize="100"/>
+  </tooldataform.core:BusinessModel>
+  <notation:Diagram xmi:id="_oXc2QJVUEe6QMcpLOiIGvA" type="MetamodelodataformBusinessdiagram" element="_oW6qwJVUEe6QMcpLOiIGvA" name="ProcessTemplate: projectnameandroid" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_pfuF4JVUEe6QMcpLOiIGvA" type="2001" element="_pfHB4JVUEe6QMcpLOiIGvA" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_pfus8ZVUEe6QMcpLOiIGvA" type="5068"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_pfvUAJVUEe6QMcpLOiIGvA" type="7001" collapsed="true"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_pfvUAZVUEe6QMcpLOiIGvA" type="7002"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pfus8JVUEe6QMcpLOiIGvA" x="60" y="95" width="171" height="136"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_uSVgUJVUEe6QMcpLOiIGvA" type="2001" element="_uSU5QJVUEe6QMcpLOiIGvA" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_uSVgUpVUEe6QMcpLOiIGvA" type="5068"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_uSVgU5VUEe6QMcpLOiIGvA" type="7001"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_uSVgVJVUEe6QMcpLOiIGvA" type="7002"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uSVgUZVUEe6QMcpLOiIGvA" x="365" y="525" width="176" height="131"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_wcfqwZVUEe6QMcpLOiIGvA" type="2001" element="_wcfqwJVUEe6QMcpLOiIGvA" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_wcgR0JVUEe6QMcpLOiIGvA" type="5068"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_wcgR0ZVUEe6QMcpLOiIGvA" type="7001"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_wcgR0pVUEe6QMcpLOiIGvA" type="7002"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wcfqwpVUEe6QMcpLOiIGvA" x="650" y="100" width="191" height="131"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_oXc2QZVUEe6QMcpLOiIGvA"/>
+  </notation:Diagram>
+</xmi:XMI>

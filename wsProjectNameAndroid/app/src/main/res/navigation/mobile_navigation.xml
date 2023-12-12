@@ -11,7 +11,7 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
-    <FrameLayout
+    <activity
         android:id="@+id/navigation_login"
         android:name="com.projectname.appestructurada.presentation.viewparts.cntloginvp.CntLoginVP"
         android:label="@string/title_login"
@@ -22,5 +22,11 @@
         android:name="com.projectname.appestructurada.presentation.viewparts.cntdenunciavp.CntDenunciaVP"
         android:label="@string/title_denuncia"
         tools:layout="@layout/fragment_denuncia" />
+
+    <activity
+        android:id="@+id/navigation_volumen_residuo"
+        android:name="com.projectname.appestructurada.presentation.viewparts.cntdenunciavp.CntVolumenResiduoVP"
+        android:label="@string/title_volumen_residuo"
+        tools:layout="@layout/activity_volumen_residuo" />
 
 </navigation>

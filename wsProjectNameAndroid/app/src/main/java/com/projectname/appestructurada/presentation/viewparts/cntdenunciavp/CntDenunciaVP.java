@@ -1,12 +1,7 @@
 package com.projectname.appestructurada.presentation.viewparts.cntdenunciavp;
 
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
@@ -15,15 +10,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
-import com.projectname.appestructurada.R;
 import com.projectname.appestructurada.databinding.FragmentDenunciaBinding;
-import com.projectname.appestructurada.data.ViewVP;
+import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.navigation.DesktopVP;
 import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
@@ -72,28 +64,12 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         return root;
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_ver_mas, menu);
-
-        // Obtén el ícono del menú que deseas tintar
-        MenuItem item = menu.findItem(R.id.action_ver_mas);
-        Drawable icon = item.getIcon();
-
-        // Tinta el ícono con el color deseado
-        if (icon != null) {
-            icon.setColorFilter(ContextCompat.getColor(requireContext(), R.color.white), PorterDuff.Mode.SRC_IN);
-        }
-
-        super.onCreateOptionsMenu(menu, inflater);
-    }
-
     private void settingEvents() {
     }
 
     private void initComponents() {
         // Inicializar Widgets
-        labelTitleToolbar = bindingDenuncia.includeToolbarDenuncia.txtTitleToolbar;
+        labelTitleToolbar = bindingDenuncia.txtTitleToolbar;
         cntDenunciaVM.getLabelTitleToolbar().observe(this,labelTitleToolbar::setText);
 
         labelContexto = bindingDenuncia.txtContext;
@@ -131,16 +107,16 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         labelTipoDenuncia = bindingDenuncia.includeTipoDenuncia.txtCartTitle;
         cntDenunciaVM.getLabelTipoDenuncia().observe(this,labelTipoDenuncia::setText);
 
-        radioButtonPublica = bindingDenuncia.includeTipoDenuncia.rgOptionOne;
+        radioButtonPublica = bindingDenuncia.includeTipoDenuncia.rbOptionOne;
         cntDenunciaVM.getRadioLabelPublica().observe(this,radioButtonPublica::setText);
 
-        radioButtonAnonima = bindingDenuncia.includeTipoDenuncia.rgOptionTwo;
+        radioButtonAnonima = bindingDenuncia.includeTipoDenuncia.rbOptionTwo;
         cntDenunciaVM.getRadioLabelAnonima().observe(this,radioButtonAnonima::setText);
 
-        checkBoxTerminosCondiciones = bindingDenuncia.includeTerminosCondicionesDenuncia.cbxCheckbox;
+        checkBoxTerminosCondiciones = bindingDenuncia.cbxCheckbox;
         cntDenunciaVM.getCheckBoxTerminosCondiciones().observe(this, checkBoxTerminosCondiciones::setText);
 
-        labelVerTerminosCondiciones = bindingDenuncia.includeTerminosCondicionesDenuncia.txtText;
+        labelVerTerminosCondiciones = bindingDenuncia.txtText;
         cntDenunciaVM.getLabelVerTerminosCondiciones().observe(this, labelVerTerminosCondiciones::setText);
 
     }

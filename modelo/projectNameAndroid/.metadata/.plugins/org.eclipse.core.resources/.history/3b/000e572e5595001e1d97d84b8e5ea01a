@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xsi:schemaLocation="http:///tooldataform/core.ecore http:///tooldataform.ecore#//core">
+  <tooldataform.core:BusinessModel xmi:id="_oW6qwJVUEe6QMcpLOiIGvA" name="ProcessTemplate: projectnameandroid"/>
+  <notation:Diagram xmi:id="_oXc2QJVUEe6QMcpLOiIGvA" type="MetamodelodataformBusinessdiagram" element="_oW6qwJVUEe6QMcpLOiIGvA" name="ProcessTemplate: projectnameandroid" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_oXc2QZVUEe6QMcpLOiIGvA"/>
+  </notation:Diagram>
+</xmi:XMI>
