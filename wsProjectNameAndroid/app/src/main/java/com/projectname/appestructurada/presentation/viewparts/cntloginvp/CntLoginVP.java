@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,6 +38,7 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     public TextView labelTitleCardView;
     public CheckBox checkBoxRememberme;
     public Button buttonLogin;
+    public ImageView imgBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +94,8 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
 
         buttonLogin = bindingLogin.btnLogin;
         cntLoginVM.getButtonLogin().observe(this, buttonLogin::setText);
+
+        imgBack = bindingLogin.actionToolbarAtras;
     }
 
     public void settingEvents() {
@@ -116,6 +120,23 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
                 }
             }
         });
+
+        getImgBack().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        CntLoginVM newCntLoginVM = getCntLoginVM();
+        getUIManager().navigationMachine("back");
+//        getCntLoginVM().updateDialogMachine("back");
+
     }
 
     @Override
@@ -132,6 +153,21 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
         this.app = app;
     }
 
+    @Override
+    public UIManager getUIManager() {
+        theUIManager = app.getTheUIManager();
+        return theUIManager;
+    }
+
+    public CntLoginVM getCntLoginVM() {
+        cntLoginVM = app.getCntLoginVM();
+        return cntLoginVM;
+    }
+
+    public void setCntLoginVM(CntLoginVM cntLoginVM) {
+        app.setCntLoginVM(cntLoginVM);
+    }
+
     public ViewModel getTheViewModel() {
         return theViewModel;
     }
@@ -140,18 +176,14 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
         this.theViewModel = theViewModel;
     }
 
-
+    @Override
     public void setIdViewPart(String newIdViewPart) {
         idViewPart = newIdViewPart;
     }
 
+    @Override
     public String getIdViewPart() {
         return idViewPart;
-    }
-
-    public UIManager getUIManager() {
-        theUIManager = app.getTheUIManager();
-        return theUIManager;
     }
 
     @Override
@@ -224,4 +256,13 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     public void setButtonLogin(Button buttonLogin) {
         this.buttonLogin = buttonLogin;
     }
+
+    public ImageView getImgBack() {
+        return imgBack;
+    }
+
+    public void setImgBack(ImageView imgBack) {
+        this.imgBack = imgBack;
+    }
+
 }

@@ -19,9 +19,9 @@ public class DesktopVM extends ViewModel {
         CntDenunciaVM newCntDenunciaVM = new CntDenunciaVM();
 
         //Enlazar el padre con sus hijos mediante metodos set de la clase que se esta implementando "sethijo(newHijo);
-        setFormLoginVM(newCntLoginVM);
-        setHomeVM(newCntHomeVM);
-        setDenunciaVM(newCntDenunciaVM);
+        setCntLoginVM(newCntLoginVM);
+        setCntHomeVM(newCntHomeVM);
+        setCntDenunciaVM(newCntDenunciaVM);
 
         //Enlazar los hijos con su padre (clase que se esta implementando - "this") "newHijo.setOwnedBy(this);"
         newCntLoginVM.setOwnedBy(this);
@@ -49,27 +49,27 @@ public class DesktopVM extends ViewModel {
         getTheUIManager().registerViewModel(newCntDenunciaVM.getIdViewModel(), newCntDenunciaVM);
     }
 
-    public CntLoginVM getFormLoginVM() {
+    public CntLoginVM getCntLoginVM() {
         return theCntLoginVM;
     }
 
-    public void setFormLoginVM(CntLoginVM cntLoginVM) {
+    public void setCntLoginVM(CntLoginVM cntLoginVM) {
         this.theCntLoginVM = cntLoginVM;
     }
 
-    public CntHomeVM getHomeVM() {
+    public CntHomeVM getCntHomeVM() {
         return theCntHomeVM;
     }
 
-    public void setHomeVM(CntHomeVM cntHomeVM) {
+    public void setCntHomeVM(CntHomeVM cntHomeVM) {
         this.theCntHomeVM = cntHomeVM;
     }
 
-    public CntDenunciaVM getDenunciaVM() {
+    public CntDenunciaVM getCntDenunciaVM() {
         return theCntDenunciaVM;
     }
 
-    public void setDenunciaVM(CntDenunciaVM cntDenunciaVM) {
+    public void setCntDenunciaVM(CntDenunciaVM cntDenunciaVM) {
         this.theCntDenunciaVM = cntDenunciaVM;
     }
 }

@@ -65,7 +65,8 @@ public class UIManager extends ViewModel {
         if (state.equals("Desktop_A") || state.equals("HomeUI_F") || state.equals("LoginUI_A") || state.equals("DenunciaUI_F")) {
 
             if (event.equals("login")) {
-//                setUiRendered("LoginUI_A");
+                setLastUiRendered(getUiRendered());
+                setUiRendered("LoginUI_A");
                 setNextNavigationViewPart("LoginUI_A");
                 return action;
             }
@@ -80,8 +81,16 @@ public class UIManager extends ViewModel {
                 return action;
             }
         }
-        return action;
 
+        if (getUiRendered().equals("LoginUI_A")) {
+            if(event.equals("back")){
+                setUiRendered(getLastUiRendered());
+                setNextNavigationViewPart(getUiRendered());
+                return action;
+            }
+        }
+
+        return action;
     }
 
     public ViewVP getTheNextNavigationViewPart() {

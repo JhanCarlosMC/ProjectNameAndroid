@@ -253,18 +253,18 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
 
         //-----------------------------------------------------
         //obtener el contexto y set:formLoginVM
-        CntLoginVM flvm = getApp().getFormLoginVM();
+        CntLoginVM flvm = getApp().getCntLoginVM();
         setFormLoginVM(flvm);
 
         //-----------------------------------------------------
         //obtener el contexto:homeVM
-        CntHomeVM hvm = getApp().getHomeVM();
+        CntHomeVM hvm = getApp().getCntHomeVM();
         //setear la homeVM
         setHomeVM(hvm);
 
         //-----------------------------------------------------
         //obtener el contexto:denunciaVM
-        CntDenunciaVM dvm = getApp().getDenunciaVM();
+        CntDenunciaVM dvm = getApp().getCntDenunciaVM();
         //setear la denunciaVM
         setDenunciaVM(dvm);
 

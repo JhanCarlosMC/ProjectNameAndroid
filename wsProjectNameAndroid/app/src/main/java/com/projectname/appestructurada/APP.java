@@ -130,27 +130,27 @@ public class APP extends Application {
         this.theDesktopVM = theDesktopVM;
     }
 
-    public CntLoginVM getFormLoginVM() {
-        return cntLoginVM = getTheDesktopVM().getFormLoginVM();
+    public CntLoginVM getCntLoginVM() {
+        return cntLoginVM = getTheDesktopVM().getCntLoginVM();
     }
 
-    public void setFormLoginVM(CntLoginVM cntLoginVM) {
+    public void setCntLoginVM(CntLoginVM cntLoginVM) {
         this.cntLoginVM = cntLoginVM;
     }
 
-    public CntHomeVM getHomeVM() {
-        return cntHomeVM = getTheDesktopVM().getHomeVM();
+    public CntHomeVM getCntHomeVM() {
+        return cntHomeVM = getTheDesktopVM().getCntHomeVM();
     }
 
-    public void setHomeVM(CntHomeVM cntHomeVM) {
+    public void setCntHomeVM(CntHomeVM cntHomeVM) {
         this.cntHomeVM = cntHomeVM;
     }
 
-    public CntDenunciaVM getDenunciaVM() {
-        return cntDenunciaVM = getTheDesktopVM().getDenunciaVM();
+    public CntDenunciaVM getCntDenunciaVM() {
+        return cntDenunciaVM = getTheDesktopVM().getCntDenunciaVM();
     }
 
-    public void setDenunciaVM(CntDenunciaVM cntDenunciaVM) {
+    public void setCntDenunciaVM(CntDenunciaVM cntDenunciaVM) {
         this.cntDenunciaVM = cntDenunciaVM;
     }
 }
