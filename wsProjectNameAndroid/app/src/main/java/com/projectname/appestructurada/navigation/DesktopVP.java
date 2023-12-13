@@ -84,15 +84,12 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         //---------------------------------actualizar la información interna del viewpart----------------------------------------------------------------------------
         //  [x] aplica,  //actualizar el viewPart  esto es para invocar la actualizacion de los handlers o recyclers, etc. updateViewPart();
         updateViewPartContext();
-        //---------------------------------actualizar la información interna del viewpart----------------------------------------------------------------------------
 
         //---------------------------------Crear hijos--------------------------------------------------------------------------------------------------------
         //  [x] aplica,  []---> crear los hijos viewPart de la pantalla [solamnete la creacion desde el recurso]: tipoWidget newWidget = findViewById(R.id.nombreWidgetEnElLayout);
         CntLoginVP newCntLoginVP = new CntLoginVP();
         CntHomeVP newCntHomeVP = new CntHomeVP();
         CntDenunciaVP newCntDenunciaVP = new CntDenunciaVP();
-
-        //---------------------------------Crear hijos--------------------------------------------------------------------------------------------------------
 
         //---------------------------------Enlazar hijos--------------------------------------------------------------------------------------------------------
         //  [x] aplica,  //enlazar el padre con sus hijos mediante metodos set de la clase que se esta implementando: sethijo(newHijo);
@@ -104,8 +101,6 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         newCntLoginVP.setOwnedByVP(this);
         newCntHomeVP.setOwnedByVP(this);
         newCntDenunciaVP.setOwnedByVP(this);
-
-        //---------------------------------Enlazar hijos--------------------------------------------------------------------------------------------------------
 
         //---------------------------------Enlazar ViewModels con ViewParts-----------------------------------------------------------------------------------------
         //  [x] aplica,  //enlazar a cada hijo viewPart su respectivo viewModel:  newHijoViewPart.setViewModel(getContenedorHijoVM());
@@ -120,7 +115,6 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         getHomeVM().setTheViewPart(newCntHomeVP);
         getDenunciaVM().setTheViewPart(newCntDenunciaVP);
 
-        //---------------------------------Enlazar ViewModels con ViewParts-----------------------------------------------------------------------------------------
 
         //---------------------------------Configurar id's de la viewpart-----------------------------------------------------------------------------------------
         //  [x] aplica,  //configurar el idViewPart de la viewPart: setIdViewPart(getOwnedByVP().getIdViewPart() + ":Tipo<Hijo>");
@@ -131,16 +125,13 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         newCntHomeVP.setIdViewPart("HomeUI_F");
         newCntDenunciaVP.setIdViewPart("DenunciaUI_F");
 
-        //---------------------------------Configurar id's de la viewpart-----------------------------------------------------------------------------------------
 
         //---------------------------------configurar la view de los hijos-----------------------------------------------------------------------------------------
         //  [] aplica,  //configurar la view de los hijos: newHijo.setTheView(rootView.findViewById(R.id.hijo);
-        //---------------------------------configurar la view de los hijos-----------------------------------------------------------------------------------------
 
         //---------------------------------implementarModelo de los hijos-----------------------------------------------------------------------------------------
         //  [] aplica,  //implementar el modelo de los hijos: newHijo.implementarModelo();
 
-        //---------------------------------implementarModelo de los hijos-----------------------------------------------------------------------------------------
 
         //---------------------------------registrar viewpart de los hijos-----------------------------------------------------------------------------------------
         //  [x] aplica,  //registrar el viewPart de los hijos: getTheUIManager().registrarViewPart(newHijo.getIIdViewPart(), newHijo);
@@ -153,17 +144,14 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         //---------------------------------Implementar los widgets de la ViewPart-----------------------------------------------------------------------------------------
         //  [x] aplica,  []---> crear los widgets de la pantalla [solamente la creacion desde el recurso]: tipoWidget newWidget = findViewById(R.id.nombreWidgetEnElLayout);
         implementWidgets();
-        //---------------------------------Implementar los widgets de la ViewPart-----------------------------------------------------------------------------------------
 
         //---------------------------------montar los eventos de la interfaz-----------------------------------------------------------------------------------------
         //  [x] aplica,  //montar los eventos de los widgets (listener = onclick(), keyPressed(), etc
         settingEvents();
-        //---------------------------------montar los eventos de la interfaz-----------------------------------------------------------------------------------------
 
         //---------------------------------obtener los datos del viewModel desde el domain----------------------------------------------------------------------------
         //  [] aplica,  //actualizar el formulario viewModel desde el Domain: updateViewModel();  esto no debe afectar el estado del dialogo
         //   updateViewModel();
-        //---------------------------------obtener los datos del viewModel desde el domain----------------------------------------------------------------------------
 
         //---------------------------------montar el automata de la interfaz-----------------------------------------------------------------------------------------
         //  [] aplica,  //inicializar el automata: getViewModel().actualizarMaquina("iniciarViewModel");
@@ -171,7 +159,6 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         String action = getUIManager().navigationMachine("home");
         /*        action = getUIManager().navigationMachine("denuncia");*/
 
-        //---------------------------------montar el automata de la interfaz-----------------------------------------------------------------------------------------
 
         //---------------------------------enlazar el handler con la viewModel de la viewpart------------------------------------------------------------------------
         //  [] aplica,  //enlazar  el handler con la viewModel,  esto es para tener acceso a los widgets de la viewpart desde cualquier lugar;
@@ -371,7 +358,7 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
     }
 
     @Override
-    public void setOwnedByVP(DesktopVP desktopVP) {
+    public void setOwnedByVP(ViewVP viewVP) {
 
     }
 

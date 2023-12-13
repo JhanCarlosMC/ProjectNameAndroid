@@ -25,7 +25,7 @@
 
     <activity
         android:id="@+id/navigation_volumen_residuo"
-        android:name="com.projectname.appestructurada.presentation.viewparts.cntdenunciavp.CntVolumenResiduoVP"
+        android:name="com.projectname.appestructurada.presentation.viewparts.cntvolumenresiduovp.CntVolumenResiduoVP"
         android:label="@string/title_volumen_residuo"
         tools:layout="@layout/activity_volumen_residuo" />
 

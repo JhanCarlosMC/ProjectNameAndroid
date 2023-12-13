@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tooldataform.ui:UI_Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui" xmi:id="_wx1KwJn4Ee6eLNjYZWDLvw" name="ViewPart: FragmentDenuncia">
+  <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_wx1KwZn4Ee6eLNjYZWDLvw" nameVar="FragmentDenuncia" type="View Modal" width="200" height="300" positionX="0" positionY="0" idWidget="_wxvrMJn4Ee6eLNjYZWDLvw">
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_wx1Kwpn4Ee6eLNjYZWDLvw" name="viewPartLoadedAction" id="_wxvrMZn4Ee6eLNjYZWDLvw" typeElement="Operation" urlIcon="" visible="true"/>
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_wx1Kw5n4Ee6eLNjYZWDLvw" name="constructorNameViewPart" id="_wxwSQJn4Ee6eLNjYZWDLvw" typeElement="Operation" urlIcon="" visible="true"/>
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_wx1KxJn4Ee6eLNjYZWDLvw" name="reboot" id="_wxwSQZn4Ee6eLNjYZWDLvw" typeElement="Operation" urlIcon="" visible="true"/>
+    <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_wx1KxZn4Ee6eLNjYZWDLvw" name="syncModel" id="_wxwSQpn4Ee6eLNjYZWDLvw" typeElement="Operation" urlIcon="" visible="true"/>
+  </theUserInterface>
+</tooldataform.ui:UI_Diagram>

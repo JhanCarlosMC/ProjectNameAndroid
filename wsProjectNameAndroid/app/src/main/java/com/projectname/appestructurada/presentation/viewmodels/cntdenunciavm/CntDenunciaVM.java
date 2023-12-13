@@ -8,9 +8,13 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.projectname.appestructurada.R;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
+import com.projectname.appestructurada.presentation.viewmodels.cntvolumenresiduovm.CntVolumenResiduoVM;
 
 public class CntDenunciaVM extends ViewModel {
+    //Hijos
+    CntVolumenResiduoVM cntVolumenResiduoVM;
 
+    //Elementos
     private final MutableLiveData<String> labelTitleToolbar;
     private final MutableLiveData<String> labelContexto;
     private final MutableLiveData<String> labelVolumenResiduo;
@@ -85,19 +89,25 @@ public class CntDenunciaVM extends ViewModel {
 
     public void implementModel() {
         //Instanciar Hijos --> HijoVM newHijo = new HijoVM();
+        CntVolumenResiduoVM newCntVolumenResiduoVM = new CntVolumenResiduoVM();
 
         //Enlazar el padre con sus hijos mediante metodos set de la clase que se esta implementando "sethijo(newHijo);
+        setCntVolumenResiduoVM(newCntVolumenResiduoVM);
 
         //Enlazar los hijos con su padre (clase que se esta implementando - "this") "newHijo.setOwnedBy(this);"
+        newCntVolumenResiduoVM.setOwnedBy(this);
 
         //Enlazar los hijos con con el UIManager "newHijo.setTheUIManager(getTheUIManager());"
+        newCntVolumenResiduoVM.setTheUIManager(getTheUIManager());
 
         //Configurar el id de cada hijo  "newHijo.setIdViewModel(getIdViewModel() + ":Tipo<Hijo>");"
+        newCntVolumenResiduoVM.setIdViewModel(getIdViewModel() + ":CntVolumenResiduoVM");
 
         //Implementar el modelo de los hijos "newHijo.implementarModelo();"
+        newCntVolumenResiduoVM.implementModel();
 
         //Registrar el viewModel de los hijos " getTheUIManager().registrarViewModel(newHijo.getIdViewModel(), newHijo);
-
+        getTheUIManager().registerViewModel(newCntVolumenResiduoVM.getIdViewModel(), newCntVolumenResiduoVM);
     }
 
     public MutableLiveData<String> getLabelTitleToolbar() {
@@ -168,5 +178,13 @@ public class CntDenunciaVM extends ViewModel {
     public MutableLiveData<Integer> getLabelVolumenResiduoFeedbackColor() {
         Log.e("getLabelVolumenResiduoFeedbackColor: ", labelVolumenResiduoFeedbackColor+"");
         return labelVolumenResiduoFeedbackColor;
+    }
+
+    public CntVolumenResiduoVM getCntVolumenResiduoVM() {
+        return cntVolumenResiduoVM;
+    }
+
+    public void setCntVolumenResiduoVM(CntVolumenResiduoVM cntVolumenResiduoVM) {
+        this.cntVolumenResiduoVM = cntVolumenResiduoVM;
     }
 }

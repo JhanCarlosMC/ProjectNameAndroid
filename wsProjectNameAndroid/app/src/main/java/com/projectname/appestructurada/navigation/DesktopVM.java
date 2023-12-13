@@ -12,8 +12,7 @@ public class DesktopVM extends ViewModel {
     private CntDenunciaVM theCntDenunciaVM;
 
     public void implementModel() {
-        //Instanciar Hijos
-        //OLD -> ContenedorLoginViewModel newContenedorLoginViewModel = racional.app.denuncia.denuncia.denuncia.ui.contenedorformulariologinvm.ContenedorformulariologinvmFactory.eINSTANCE.createContenedorFormularioLoginVM();
+        //Instanciar Hijos --> HijoVM newHijo = new HijoVM();
         CntLoginVM newCntLoginVM = new CntLoginVM();
         CntHomeVM newCntHomeVM = new CntHomeVM();
         CntDenunciaVM newCntDenunciaVM = new CntDenunciaVM();

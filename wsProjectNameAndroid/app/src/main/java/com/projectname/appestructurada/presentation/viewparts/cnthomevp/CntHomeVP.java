@@ -89,8 +89,8 @@ public class CntHomeVP extends Fragment implements ViewVP {
         return theUIManager;
     }
     @Override
-    public void setOwnedByVP(DesktopVP desktopVP) {
-        ownedByVP = desktopVP;
+    public void setOwnedByVP(ViewVP viewVP) {
+        ownedByVP = viewVP;
     }
 
     @Override

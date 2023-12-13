@@ -80,6 +80,13 @@ public class UIManager extends ViewModel {
                 setNextNavigationViewPart("DenunciaUI_F");
                 return action;
             }
+
+            if (event.equals("navigateToCategoriaVolumen")) {
+                setLastUiRendered("Desktop_A");
+                setUiRendered("VolumenUI_A");
+                setNextNavigationViewPart("VolumenUI_A");
+                return action;
+            }
         }
 
         if (getUiRendered().equals("LoginUI_A")) {

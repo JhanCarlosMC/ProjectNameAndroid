@@ -45,8 +45,8 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bindingLogin = bindingLogin.inflate(getLayoutInflater());
-        View rootForm = bindingLogin.getRoot();
-        setContentView(rootForm);
+        View root = bindingLogin.getRoot();
+        setContentView(root);
 
         cntLoginVM = new ViewModelProvider(this).get(CntLoginVM.class);
 
@@ -55,18 +55,6 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
 
         // Ocultar la ActionBar
         getSupportActionBar().hide();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                // Lógica para manejar el clic en el botón de retroceso
-                onBackPressed();  // Esta línea es opcional, puedes personalizar la acción
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 
     private void initComponents() {
@@ -193,8 +181,8 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
     }
 
     @Override
-    public void setOwnedByVP(DesktopVP desktopVP) {
-        ownedByVP = desktopVP;
+    public void setOwnedByVP(ViewVP viewVP) {
+        ownedByVP = viewVP;
     }
 
     @Override

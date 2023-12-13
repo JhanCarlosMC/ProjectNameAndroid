@@ -11,6 +11,7 @@ import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
 import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
 import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHomeVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntvolumenresiduovm.CntVolumenResiduoVM;
 
 //Esta clase hace de "ModelFactory" para el  nodo de cliente en el proyecto
 public class APP extends Application {
@@ -27,6 +28,7 @@ public class APP extends Application {
     CntLoginVM cntLoginVM;
     CntHomeVM cntHomeVM;
     CntDenunciaVM cntDenunciaVM;
+    CntVolumenResiduoVM cntVolumenResiduoVM;
 
 
     //------------------------------  Singleton ------------------------------------------------
@@ -152,5 +154,13 @@ public class APP extends Application {
 
     public void setCntDenunciaVM(CntDenunciaVM cntDenunciaVM) {
         this.cntDenunciaVM = cntDenunciaVM;
+    }
+
+    public CntVolumenResiduoVM getCntVolumenResiduoVM() {
+        return cntVolumenResiduoVM = getTheDesktopVM().getCntDenunciaVM().getCntVolumenResiduoVM();
+    }
+
+    public void setCntVolumenResiduoVM(CntVolumenResiduoVM cntVolumenResiduoVM) {
+        this.cntVolumenResiduoVM = cntVolumenResiduoVM;
     }
 }

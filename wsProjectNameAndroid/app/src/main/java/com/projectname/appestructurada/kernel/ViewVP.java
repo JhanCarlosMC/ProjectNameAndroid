@@ -1,6 +1,5 @@
 package com.projectname.appestructurada.kernel;
 
-import com.projectname.appestructurada.navigation.DesktopVP;
 import com.projectname.appestructurada.presentation.UIManager;
 
 public interface ViewVP {
@@ -8,7 +7,7 @@ public interface ViewVP {
 
     public String getIdViewPart();
 
-    void setOwnedByVP(DesktopVP desktopVP);
+    void setOwnedByVP(ViewVP viewVP);
 
     ViewVP getOwnedByVP();
 

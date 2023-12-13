@@ -1,6 +1,5 @@
-#Wed Dec 13 15:46:59 COT 2023
+#Wed Dec 13 15:47:18 COT 2023
 rulergrid.snaptogeometry=true
-viewport.x=0
 zoom=1.0
 print.margin.right=0.5
 rulergrid.rulerunit=1
@@ -15,7 +14,6 @@ print.margin.bottom=0.5
 rulergrid.gridlinestyle=6
 rulergrid.gridlevel=true
 print.margin.top=0.5
-rulergrid.viewrulers=true
 print.useMillim=true
+rulergrid.viewrulers=true
 print.usePortrait=true
-viewport.y=0

@@ -1,10 +1,12 @@
 package com.projectname.appestructurada.presentation.viewparts.cntdenunciavp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -16,22 +18,32 @@ import androidx.lifecycle.ViewModelProvider;
 import com.projectname.appestructurada.APP;
 import com.projectname.appestructurada.databinding.FragmentDenunciaBinding;
 import com.projectname.appestructurada.kernel.ViewVP;
-import com.projectname.appestructurada.navigation.DesktopVP;
 import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
 import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntvolumenresiduovm.CntVolumenResiduoVM;
+import com.projectname.appestructurada.presentation.viewparts.cntvolumenresiduovp.CntVolumenResiduoVP;
 
 public class CntDenunciaVP extends Fragment implements ViewVP {
 
+    //Varibales de Binding
     private FragmentDenunciaBinding bindingDenuncia;
     private CntDenunciaVM cntDenunciaVM;
+
+    //Variables de Relaciones
     ViewVP ownedByVP;
     APP app = APP.getInstance();
     UIManager theUIManager;
     String idViewPart;
     ViewModel theViewModel;
 
-    /*Layouts Elements*/
+    private View view;
+
+    //varibales contenedor viewmodel
+    CntVolumenResiduoVP cntVolumenResiduoVP;
+    CntVolumenResiduoVM cntVolumenResiduoVM;
+
+    //Layouts Elements
     public TextView labelTitleToolbar;
     public TextView labelContexto;
     public TextView labelVolumenResiduo;
@@ -48,6 +60,7 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
     public TextView labelVolumenResiduoFeedback;
     public TextView labelTipoResiduoFeedback;
     public TextView labelInformacionAdicionalFeedback;
+    public LinearLayout cartVolumenResiduo;
 
     @Nullable
     @Override
@@ -58,15 +71,47 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         View root = bindingDenuncia.getRoot();
 
         /*Carga de informacion desde la VM a la VP*/
-        initComponents();
-        settingEvents();
+        implementModel();
+//        initComponents();
+//        settingEvents();
 
         return root;
     }
+    public void implementModel(){
 
-    private void settingEvents() {
+        //Instanciar
+        CntVolumenResiduoVP newCntVolumenResiduoVP = new CntVolumenResiduoVP();
+
+        //Enlazar hijos
+        setCntVolumenResiduoVP(newCntVolumenResiduoVP);
+
+//        //Enlazar padres hijos
+//        newCntVolumenResiduoVP.setOwnedByVP(this);
+//
+//        //Enlazar contexto
+//        newCntVolumenResiduoVP.setView(view.findViewById(R.id.activity_volumen_residuo));
+//
+//        //Enlazar viewModels
+//        newCntVolumenResiduoVP.setTheViewModel(getCntVolumenResiduoVM());
+//
+//        //Enlazar viewModels hijos con viewPart
+//        getCntVolumenResiduoVM().setTheViewPart(newCntVolumenResiduoVP);
+//
+//        //Generar id
+//        setIdViewPart(getOwnedByVP().getIdViewPart() + ":CntDenunciaVP");
+
+        //Invocar implementar modelo hijos
+//        newCntVolumenResiduoVP.implementModel();
+
+        //Inicializando componentes
+        initComponents();
+
+        //montar eventos
+        settingEvents();
+
+//        //update views
+
     }
-
     private void initComponents() {
         // Inicializar Widgets
         labelTitleToolbar = bindingDenuncia.txtTitleToolbar;
@@ -104,13 +149,13 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
             labelInformacionAdicionalFeedback = bindingDenuncia.includeInformacionAdicional.txtFeedback;
             cntDenunciaVM.getLabelInformacionAdicionalFeedback().observe(this,labelInformacionAdicionalFeedback::setText);
 
-        labelTipoDenuncia = bindingDenuncia.includeTipoDenuncia.txtCartTitle;
+        labelTipoDenuncia = bindingDenuncia.txtCartTitleRadio;
         cntDenunciaVM.getLabelTipoDenuncia().observe(this,labelTipoDenuncia::setText);
 
-        radioButtonPublica = bindingDenuncia.includeTipoDenuncia.rbOptionOne;
+        radioButtonPublica = bindingDenuncia.rbOptionOne;
         cntDenunciaVM.getRadioLabelPublica().observe(this,radioButtonPublica::setText);
 
-        radioButtonAnonima = bindingDenuncia.includeTipoDenuncia.rbOptionTwo;
+        radioButtonAnonima = bindingDenuncia.rbOptionTwo;
         cntDenunciaVM.getRadioLabelAnonima().observe(this,radioButtonAnonima::setText);
 
         checkBoxTerminosCondiciones = bindingDenuncia.cbxCheckbox;
@@ -119,6 +164,28 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         labelVerTerminosCondiciones = bindingDenuncia.txtText;
         cntDenunciaVM.getLabelVerTerminosCondiciones().observe(this, labelVerTerminosCondiciones::setText);
 
+        cartVolumenResiduo = bindingDenuncia.includeVolumenResiduo.llCart;
+    }
+
+    private void settingEvents() {
+
+        getCartVolumenResiduo().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickVolumenResiduo(view);
+            }
+        });
+    }
+
+    private void onClickVolumenResiduo(View view) {
+        getUIManager().navigationMachine("navigateToCategoriaVolumen");
+
+        if (getUIManager().getUiRendered().equals("VolumenUI_A")){
+//            Intent intent = new Intent(view.getContext(), getCntVolumenResiduoVP().getClass());
+            Intent intent = new Intent(view.getContext(), getCntVolumenResiduoVP().getClass());
+
+            getView().getContext().startActivity(intent);
+        }
     }
 
     @Override
@@ -263,6 +330,39 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         this.labelInformacionAdicionalFeedback = labelInformacionAdicionalFeedback;
     }
 
+    public TextView getLabelTitleToolbar() {
+        return labelTitleToolbar;
+    }
+
+    public void setLabelTitleToolbar(TextView labelTitleToolbar) {
+        this.labelTitleToolbar = labelTitleToolbar;
+    }
+
+    public LinearLayout getCartVolumenResiduo() {
+        return cartVolumenResiduo;
+    }
+
+    public void setCartVolumenResiduo(LinearLayout cartVolumenResiduo) {
+        this.cartVolumenResiduo = cartVolumenResiduo;
+    }
+
+    public CntVolumenResiduoVP getCntVolumenResiduoVP() {
+        return cntVolumenResiduoVP;
+    }
+
+    public void setCntVolumenResiduoVP(CntVolumenResiduoVP cntVolumenResiduoVP) {
+        this.cntVolumenResiduoVP = cntVolumenResiduoVP;
+    }
+
+    public CntVolumenResiduoVM getCntVolumenResiduoVM() {
+        cntVolumenResiduoVM = app.getCntVolumenResiduoVM();
+        return cntVolumenResiduoVM;
+    }
+
+    public void setCntVolumenResiduoVM(CntVolumenResiduoVM cntVolumenResiduoVM) {
+        this.cntVolumenResiduoVM = cntVolumenResiduoVM;
+    }
+
     @Override
     public void setIdViewPart(String newIdViewPart) {
         idViewPart = newIdViewPart;
@@ -274,8 +374,8 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
     }
 
     @Override
-    public void setOwnedByVP(DesktopVP desktopVP) {
-        ownedByVP = desktopVP;
+    public void setOwnedByVP(ViewVP viewVP) {
+        ownedByVP = viewVP;
     }
 
     @Override
