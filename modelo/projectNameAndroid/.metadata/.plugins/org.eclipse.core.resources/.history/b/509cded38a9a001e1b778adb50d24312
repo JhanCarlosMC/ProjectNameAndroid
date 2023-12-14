@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tooldataform.statemachine.abstract:StateChartDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tooldataform.statemachine.abstract="http:///tooldataform/statemachine/abstract.ecore" xsi:schemaLocation="http:///tooldataform/statemachine/abstract.ecore http:///tooldataform.ecore#//abstract" xmi:id="_093ZAJqKEe6_D_4ndI2wFQ" name="Dialog: WidgetTextInput"/>

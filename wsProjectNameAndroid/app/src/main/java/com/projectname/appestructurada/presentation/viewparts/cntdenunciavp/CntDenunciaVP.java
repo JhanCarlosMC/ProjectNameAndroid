@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
+import com.projectname.appestructurada.R;
 import com.projectname.appestructurada.databinding.FragmentDenunciaBinding;
 import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.presentation.UIManager;
@@ -181,7 +182,6 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         getUIManager().navigationMachine("navigateToCategoriaVolumen");
 
         if (getUIManager().getUiRendered().equals("VolumenUI_A")){
-//            Intent intent = new Intent(view.getContext(), getCntVolumenResiduoVP().getClass());
             Intent intent = new Intent(view.getContext(), getCntVolumenResiduoVP().getClass());
 
             getView().getContext().startActivity(intent);

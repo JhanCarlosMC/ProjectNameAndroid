@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.statemachine.abstract="http:///tooldataform/statemachine/abstract.ecore" xsi:schemaLocation="http:///tooldataform/statemachine/abstract.ecore http:///tooldataform.ecore#//abstract">
+  <tooldataform.statemachine.abstract:StateChartDiagram xmi:id="_zKc6oJqKEe6_D_4ndI2wFQ" name="Dialog: FragmentDenuncia"/>
+  <notation:Diagram xmi:id="_zLifwJqKEe6_D_4ndI2wFQ" type="MetamodelodataformStateChartDiagram" element="_zKc6oJqKEe6_D_4ndI2wFQ" name="Dialog: FragmentDenuncia" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_zLifwZqKEe6_D_4ndI2wFQ"/>
+  </notation:Diagram>
+</xmi:XMI>
