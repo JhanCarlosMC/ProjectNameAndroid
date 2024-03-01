@@ -31,7 +31,7 @@ public class FormLoginVM extends ViewModel {
         textPassword.setValue("*********");
 
         labelTitleCardView = new MutableLiveData<>();
-        labelTitleCardView.setValue("LoginForm");
+        labelTitleCardView.setValue("Sign In");
 
         checkBoxRememberme = new MutableLiveData<>();
         checkBoxRememberme.setValue("Remember Me");

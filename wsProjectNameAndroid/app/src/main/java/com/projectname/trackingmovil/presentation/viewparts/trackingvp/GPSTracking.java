@@ -107,6 +107,7 @@ public class GPSTracking extends AppCompatActivity implements LocationListener {
             public void onClick(View v) {
                 // Inicia el ciclo del Runnable
                 handler.postDelayed(runnable, intervalo);
+                mostrarAlertaInicio();
             }
         });
 
@@ -115,11 +116,37 @@ public class GPSTracking extends AppCompatActivity implements LocationListener {
             public void onClick(View v) {
                 // Para detener el Runnable, simplemente llama a removeCallbacks en el Handler
                 handler.removeCallbacks(runnable);
+                mostrarAlertaFin();
+                labelGPS.setText("Ubicacion...");
             }
         });
 
     }
+    private void mostrarAlertaInicio() {
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setMessage("Su ubicacion esta siendo calculada...")
+                .setTitle("Alerta")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 
+    private void mostrarAlertaFin() {
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setMessage("Se ha finalizado el seguimiento de su ubicacion")
+                .setTitle("Alerta")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+        dialog.show();
+    }
     private void obtenerDate() {
         // Obtener la fecha y hora actual
         Calendar calendar = Calendar.getInstance();
