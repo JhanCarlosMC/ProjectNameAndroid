@@ -107,11 +107,23 @@ public class GPSTracking extends AppCompatActivity implements LocationListener {
 
                 String estadoReserva = "Solicitada";
                 DesktopVP.trackingUser(fechaDispositivo, horaDispositivo, nombreUsuarioLogin, latitud, longitud, estadoReserva);
+                mostrarAlerta();
             }
         });
 
     }
-
+    private void mostrarAlerta() {
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setMessage("Se ha reservado su puesto, por favor espere en su ubicacion actual!")
+                .setTitle("Actualizacion")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+        dialog.show();
+    }
     private void obtenerDate() {
         // Obtener la fecha y hora actual
         Calendar calendar = Calendar.getInstance();
