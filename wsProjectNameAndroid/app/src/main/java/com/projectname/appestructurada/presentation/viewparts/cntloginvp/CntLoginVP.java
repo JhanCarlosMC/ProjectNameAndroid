@@ -1,5 +1,6 @@
 package com.projectname.appestructurada.presentation.viewparts.cntloginvp;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -106,6 +108,8 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
                     textUser.setText(null);
                     textPassword.setText(null);
                     cntLoginVM.resetTexts();
+                }else{
+                    mostrarAlerta();
                 }
             }
         });
@@ -118,7 +122,18 @@ public class CntLoginVP extends AppCompatActivity implements ViewVP {
         });
 
     }
-
+    private void mostrarAlerta() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Debe completar todos campos del formulario")
+                .setTitle("Alerta")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
     @Override
     public void onBackPressed() {
         super.onBackPressed();

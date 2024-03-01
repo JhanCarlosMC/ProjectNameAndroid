@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xsi:schemaLocation="http:///tooldataform/core.ecore http:///tooldataform.ecore#//core">
+  <tooldataform.core:Datos_Diagram xmi:id="_0wbvoNgEEe6kLIjGyFW4hg" name="Datos: ActivityLogin"/>
+  <notation:Diagram xmi:id="_00g-YNgEEe6kLIjGyFW4hg" type="MetamodelodataformDatosDiagram" element="_0wbvoNgEEe6kLIjGyFW4hg" name="Datos: ActivityLogin" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_00g-YdgEEe6kLIjGyFW4hg"/>
+  </notation:Diagram>
+</xmi:XMI>

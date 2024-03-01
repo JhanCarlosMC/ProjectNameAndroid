@@ -3,6 +3,7 @@ package com.projectname.appestructurada.presentation.viewparts.cntvolumenresiduo
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -16,6 +17,7 @@ import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.navigation.DesktopVP;
 import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
+import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
 import com.projectname.appestructurada.presentation.viewmodels.cntvolumenresiduovm.CntVolumenResiduoVM;
 
 public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
@@ -34,6 +36,7 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
     public RadioButton labelRadioButtonMano;
     public RadioButton labelRadioButtonContenedor;
     public RadioButton labelRadioButtonMasGrande;
+    public RelativeLayout imgBack;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,7 +48,7 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
         cntVolumenResiduoVM = new ViewModelProvider(this).get(CntVolumenResiduoVM.class);
 
         initComponents();
-//        settingEvents();
+        settingEvents();
 
 
         // Ocultar la ActionBar
@@ -66,8 +69,18 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
         labelRadioButtonMasGrande = bindingVolumenResiduo.includeOptionMasGrande.rbOption;
         cntVolumenResiduoVM.getLabelRadioButtonMasGrande().observe(this,labelRadioButtonMasGrande::setText);
 
+        imgBack = bindingVolumenResiduo.actionToolbarAtras;
     }
+    public void settingEvents() {
+        //Antiguo montarEventos()
+        getImgBack().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
+    }
     public View getView() {
         return view;
     }
@@ -108,5 +121,8 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
     public UIManager getUIManager() {
         theUIManager = app.getTheUIManager();
         return theUIManager;
+    }
+    public RelativeLayout getImgBack() {
+        return imgBack;
     }
 }

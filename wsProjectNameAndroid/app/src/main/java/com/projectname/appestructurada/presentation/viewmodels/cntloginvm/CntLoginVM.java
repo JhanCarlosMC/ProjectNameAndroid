@@ -37,7 +37,7 @@ public class CntLoginVM extends ViewModel {
         textPassword.setValue("*********");
 
         labelTitleCardView = new MutableLiveData<>();
-        labelTitleCardView.setValue("Login");
+        labelTitleCardView.setValue("Sign In");
 
         checkBoxRememberme = new MutableLiveData<>();
         checkBoxRememberme.setValue("Remember Me");
