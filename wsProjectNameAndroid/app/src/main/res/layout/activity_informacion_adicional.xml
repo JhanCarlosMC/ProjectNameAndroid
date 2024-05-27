@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_informacion_adicional"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/imageView_icono"
+            android:background="@color/colorAccent">
+
+            <RelativeLayout
+                android:id="@+id/action_toolbar_atras"
+                android:layout_width="@dimen/img_atras"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/imageView_atras"
+                    android:layout_height="@dimen/imageView_atras"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/ic_atras"
+                    android:backgroundTint="@color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_title_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/titulo_principal"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_margin_15dp">
+
+        <LinearLayout
+            android:id="@+id/ll_ubicacion_actual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_margin_15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/imageView_iconos"
+                    android:layout_height="@dimen/imageView_iconos"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_toStartOf="@+id/arrow"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:background="@mipmap/ic_ubicacion" />
+
+                <TextView
+                    android:id="@+id/txt_cart_title_ubicacion_actual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_height_5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/titulo_contenedor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRojo"
+                    android:textSize="@dimen/titulo_contenedor" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_label_ubicacion_actual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginLeft_5dp"
+                android:layout_marginTop="@dimen/marginTop_3dp"
+                android:layout_marginRight="@dimen/marginRight_5dp"
+                android:background="@drawable/campos"
+                android:padding="@dimen/padding_10dp"
+                android:textSize="@dimen/titulo_contenedor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fecha_denuncia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_margin_15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/imageView_iconos"
+                    android:layout_height="@dimen/imageView_iconos"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_toStartOf="@+id/arrow"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:background="@mipmap/ic_calendar" />
+
+                <TextView
+                    android:id="@+id/txt_cart_title_fecha_actual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_height_5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/titulo_contenedor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRojo"
+                    android:textSize="@dimen/titulo_contenedor" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_label_fecha_denuncia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginLeft_5dp"
+                android:layout_marginTop="@dimen/marginTop_3dp"
+                android:layout_marginRight="@dimen/marginRight_5dp"
+                android:background="@drawable/campos"
+                android:padding="@dimen/padding_10dp"
+                android:textSize="@dimen/titulo_contenedor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_margin_15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/imageView_iconos"
+                    android:layout_height="@dimen/imageView_iconos"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_toStartOf="@+id/arrow"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:background="@mipmap/ic_descripcion" />
+
+                <TextView
+                    android:id="@+id/txt_cart_title_descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_height_5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/titulo_contenedor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRojo"
+                    android:textSize="@dimen/titulo_contenedor" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_label_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginLeft_5dp"
+                android:layout_marginTop="@dimen/marginTop_3dp"
+                android:layout_marginRight="@dimen/marginRight_5dp"
+                android:background="@drawable/campos"
+                android:padding="@dimen/padding_10dp"
+                android:textSize="@dimen/titulo_contenedor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fotografia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_margin_15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/imageView_iconos"
+                    android:layout_height="@dimen/imageView_iconos"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_toStartOf="@+id/arrow"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:background="@mipmap/ic_fotografia" />
+
+                <TextView
+                    android:id="@+id/txt_cart_title_fotografia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_height_5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/titulo_contenedor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRojo"
+                    android:textSize="@dimen/titulo_contenedor" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_informacion_fotografia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginLeft_5dp"
+                android:layout_marginRight="@dimen/marginRight_5dp"
+                android:layout_marginBottom="@dimen/marginBottom_5dp"
+                app:cardBackgroundColor="#ffff"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                app:cardElevation="@dimen/cardElevation"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_denuncia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/layout_margin_5dp"
+                            android:layout_marginTop="@dimen/layout_margin_5dp"
+                            android:layout_marginEnd="@dimen/layout_margin_5dp"
+                            android:layout_marginBottom="@dimen/layout_margin_5dp"
+                            android:src="@drawable/icon_foto" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/linea"
+                        android:layout_marginLeft="@dimen/marginLeft_10dp"
+                        android:layout_marginRight="@dimen/marginRight_10dp"
+                        android:background="@color/contenedor_titulo" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_5dp"
+                        android:weightSum="2">
+
+                        <Button
+                            android:id="@+id/form_informacion_adicional_tomar_foto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/color_boon_ingresar"
+                            android:text="@string/Tomar_foto"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_informacion_acciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linea"
+            android:background="@color/contenedor_titulo" />
+
+        <Button
+            android:id="@+id/btn_aceptar_informacion_adicional"
+            android:layout_width="@dimen/width_button"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:enabled="false"
+            android:text="@string/aceptar"
+            android:textAllCaps="false"
+            android:textSize="@dimen/titulo_contenedor" />
+    </RelativeLayout>
+</LinearLayout>

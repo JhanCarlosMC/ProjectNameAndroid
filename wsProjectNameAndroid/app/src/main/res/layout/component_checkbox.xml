@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cbx_selection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_radio_button"
+    android:checked="false"
+    android:drawablePadding="@dimen/padding_5dp"
+    android:textSize="@dimen/titulo_contenedor" />

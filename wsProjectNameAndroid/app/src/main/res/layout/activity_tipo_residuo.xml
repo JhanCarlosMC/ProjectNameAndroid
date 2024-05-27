@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_volumen_residuo"
+    android:id="@+id/activity_tipo_residuo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -55,57 +55,72 @@
         android:orientation="vertical"
         android:padding="@dimen/layout_margin_15dp">
 
-        <RadioGroup
-            android:id="@+id/rg_list_volumen_residuo"
+        <!-- Includes Reutilizables -->
+        <include
+            android:id="@+id/include_option_envases"
+            layout="@layout/component_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginBottom="@dimen/marginBottom_10dp" />
 
-            <!-- Includes Reutilizables -->
-            <include
-                android:id="@+id/include_option_mano"
-                layout="@layout/component_radiobutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/marginBottom_10dp" />
+        <include
+            android:id="@+id/include_option_carton"
+            layout="@layout/component_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBottom_10dp" />
 
-            <include
-                android:id="@+id/include_option_mochila"
-                layout="@layout/component_radiobutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/marginBottom_10dp" />
+        <include
+            android:id="@+id/include_option_bolsas"
+            layout="@layout/component_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBottom_10dp" />
 
-            <include
-                android:id="@+id/include_option_automovil"
-                layout="@layout/component_radiobutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/marginBottom_10dp" />
+        <include
+            android:id="@+id/include_option_electronicos"
+            layout="@layout/component_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBottom_10dp" />
 
-            <include
-                android:id="@+id/include_option_contenedor"
-                layout="@layout/component_radiobutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/marginBottom_10dp" />
+        <include
+            android:id="@+id/include_option_baterias"
+            layout="@layout/component_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBottom_10dp" />
 
-            <include
-                android:id="@+id/include_option_camion"
-                layout="@layout/component_radiobutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/marginBottom_10dp" />
+        <include
+            android:id="@+id/include_option_neumaticos"
+            layout="@layout/component_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBottom_10dp" />
 
-            <include
-                android:id="@+id/include_option_mas_grande"
-                layout="@layout/component_radiobutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/marginBottom_10dp" />
-            <!-- Includes Reutilizables -->
+        <include
+            android:id="@+id/include_option_medicamentos"
+            layout="@layout/component_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBottom_10dp" />
 
-        </RadioGroup>
+        <include
+            android:id="@+id/include_option_escombros"
+            layout="@layout/component_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBottom_10dp" />
+
+        <include
+            android:id="@+id/include_option_vidrios"
+            layout="@layout/component_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBottom_10dp" />
+
+        <!-- Includes Reutilizables -->
+
     </LinearLayout>
 
     <RelativeLayout
@@ -121,7 +136,7 @@
             android:background="@color/contenedor_titulo" />
 
         <Button
-            android:id="@+id/btn_aceptar_volumen_residuo"
+            android:id="@+id/btn_aceptar_tipo_residuo"
             android:layout_width="@dimen/width_button"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
