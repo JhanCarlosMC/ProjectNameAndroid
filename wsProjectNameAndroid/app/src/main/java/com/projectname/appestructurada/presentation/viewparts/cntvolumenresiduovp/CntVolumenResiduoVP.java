@@ -34,7 +34,10 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
     /*Layouts Elements*/
     public TextView labelTitleTollbar;
     public RadioButton labelRadioButtonMano;
+    public RadioButton labelRadioButtonMochila;
+    public RadioButton labelRadioButtonAutomovil;
     public RadioButton labelRadioButtonContenedor;
+    public RadioButton labelRadioButtonCamion;
     public RadioButton labelRadioButtonMasGrande;
     public RelativeLayout imgBack;
 
@@ -50,7 +53,6 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
         initComponents();
         settingEvents();
 
-
         // Ocultar la ActionBar
         getSupportActionBar().hide();
     }
@@ -63,8 +65,17 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
         labelRadioButtonMano = bindingVolumenResiduo.includeOptionMano.rbOption;
         cntVolumenResiduoVM.getLabelRadioButtonMano().observe(this,labelRadioButtonMano::setText);
 
+        labelRadioButtonMochila = bindingVolumenResiduo.includeOptionMano.rbOption;
+        cntVolumenResiduoVM.getLabelRadioButtonMochila().observe(this,labelRadioButtonMochila::setText);
+
+        labelRadioButtonAutomovil = bindingVolumenResiduo.includeOptionMano.rbOption;
+        cntVolumenResiduoVM.getLabelRadioButtonAutomovil().observe(this,labelRadioButtonAutomovil::setText);
+
         labelRadioButtonContenedor = bindingVolumenResiduo.includeOptionContenedor.rbOption;
         cntVolumenResiduoVM.getLabelRadioButtonContenedor().observe(this,labelRadioButtonContenedor::setText);
+
+        labelRadioButtonCamion = bindingVolumenResiduo.includeOptionMano.rbOption;
+        cntVolumenResiduoVM.getLabelRadioButtonCamion().observe(this,labelRadioButtonCamion::setText);
 
         labelRadioButtonMasGrande = bindingVolumenResiduo.includeOptionMasGrande.rbOption;
         cntVolumenResiduoVM.getLabelRadioButtonMasGrande().observe(this,labelRadioButtonMasGrande::setText);

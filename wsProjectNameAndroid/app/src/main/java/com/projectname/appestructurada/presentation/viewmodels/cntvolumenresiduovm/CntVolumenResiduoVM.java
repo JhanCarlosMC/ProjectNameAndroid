@@ -10,7 +10,10 @@ public class CntVolumenResiduoVM extends ViewModel {
     //Elementos
     private final MutableLiveData<String> labelTitleTollbar;
     private final MutableLiveData<String> labelRadioButtonMano;
+    private final MutableLiveData<String> labelRadioButtonMochila;
+    private final MutableLiveData<String> labelRadioButtonAutomovil;
     private final MutableLiveData<String> labelRadioButtonContenedor;
+    private final MutableLiveData<String> labelRadioButtonCamion;
     private final MutableLiveData<String> labelRadioButtonMasGrande;
 
 
@@ -21,8 +24,17 @@ public class CntVolumenResiduoVM extends ViewModel {
         labelRadioButtonMano = new MutableLiveData<>();
         labelRadioButtonMano.setValue("Cabe en una Mano");
 
+        labelRadioButtonMochila = new MutableLiveData<>();
+        labelRadioButtonMochila.setValue("Cabe en una Mochila");
+
+        labelRadioButtonAutomovil = new MutableLiveData<>();
+        labelRadioButtonAutomovil.setValue("Cabe en una Mochila");
+
         labelRadioButtonContenedor = new MutableLiveData<>();
         labelRadioButtonContenedor.setValue("Cabe en un Contenedor");
+
+        labelRadioButtonCamion = new MutableLiveData<>();
+        labelRadioButtonCamion.setValue("Cabe en una Mochila");
 
         labelRadioButtonMasGrande = new MutableLiveData<>();
         labelRadioButtonMasGrande.setValue("Mas Grande");
@@ -59,5 +71,17 @@ public class CntVolumenResiduoVM extends ViewModel {
 
     public MutableLiveData<String> getLabelRadioButtonMasGrande() {
         return labelRadioButtonMasGrande;
+    }
+
+    public MutableLiveData<String> getLabelRadioButtonMochila() {
+        return labelRadioButtonMochila;
+    }
+
+    public MutableLiveData<String> getLabelRadioButtonAutomovil() {
+        return labelRadioButtonAutomovil;
+    }
+
+    public MutableLiveData<String> getLabelRadioButtonCamion() {
+        return labelRadioButtonCamion;
     }
 }

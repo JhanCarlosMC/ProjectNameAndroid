@@ -113,7 +113,7 @@
             android:layout_marginBottom="@dimen/marginBottom_10dp" />
 
         <include
-            android:id="@+id/include_option_vidrios"
+            android:id="@+id/include_option_varios"
             layout="@layout/component_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
