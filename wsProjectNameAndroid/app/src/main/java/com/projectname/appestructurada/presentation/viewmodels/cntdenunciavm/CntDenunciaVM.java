@@ -8,11 +8,15 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.projectname.appestructurada.R;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
+import com.projectname.appestructurada.presentation.viewmodels.cntinformacionadicionalvm.CntInformacionAdicionalVM;
+import com.projectname.appestructurada.presentation.viewmodels.cnttiporesiduovm.CntTipoResiduoVM;
 import com.projectname.appestructurada.presentation.viewmodels.cntvolumenresiduovm.CntVolumenResiduoVM;
 
 public class CntDenunciaVM extends ViewModel {
     //Hijos
     CntVolumenResiduoVM cntVolumenResiduoVM;
+    CntTipoResiduoVM cntTipoResiduoVM;
+    CntInformacionAdicionalVM cntInformacionAdicionalVM;
 
     //Elementos
     private final MutableLiveData<String> labelTitleToolbar;
@@ -90,24 +94,39 @@ public class CntDenunciaVM extends ViewModel {
     public void implementModel() {
         //Instanciar Hijos --> HijoVM newHijo = new HijoVM();
         CntVolumenResiduoVM newCntVolumenResiduoVM = new CntVolumenResiduoVM();
+        CntTipoResiduoVM newCntTipoResiduoVM = new CntTipoResiduoVM();
+        CntInformacionAdicionalVM newCntInformacionAdicionalVM = new CntInformacionAdicionalVM();
 
         //Enlazar el padre con sus hijos mediante metodos set de la clase que se esta implementando "sethijo(newHijo);
         setCntVolumenResiduoVM(newCntVolumenResiduoVM);
+        setCntTipoResiduoVM(newCntTipoResiduoVM);
+        setCntInformacionAdicionalVM(newCntInformacionAdicionalVM);
 
         //Enlazar los hijos con su padre (clase que se esta implementando - "this") "newHijo.setOwnedBy(this);"
         newCntVolumenResiduoVM.setOwnedBy(this);
+        newCntTipoResiduoVM.setOwnedBy(this);
+        newCntInformacionAdicionalVM.setOwnedBy(this);
 
         //Enlazar los hijos con con el UIManager "newHijo.setTheUIManager(getTheUIManager());"
         newCntVolumenResiduoVM.setTheUIManager(getTheUIManager());
+        newCntTipoResiduoVM.setTheUIManager(getTheUIManager());
+        newCntInformacionAdicionalVM.setTheUIManager(getTheUIManager());
 
         //Configurar el id de cada hijo  "newHijo.setIdViewModel(getIdViewModel() + ":Tipo<Hijo>");"
         newCntVolumenResiduoVM.setIdViewModel(getIdViewModel() + ":CntVolumenResiduoVM");
+        newCntTipoResiduoVM.setIdViewModel(getIdViewModel()+":CntTipoResiduoVM");
+        newCntInformacionAdicionalVM.setIdViewModel(getIdViewModel()+":CntInformacionAdicionalVM");
 
         //Implementar el modelo de los hijos "newHijo.implementarModelo();"
         newCntVolumenResiduoVM.implementModel();
+        newCntTipoResiduoVM.implementModel();
+        newCntInformacionAdicionalVM.implementModel();
 
         //Registrar el viewModel de los hijos " getTheUIManager().registrarViewModel(newHijo.getIdViewModel(), newHijo);
         getTheUIManager().registerViewModel(newCntVolumenResiduoVM.getIdViewModel(), newCntVolumenResiduoVM);
+        getTheUIManager().registerViewModel(newCntTipoResiduoVM.getIdViewModel(), newCntTipoResiduoVM);
+        getTheUIManager().registerViewModel(newCntInformacionAdicionalVM.getIdViewModel(), newCntInformacionAdicionalVM);
+
     }
 
     public MutableLiveData<String> getLabelTitleToolbar() {
@@ -186,5 +205,21 @@ public class CntDenunciaVM extends ViewModel {
 
     public void setCntVolumenResiduoVM(CntVolumenResiduoVM cntVolumenResiduoVM) {
         this.cntVolumenResiduoVM = cntVolumenResiduoVM;
+    }
+
+    public CntTipoResiduoVM getCntTipoResiduoVM() {
+        return cntTipoResiduoVM;
+    }
+
+    public void setCntTipoResiduoVM(CntTipoResiduoVM cntTipoResiduoVM) {
+        this.cntTipoResiduoVM = cntTipoResiduoVM;
+    }
+
+    public CntInformacionAdicionalVM getCntInformacionAdicionalVM() {
+        return cntInformacionAdicionalVM;
+    }
+
+    public void setCntInformacionAdicionalVM(CntInformacionAdicionalVM cntInformacionAdicionalVM) {
+        this.cntInformacionAdicionalVM = cntInformacionAdicionalVM;
     }
 }

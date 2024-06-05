@@ -9,8 +9,10 @@ import com.projectname.appestructurada.navigation.DesktopVM;
 import com.projectname.appestructurada.persistence.Persistence;
 import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntinformacionadicionalvm.CntInformacionAdicionalVM;
 import com.projectname.appestructurada.presentation.viewmodels.cntloginvm.CntLoginVM;
 import com.projectname.appestructurada.presentation.viewmodels.cnthomevm.CntHomeVM;
+import com.projectname.appestructurada.presentation.viewmodels.cnttiporesiduovm.CntTipoResiduoVM;
 import com.projectname.appestructurada.presentation.viewmodels.cntvolumenresiduovm.CntVolumenResiduoVM;
 
 //Esta clase hace de "ModelFactory" para el  nodo de cliente en el proyecto
@@ -29,6 +31,8 @@ public class APP extends Application {
     CntHomeVM cntHomeVM;
     CntDenunciaVM cntDenunciaVM;
     CntVolumenResiduoVM cntVolumenResiduoVM;
+    CntTipoResiduoVM cntTipoResiduoVM;
+    CntInformacionAdicionalVM cntInformacionAdicionalVM;
 
 
     //------------------------------  Singleton ------------------------------------------------
@@ -162,5 +166,21 @@ public class APP extends Application {
 
     public void setCntVolumenResiduoVM(CntVolumenResiduoVM cntVolumenResiduoVM) {
         this.cntVolumenResiduoVM = cntVolumenResiduoVM;
+    }
+
+    public CntTipoResiduoVM getCntTipoResiduoVM() {
+        return cntTipoResiduoVM = getTheDesktopVM().getCntDenunciaVM().getCntTipoResiduoVM();
+    }
+
+    public void setCntTipoResiduoVM(CntTipoResiduoVM cntTipoResiduoVM) {
+        this.cntTipoResiduoVM = cntTipoResiduoVM;
+    }
+
+    public CntInformacionAdicionalVM getCntInformacionAdicionalVM() {
+        return cntInformacionAdicionalVM = getTheDesktopVM().getCntDenunciaVM().getCntInformacionAdicionalVM();
+    }
+
+    public void setCntInformacionAdicionalVM(CntInformacionAdicionalVM cntInformacionAdicionalVM) {
+        this.cntInformacionAdicionalVM = cntInformacionAdicionalVM;
     }
 }

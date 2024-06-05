@@ -22,7 +22,11 @@ import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
 import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
+import com.projectname.appestructurada.presentation.viewmodels.cntinformacionadicionalvm.CntInformacionAdicionalVM;
+import com.projectname.appestructurada.presentation.viewmodels.cnttiporesiduovm.CntTipoResiduoVM;
 import com.projectname.appestructurada.presentation.viewmodels.cntvolumenresiduovm.CntVolumenResiduoVM;
+import com.projectname.appestructurada.presentation.viewparts.cntinformacionadicionalvp.CntInformacionAdicionalVP;
+import com.projectname.appestructurada.presentation.viewparts.cnttiporesiduovp.CntTipoResiduoVP;
 import com.projectname.appestructurada.presentation.viewparts.cntvolumenresiduovp.CntVolumenResiduoVP;
 
 public class CntDenunciaVP extends Fragment implements ViewVP {
@@ -43,6 +47,10 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
     //varibales contenedor viewmodel
     CntVolumenResiduoVP cntVolumenResiduoVP;
     CntVolumenResiduoVM cntVolumenResiduoVM;
+    CntTipoResiduoVM cntTipoResiduoVM;
+    CntTipoResiduoVP cntTipoResiduoVP;
+    CntInformacionAdicionalVM cntInformacionAdicionalVM;
+    CntInformacionAdicionalVP cntInformacionAdicionalVP;
 
     //Layouts Elements
     public TextView labelTitleToolbar;
@@ -82,9 +90,13 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
         //Instanciar
         CntVolumenResiduoVP newCntVolumenResiduoVP = new CntVolumenResiduoVP();
+        CntTipoResiduoVP newCntTipoResiduoVP = new CntTipoResiduoVP();
+        CntInformacionAdicionalVP newCntInformacionAdicionalVP = new CntInformacionAdicionalVP();
 
         //Enlazar hijos
         setCntVolumenResiduoVP(newCntVolumenResiduoVP);
+        setCntTipoResiduoVP(newCntTipoResiduoVP);
+        setCntInformacionAdicionalVP(newCntInformacionAdicionalVP);
 
 //        //Enlazar padres hijos
 //        newCntVolumenResiduoVP.setOwnedByVP(this);
@@ -361,6 +373,40 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
     public void setCntVolumenResiduoVM(CntVolumenResiduoVM cntVolumenResiduoVM) {
         this.cntVolumenResiduoVM = cntVolumenResiduoVM;
+    }
+
+    public CntTipoResiduoVM getCntTipoResiduoVM() {
+        cntTipoResiduoVM = app.getCntTipoResiduoVM();
+        return cntTipoResiduoVM;
+    }
+
+    public void setCntTipoResiduoVM(CntTipoResiduoVM cntTipoResiduoVM) {
+        this.cntTipoResiduoVM = cntTipoResiduoVM;
+    }
+
+    public CntTipoResiduoVP getCntTipoResiduoVP() {
+        return cntTipoResiduoVP;
+    }
+
+    public void setCntTipoResiduoVP(CntTipoResiduoVP cntTipoResiduoVP) {
+        this.cntTipoResiduoVP = cntTipoResiduoVP;
+    }
+
+    public CntInformacionAdicionalVM getCntInformacionAdicionalVM() {
+        cntInformacionAdicionalVM = app.getCntInformacionAdicionalVM();
+        return cntInformacionAdicionalVM;
+    }
+
+    public void setCntInformacionAdicionalVM(CntInformacionAdicionalVM cntInformacionAdicionalVM) {
+        this.cntInformacionAdicionalVM = cntInformacionAdicionalVM;
+    }
+
+    public CntInformacionAdicionalVP getCntInformacionAdicionalVP() {
+        return cntInformacionAdicionalVP;
+    }
+
+    public void setCntInformacionAdicionalVP(CntInformacionAdicionalVP cntInformacionAdicionalVP) {
+        this.cntInformacionAdicionalVP = cntInformacionAdicionalVP;
     }
 
     @Override
