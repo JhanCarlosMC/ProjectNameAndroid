@@ -33,6 +33,8 @@
         <!--Nuevas actividades -->
         <activity android:name=".presentation.viewparts.cntloginvp.CntLoginVP" android:screenOrientation="portrait"/>
         <activity android:name=".presentation.viewparts.cntvolumenresiduovp.CntVolumenResiduoVP" android:screenOrientation="portrait"/>
+        <activity android:name=".presentation.viewparts.cnttiporesiduovp.CntTipoResiduoVP" android:screenOrientation="portrait"/>
+        <activity android:name=".presentation.viewparts.cntinformacionadicionalvp.CntInformacionAdicionalVP" android:screenOrientation="portrait"/>
 
     </application>
 

@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
 import com.projectname.appestructurada.databinding.ActivityInformacionAdicionalBinding;
@@ -41,6 +42,8 @@ public class CntInformacionAdicionalVP extends AppCompatActivity implements View
         bindingInformacionAdicional = bindingInformacionAdicional.inflate(getLayoutInflater());
         View root = bindingInformacionAdicional.getRoot();
         setContentView(root);
+
+        cntInformacionAdicionalVM = new ViewModelProvider(this).get(CntInformacionAdicionalVM.class);
 
         initComponents();
         settingEvents();

@@ -82,14 +82,36 @@ public class UIManager extends ViewModel {
             }
 
             if (event.equals("navigateToCategoriaVolumen")) {
-                setLastUiRendered("Desktop_A");
+                setLastUiRendered("DenunciaUI_F");
                 setUiRendered("VolumenUI_A");
                 setNextNavigationViewPart("VolumenUI_A");
+                return action;
+            }
+
+            if (event.equals("navigateToCategoriaTipo")) {
+                setLastUiRendered("DenunciaUI_F");
+                setUiRendered("TipoUI_A");
+                setNextNavigationViewPart("TipoUI_A");
+                return action;
+            }
+
+            if (event.equals("navigateToCategoriaInformacion")) {
+                setLastUiRendered("DenunciaUI_F");
+                setUiRendered("InformacionUI_A");
+                setNextNavigationViewPart("InformacionUI_A");
                 return action;
             }
         }
 
         if (getUiRendered().equals("LoginUI_A")) {
+            if(event.equals("back")){
+                setUiRendered(getLastUiRendered());
+                setNextNavigationViewPart(getUiRendered());
+                return action;
+            }
+        }
+
+        if (getUiRendered().equals("VolumenUI_A")) {
             if(event.equals("back")){
                 setUiRendered(getLastUiRendered());
                 setNextNavigationViewPart(getUiRendered());

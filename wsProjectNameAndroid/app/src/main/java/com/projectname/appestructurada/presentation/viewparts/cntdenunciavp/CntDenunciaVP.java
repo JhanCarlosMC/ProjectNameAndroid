@@ -70,6 +70,9 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
     public TextView labelTipoResiduoFeedback;
     public TextView labelInformacionAdicionalFeedback;
     public LinearLayout cartVolumenResiduo;
+    public LinearLayout cartTipoResiduo;
+    public LinearLayout cartInformacionAdicional;
+
 
     @Nullable
     @Override
@@ -178,6 +181,8 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         cntDenunciaVM.getLabelVerTerminosCondiciones().observe(this, labelVerTerminosCondiciones::setText);
 
         cartVolumenResiduo = bindingDenuncia.includeVolumenResiduo.llCart;
+        cartTipoResiduo = bindingDenuncia.includeTipoResiduo.llCart;
+        cartInformacionAdicional = bindingDenuncia.includeInformacionAdicional.llCart;
     }
 
     private void settingEvents() {
@@ -188,6 +193,20 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
                 onClickVolumenResiduo(view);
             }
         });
+
+        getCartTipoResiduo().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickTipoResiduo(view);
+            }
+        });
+
+        getCartInformacionAdicional().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickInformacionAdicional(view);
+            }
+        });
     }
 
     private void onClickVolumenResiduo(View view) {
@@ -195,6 +214,26 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
         if (getUIManager().getUiRendered().equals("VolumenUI_A")){
             Intent intent = new Intent(view.getContext(), getCntVolumenResiduoVP().getClass());
+
+            getView().getContext().startActivity(intent);
+        }
+    }
+
+    private void onClickTipoResiduo(View view) {
+        getUIManager().navigationMachine("navigateToCategoriaTipo");
+
+        if (getUIManager().getUiRendered().equals("TipoUI_A")){
+            Intent intent = new Intent(view.getContext(), getCntTipoResiduoVP().getClass());
+
+            getView().getContext().startActivity(intent);
+        }
+    }
+
+    private void onClickInformacionAdicional(View view) {
+        getUIManager().navigationMachine("navigateToCategoriaInformacion");
+
+        if (getUIManager().getUiRendered().equals("InformacionUI_A")){
+            Intent intent = new Intent(view.getContext(), getCntInformacionAdicionalVP().getClass());
 
             getView().getContext().startActivity(intent);
         }
@@ -356,6 +395,22 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
     public void setCartVolumenResiduo(LinearLayout cartVolumenResiduo) {
         this.cartVolumenResiduo = cartVolumenResiduo;
+    }
+
+    public LinearLayout getCartTipoResiduo() {
+        return cartTipoResiduo;
+    }
+
+    public void setCartTipoResiduo(LinearLayout cartTipoResiduo) {
+        this.cartTipoResiduo = cartTipoResiduo;
+    }
+
+    public LinearLayout getCartInformacionAdicional() {
+        return cartInformacionAdicional;
+    }
+
+    public void setCartInformacionAdicional(LinearLayout cartInformacionAdicional) {
+        this.cartInformacionAdicional = cartInformacionAdicional;
     }
 
     public CntVolumenResiduoVP getCntVolumenResiduoVP() {

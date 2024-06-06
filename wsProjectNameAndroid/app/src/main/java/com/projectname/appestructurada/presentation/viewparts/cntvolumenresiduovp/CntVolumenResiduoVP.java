@@ -65,16 +65,16 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
         labelRadioButtonMano = bindingVolumenResiduo.includeOptionMano.rbOption;
         cntVolumenResiduoVM.getLabelRadioButtonMano().observe(this,labelRadioButtonMano::setText);
 
-        labelRadioButtonMochila = bindingVolumenResiduo.includeOptionMano.rbOption;
+        labelRadioButtonMochila = bindingVolumenResiduo.includeOptionMochila.rbOption;
         cntVolumenResiduoVM.getLabelRadioButtonMochila().observe(this,labelRadioButtonMochila::setText);
 
-        labelRadioButtonAutomovil = bindingVolumenResiduo.includeOptionMano.rbOption;
+        labelRadioButtonAutomovil = bindingVolumenResiduo.includeOptionAutomovil.rbOption;
         cntVolumenResiduoVM.getLabelRadioButtonAutomovil().observe(this,labelRadioButtonAutomovil::setText);
 
         labelRadioButtonContenedor = bindingVolumenResiduo.includeOptionContenedor.rbOption;
         cntVolumenResiduoVM.getLabelRadioButtonContenedor().observe(this,labelRadioButtonContenedor::setText);
 
-        labelRadioButtonCamion = bindingVolumenResiduo.includeOptionMano.rbOption;
+        labelRadioButtonCamion = bindingVolumenResiduo.includeOptionCamion.rbOption;
         cntVolumenResiduoVM.getLabelRadioButtonCamion().observe(this,labelRadioButtonCamion::setText);
 
         labelRadioButtonMasGrande = bindingVolumenResiduo.includeOptionMasGrande.rbOption;
