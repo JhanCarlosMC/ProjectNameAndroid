@@ -16,6 +16,7 @@ public class CntVolumenResiduoVM extends ViewModel {
     private final MutableLiveData<String> labelRadioButtonCamion;
     private final MutableLiveData<String> labelRadioButtonMasGrande;
 
+    private String state = "NO_INITIALIZED";
 
     public CntVolumenResiduoVM() {
         labelTitleTollbar = new MutableLiveData<>();
@@ -57,6 +58,71 @@ public class CntVolumenResiduoVM extends ViewModel {
 
     }
 
+    public String updateDialogMachine(final String event) {
+        String action = "";
+
+        if (getState().trim().equals("NO_INITIALIZED")) {
+            if (event.equals("load")) {
+                setState("VMLoaded");
+                notifyCompletar();
+                return action;
+            }
+        }
+        if (getState().equals("VMLoaded")) {
+            if (event.equals("fill")) {
+                setState("Filling");
+                return action;
+            }
+        }
+
+        if (getState().equals("Filling")) {
+            if (event.equals("selectItem")) {
+                updateAcceptButton();
+                updateItemSelected();
+                return action;
+            }
+            if (event.equals("accept")) {
+                notifyCompletado();
+                setState("Filled");
+                return action;
+            }
+            if (event.equals("back") && radioButtonResiduoSelected != 0) {
+                notifyCompletado();
+                setState("Filled");
+                return action;
+            }
+            if (event.equals("back") && radioButtonResiduoSelected == 0) {
+                notifyCompletar();
+                return action;
+            }
+        }
+
+        if (getState().equals("Filled")) {
+            if (event.equals("clear")) {
+                notifyCompletar();
+                clearViewModel();
+                setState("VMLoaded");
+                return action;
+            }
+
+            if (event.equals("selectItem")) {
+                setState("Filling");
+                updateAcceptButton();
+                updateItemSelected();
+                return action;
+            }
+        }
+
+        return action;
+
+    }
+
+    public void notifyCompletar() {
+        setMsgNavigationButton("Completar");
+        setColorNavigationButton("red");
+
+    }
+
     public MutableLiveData<String> getLabelTitleTollbar() {
         return labelTitleTollbar;
     }
@@ -83,5 +149,13 @@ public class CntVolumenResiduoVM extends ViewModel {
 
     public MutableLiveData<String> getLabelRadioButtonCamion() {
         return labelRadioButtonCamion;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

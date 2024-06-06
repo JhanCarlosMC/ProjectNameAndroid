@@ -84,8 +84,6 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
         /*Carga de informacion desde la VM a la VP*/
         implementModel();
-//        initComponents();
-//        settingEvents();
 
         return root;
     }
@@ -207,6 +205,8 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
                 onClickInformacionAdicional(view);
             }
         });
+
+//        getLabelVolumenResiduo()
     }
 
     private void onClickVolumenResiduo(View view) {
