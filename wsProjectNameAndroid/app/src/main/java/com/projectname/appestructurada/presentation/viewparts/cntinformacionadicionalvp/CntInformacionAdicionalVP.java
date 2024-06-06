@@ -84,6 +84,12 @@ public class CntInformacionAdicionalVP extends AppCompatActivity implements View
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        getUIManager().navigationMachine("back");
+    }
+
+    @Override
     public void setIdViewPart(String newIdViewPart) {
         idViewPart = newIdViewPart;
     }

@@ -119,6 +119,22 @@ public class UIManager extends ViewModel {
             }
         }
 
+        if (getUiRendered().equals("TipoUI_A")) {
+            if(event.equals("back")){
+                setUiRendered(getLastUiRendered());
+                setNextNavigationViewPart(getUiRendered());
+                return action;
+            }
+        }
+
+        if (getUiRendered().equals("InformacionUI_A")) {
+            if(event.equals("back")){
+                setUiRendered(getLastUiRendered());
+                setNextNavigationViewPart(getUiRendered());
+                return action;
+            }
+        }
+
         return action;
     }
 

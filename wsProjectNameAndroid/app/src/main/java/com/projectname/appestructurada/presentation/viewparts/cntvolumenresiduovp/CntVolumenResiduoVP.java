@@ -92,6 +92,13 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        getUIManager().navigationMachine("back");
+    }
+
     public View getView() {
         return view;
     }

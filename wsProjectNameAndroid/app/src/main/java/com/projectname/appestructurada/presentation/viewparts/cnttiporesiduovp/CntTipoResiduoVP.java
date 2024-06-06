@@ -103,6 +103,12 @@ public class CntTipoResiduoVP extends AppCompatActivity implements ViewVP {
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        getUIManager().navigationMachine("back");
+    }
+
+    @Override
     public void setIdViewPart(String newIdViewPart) {
         idViewPart = newIdViewPart;
     }
