@@ -2,6 +2,7 @@ package com.projectname.appestructurada.presentation.viewmodels.cntvolumenresidu
 
 import androidx.lifecycle.MutableLiveData;
 
+import com.projectname.appestructurada.databinding.ActivityVolumenResiduoBinding;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
 
 public class CntVolumenResiduoVM extends ViewModel {
@@ -64,7 +65,7 @@ public class CntVolumenResiduoVM extends ViewModel {
         if (getState().trim().equals("NO_INITIALIZED")) {
             if (event.equals("load")) {
                 setState("VMLoaded");
-                notifyCompletar();
+                notifyCompletar_action();
                 return action;
             }
         }
@@ -92,14 +93,14 @@ public class CntVolumenResiduoVM extends ViewModel {
                 return action;
             }
             if (event.equals("back") && radioButtonResiduoSelected == 0) {
-                notifyCompletar();
+                notifyCompletar_action();
                 return action;
             }
         }
 
         if (getState().equals("Filled")) {
             if (event.equals("clear")) {
-                notifyCompletar();
+                notifyCompletar_action();
                 clearViewModel();
                 setState("VMLoaded");
                 return action;
@@ -117,7 +118,7 @@ public class CntVolumenResiduoVM extends ViewModel {
 
     }
 
-    public void notifyCompletar() {
+    public void notifyCompletar_action() {
         setMsgNavigationButton("Completar");
         setColorNavigationButton("red");
 
