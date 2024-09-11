@@ -1,9 +1,7 @@
 package com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm;
 
-import android.content.res.Resources;
 import android.util.Log;
 
-import androidx.core.content.ContextCompat;
 import androidx.lifecycle.MutableLiveData;
 
 import com.projectname.appestructurada.R;
@@ -192,7 +190,6 @@ public class CntDenunciaVM extends ViewModel {
     public MutableLiveData<String> getLabelInformacionAdicionalFeedback() {
         return labelInformacionAdicionalFeedback;
     }
-
 
     public MutableLiveData<Integer> getLabelVolumenResiduoFeedbackColor() {
         Log.e("getLabelVolumenResiduoFeedbackColor: ", labelVolumenResiduoFeedbackColor+"");

@@ -1,9 +1,11 @@
 package com.projectname.appestructurada.presentation.viewmodels.cntvolumenresiduovm;
 
+import android.os.Bundle;
+
 import androidx.lifecycle.MutableLiveData;
 
-import com.projectname.appestructurada.databinding.ActivityVolumenResiduoBinding;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
+import com.projectname.appestructurada.presentation.viewparts.cntdenunciavp.CntDenunciaVP;
 
 public class CntVolumenResiduoVM extends ViewModel {
     //Hijos
@@ -59,6 +61,7 @@ public class CntVolumenResiduoVM extends ViewModel {
 
     }
 
+    /**
     public String updateDialogMachine(final String event) {
         String action = "";
 
@@ -120,10 +123,15 @@ public class CntVolumenResiduoVM extends ViewModel {
 
     public void notifyCompletar_action() {
         setMsgNavigationButton("Completar");
-        setColorNavigationButton("red");
+        //setColorNavigationButton("red");
 
     }
 
+    public void setMsgNavigationButton(String newMsgnavigationButton){
+//        setLabelInformacionAdicionalFeedback(newMsgnavigationButton);
+
+    }
+     */
     public MutableLiveData<String> getLabelTitleTollbar() {
         return labelTitleTollbar;
     }

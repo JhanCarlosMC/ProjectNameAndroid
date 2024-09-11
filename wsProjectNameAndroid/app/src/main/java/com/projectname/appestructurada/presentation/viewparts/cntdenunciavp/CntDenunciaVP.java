@@ -16,7 +16,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
-import com.projectname.appestructurada.R;
 import com.projectname.appestructurada.databinding.FragmentDenunciaBinding;
 import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.presentation.UIManager;
@@ -73,6 +72,7 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
     public LinearLayout cartTipoResiduo;
     public LinearLayout cartInformacionAdicional;
 
+    private TextView label;
 
     @Nullable
     @Override
@@ -81,6 +81,7 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         cntDenunciaVM = new ViewModelProvider(this).get(CntDenunciaVM.class);
         bindingDenuncia = FragmentDenunciaBinding.inflate(inflater, container, false);
         View root = bindingDenuncia.getRoot();
+
 
         /*Carga de informacion desde la VM a la VP*/
         implementModel();
