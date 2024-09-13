@@ -2,6 +2,7 @@ package com.projectname.appestructurada.presentation.viewparts.cntdenunciavp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +14,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
+import com.projectname.appestructurada.R;
 import com.projectname.appestructurada.databinding.FragmentDenunciaBinding;
 import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.presentation.UIManager;
@@ -101,19 +105,21 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         setCntInformacionAdicionalVP(newCntInformacionAdicionalVP);
 
 //        //Enlazar padres hijos
-//        newCntVolumenResiduoVP.setOwnedByVP(this);
+        newCntVolumenResiduoVP.setOwnedByVP(this);
+        Log.e("Ref Data NUll", "implementModel: newCntVolumenResiduoVP " + newCntVolumenResiduoVP.toString());
 //
+//        Log.e("Ref Data NUll", "implementModel: view " + view.findViewById(R.id.activity_volumen_residuo));
 //        //Enlazar contexto
 //        newCntVolumenResiduoVP.setView(view.findViewById(R.id.activity_volumen_residuo));
 //
 //        //Enlazar viewModels
-//        newCntVolumenResiduoVP.setTheViewModel(getCntVolumenResiduoVM());
+        newCntVolumenResiduoVP.setTheViewModel(getCntVolumenResiduoVM());
 //
 //        //Enlazar viewModels hijos con viewPart
-//        getCntVolumenResiduoVM().setTheViewPart(newCntVolumenResiduoVP);
+        getCntVolumenResiduoVM().setTheViewPart(newCntVolumenResiduoVP);
 //
 //        //Generar id
-//        setIdViewPart(getOwnedByVP().getIdViewPart() + ":CntDenunciaVP");
+        setIdViewPart(getOwnedByVP().getIdViewPart() + ":CntDenunciaVP");
 
         //Invocar implementar modelo hijos
 //        newCntVolumenResiduoVP.implementModel();
@@ -143,8 +149,8 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
             labelVolumenResiduoFeedback = bindingDenuncia.includeVolumenResiduo.txtFeedback;
             cntDenunciaVM.getLabelVolumenResiduoFeedback().observe(this, labelVolumenResiduoFeedback::setText);
-            cntDenunciaVM.getLabelVolumenResiduoFeedbackColor().observe(this, labelVolumenResiduoFeedback::setTextColor);
-//            labelVolumenResiduoFeedback.setTextColor(getResources().getColor(cntDenunciaVM.getLabelVolumenResiduoFeedbackColor().getValue()));
+//            cntDenunciaVM.getLabelVolumenResiduoFeedbackColor().observe(this, labelVolumenResiduoFeedback::setTextColor);
+            labelVolumenResiduoFeedback.setTextColor(getResources().getColorStateList(R.color.color_ic_orientacion));
 
         labelTipoResiduo = bindingDenuncia.includeTipoResiduo.txtCartTitle;
         cntDenunciaVM.getLabelTipoResiduo().observe(this, labelTipoResiduo::setText);
@@ -154,6 +160,7 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
             labelTipoResiduoFeedback = bindingDenuncia.includeTipoResiduo.txtFeedback;
             cntDenunciaVM.getLabelTipoResiduoFeedback().observe(this,labelTipoResiduoFeedback::setText);
+            labelTipoResiduoFeedback.setTextColor(getResources().getColorStateList(R.color.color_ic_orientacion));
 
         labelInformacionAdicional = bindingDenuncia.includeInformacionAdicional.txtCartTitle;
         cntDenunciaVM.getLabelInformacionAdicional().observe(this, labelInformacionAdicional::setText);
@@ -163,6 +170,7 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
 
             labelInformacionAdicionalFeedback = bindingDenuncia.includeInformacionAdicional.txtFeedback;
             cntDenunciaVM.getLabelInformacionAdicionalFeedback().observe(this,labelInformacionAdicionalFeedback::setText);
+            labelInformacionAdicionalFeedback.setTextColor(getResources().getColorStateList(R.color.color_ic_orientacion));
 
         labelTipoDenuncia = bindingDenuncia.txtCartTitleRadio;
         cntDenunciaVM.getLabelTipoDenuncia().observe(this,labelTipoDenuncia::setText);
@@ -183,7 +191,6 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
         cartTipoResiduo = bindingDenuncia.includeTipoResiduo.llCart;
         cartInformacionAdicional = bindingDenuncia.includeInformacionAdicional.llCart;
     }
-
     private void settingEvents() {
 
         getCartVolumenResiduo().setOnClickListener(new View.OnClickListener() {
@@ -207,8 +214,25 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
             }
         });
 
+
+
 //        getLabelVolumenResiduo()
     }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+            // Obtener los datos del Intent devuelto
+            String result = data.getStringExtra("result_key");
+        Log.e("CntDenunciaVP", "onActivityResult " + result);
+//
+//            // Actualizar el Fragment con los datos recibidos
+////            cntDenunciaVM.updateVolumenResiduoFeedback(result);
+//            cntDenunciaVM.getLabelVolumenResiduoFeedback().setValue(result);
+    }
+
 
     private void onClickVolumenResiduo(View view) {
         getUIManager().navigationMachine("navigateToCategoriaVolumen");
@@ -464,6 +488,8 @@ public class CntDenunciaVP extends Fragment implements ViewVP {
     public void setCntInformacionAdicionalVP(CntInformacionAdicionalVP cntInformacionAdicionalVP) {
         this.cntInformacionAdicionalVP = cntInformacionAdicionalVP;
     }
+
+
 
     @Override
     public void setIdViewPart(String newIdViewPart) {

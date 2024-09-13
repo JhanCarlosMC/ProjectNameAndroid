@@ -2,6 +2,7 @@ package com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm;
 
 import android.util.Log;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.projectname.appestructurada.R;
@@ -31,11 +32,14 @@ public class CntDenunciaVM extends ViewModel {
     private final MutableLiveData<String> checkBoxTerminosCondiciones;
     private final MutableLiveData<String> labelVerTerminosCondiciones;
     private final MutableLiveData<String> labelVolumenResiduoFeedback;
-    private final MutableLiveData<Integer> labelVolumenResiduoFeedbackColor;
+//    private MutableLiveData<String> labelVolumenResiduoFeedback = new MutableLiveData<>();
+
+
     private final MutableLiveData<String> labelTipoResiduoFeedback;
     private final MutableLiveData<String> labelInformacionAdicionalFeedback;
 
     public CntDenunciaVM() {
+        Log.e("CntDenunciaVM", "Entro en el constructor");
         labelTitleToolbar = new MutableLiveData<>();
         labelTitleToolbar.setValue("Denuncia");
 
@@ -77,9 +81,6 @@ public class CntDenunciaVM extends ViewModel {
 
         labelVolumenResiduoFeedback = new MutableLiveData<>();
         labelVolumenResiduoFeedback.setValue("Completar");
-
-        labelVolumenResiduoFeedbackColor = new MutableLiveData<>();
-        labelVolumenResiduoFeedbackColor.setValue(R.color.colorRojo);
 
         labelTipoResiduoFeedback = new MutableLiveData<>();
         labelTipoResiduoFeedback.setValue("Completar");
@@ -191,11 +192,6 @@ public class CntDenunciaVM extends ViewModel {
         return labelInformacionAdicionalFeedback;
     }
 
-    public MutableLiveData<Integer> getLabelVolumenResiduoFeedbackColor() {
-        Log.e("getLabelVolumenResiduoFeedbackColor: ", labelVolumenResiduoFeedbackColor+"");
-        return labelVolumenResiduoFeedbackColor;
-    }
-
     public CntVolumenResiduoVM getCntVolumenResiduoVM() {
         return cntVolumenResiduoVM;
     }
@@ -219,4 +215,13 @@ public class CntDenunciaVM extends ViewModel {
     public void setCntInformacionAdicionalVM(CntInformacionAdicionalVM cntInformacionAdicionalVM) {
         this.cntInformacionAdicionalVM = cntInformacionAdicionalVM;
     }
+//
+//    // Método para actualizar el valor
+//    public void updateVolumenResiduoFeedback(String feedback) {
+//        labelVolumenResiduoFeedback.setValue(feedback);
+//    }
+//
+//    public LiveData<String> getLabelVolumenResiduoFeedback() {
+//        return labelVolumenResiduoFeedback;
+//    }
 }

@@ -1,5 +1,7 @@
 package com.projectname.appestructurada.presentation;
 
+import android.util.Log;
+
 import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.domain.Domain;
 import com.projectname.appestructurada.navigation.DesktopVM;
@@ -113,6 +115,7 @@ public class UIManager extends ViewModel {
 
         if (getUiRendered().equals("VolumenUI_A")) {
             if(event.equals("back")){
+                Log.e("UIManager", "navigationMachine: back" + getLastUiRendered());
                 setUiRendered(getLastUiRendered());
                 setNextNavigationViewPart(getUiRendered());
                 return action;

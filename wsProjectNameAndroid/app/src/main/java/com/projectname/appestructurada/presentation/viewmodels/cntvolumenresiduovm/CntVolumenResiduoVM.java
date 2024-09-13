@@ -2,6 +2,7 @@ package com.projectname.appestructurada.presentation.viewmodels.cntvolumenresidu
 
 import android.os.Bundle;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
@@ -18,7 +19,7 @@ public class CntVolumenResiduoVM extends ViewModel {
     private final MutableLiveData<String> labelRadioButtonContenedor;
     private final MutableLiveData<String> labelRadioButtonCamion;
     private final MutableLiveData<String> labelRadioButtonMasGrande;
-
+    private final MutableLiveData<String> labelButtonAceptar;
     private String state = "NO_INITIALIZED";
 
     public CntVolumenResiduoVM() {
@@ -32,16 +33,19 @@ public class CntVolumenResiduoVM extends ViewModel {
         labelRadioButtonMochila.setValue("Cabe en una Mochila");
 
         labelRadioButtonAutomovil = new MutableLiveData<>();
-        labelRadioButtonAutomovil.setValue("Cabe en una Mochila");
+        labelRadioButtonAutomovil.setValue("Cabe en un automovil");
 
         labelRadioButtonContenedor = new MutableLiveData<>();
         labelRadioButtonContenedor.setValue("Cabe en un Contenedor");
 
         labelRadioButtonCamion = new MutableLiveData<>();
-        labelRadioButtonCamion.setValue("Cabe en una Mochila");
+        labelRadioButtonCamion.setValue("Cabe en un camion");
 
         labelRadioButtonMasGrande = new MutableLiveData<>();
         labelRadioButtonMasGrande.setValue("Mas Grande");
+
+        labelButtonAceptar = new MutableLiveData<>();
+        labelButtonAceptar.setValue("Guardar");
     }
 
     public void implementModel() {
@@ -61,7 +65,7 @@ public class CntVolumenResiduoVM extends ViewModel {
 
     }
 
-    /**
+/**
     public String updateDialogMachine(final String event) {
         String action = "";
 
@@ -81,17 +85,17 @@ public class CntVolumenResiduoVM extends ViewModel {
 
         if (getState().equals("Filling")) {
             if (event.equals("selectItem")) {
-                updateAcceptButton();
-                updateItemSelected();
+//                updateAcceptButton();
+//                updateItemSelected();
                 return action;
             }
             if (event.equals("accept")) {
-                notifyCompletado();
+//                notifyCompletado();
                 setState("Filled");
                 return action;
             }
             if (event.equals("back") && radioButtonResiduoSelected != 0) {
-                notifyCompletado();
+//                notifyCompletado();
                 setState("Filled");
                 return action;
             }
@@ -104,15 +108,15 @@ public class CntVolumenResiduoVM extends ViewModel {
         if (getState().equals("Filled")) {
             if (event.equals("clear")) {
                 notifyCompletar_action();
-                clearViewModel();
+//                clearViewModel();
                 setState("VMLoaded");
                 return action;
             }
 
             if (event.equals("selectItem")) {
                 setState("Filling");
-                updateAcceptButton();
-                updateItemSelected();
+//                updateAcceptButton();
+//                updateItemSelected();
                 return action;
             }
         }
@@ -120,7 +124,7 @@ public class CntVolumenResiduoVM extends ViewModel {
         return action;
 
     }
-
+*/
     public void notifyCompletar_action() {
         setMsgNavigationButton("Completar");
         //setColorNavigationButton("red");
@@ -131,7 +135,6 @@ public class CntVolumenResiduoVM extends ViewModel {
 //        setLabelInformacionAdicionalFeedback(newMsgnavigationButton);
 
     }
-     */
     public MutableLiveData<String> getLabelTitleTollbar() {
         return labelTitleTollbar;
     }
@@ -158,6 +161,10 @@ public class CntVolumenResiduoVM extends ViewModel {
 
     public MutableLiveData<String> getLabelRadioButtonCamion() {
         return labelRadioButtonCamion;
+    }
+
+    public MutableLiveData<String> getLabelButtonAceptar() {
+        return labelButtonAceptar;
     }
 
     public String getState() {

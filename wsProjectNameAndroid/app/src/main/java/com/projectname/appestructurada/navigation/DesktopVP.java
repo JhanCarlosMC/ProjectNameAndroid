@@ -157,12 +157,12 @@ public class DesktopVP extends AppCompatActivity implements ViewVP {
         //  [] aplica,  //inicializar el automata: getViewModel().actualizarMaquina("iniciarViewModel");
         getUIManager().navigationMachine("control");
         String action = getUIManager().navigationMachine("home");
-        /*        action = getUIManager().navigationMachine("denuncia");*/
+//        action = getUIManager().navigationMachine("denuncia");
 
 
         //---------------------------------enlazar el handler con la viewModel de la viewpart------------------------------------------------------------------------
         //  [] aplica,  //enlazar  el handler con la viewModel,  esto es para tener acceso a los widgets de la viewpart desde cualquier lugar;
-        //  getViewModel().setTheHandler(theHandler);  //es necesario crear el handler en esta clase e inicializar los metodos set y get para dicho handler!
+//        getViewModel().setTheHandler(theHandler);  //es necesario crear el handler en esta clase e inicializar los metodos set y get para dicho handler!
         //---------------------------------registrar  el handler de la viewpart-------------------------------------------------------------------------------------
 
         /*[]=============================== Formulario de Control de implementarModelo() =============================[]*/

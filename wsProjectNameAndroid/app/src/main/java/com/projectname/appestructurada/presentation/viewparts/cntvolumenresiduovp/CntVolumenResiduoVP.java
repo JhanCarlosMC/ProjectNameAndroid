@@ -1,8 +1,9 @@
 package com.projectname.appestructurada.presentation.viewparts.cntvolumenresiduovp;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
@@ -10,18 +11,24 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.projectname.appestructurada.APP;
+import com.projectname.appestructurada.R;
 import com.projectname.appestructurada.databinding.ActivityVolumenResiduoBinding;
 import com.projectname.appestructurada.kernel.ViewVP;
 import com.projectname.appestructurada.presentation.UIManager;
 import com.projectname.appestructurada.presentation.viewmodels.ViewModel;
+import com.projectname.appestructurada.presentation.viewmodels.cntdenunciavm.CntDenunciaVM;
 import com.projectname.appestructurada.presentation.viewmodels.cntvolumenresiduovm.CntVolumenResiduoVM;
+import com.projectname.appestructurada.presentation.viewparts.cntdenunciavp.CntDenunciaVP;
 
 public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
     private ActivityVolumenResiduoBinding bindingVolumenResiduo;
     private CntVolumenResiduoVM cntVolumenResiduoVM;
+//    private CntDenunciaVM cntDenunciaVM;
     ViewVP ownedByVP;
     APP app = APP.getInstance();
     UIManager theUIManager;
@@ -38,7 +45,8 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
     public RadioButton labelRadioButtonCamion;
     public RadioButton labelRadioButtonMasGrande;
     public RelativeLayout imgBack;
-    public RadioGroup listVolumenResiduo;
+    public RadioGroup radioGroupVolumenResiduo;
+    public Button btnAceptarVolumenResiduo;
 
     //Propios
     int resourceRadioButton;
@@ -51,7 +59,10 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
         View root = bindingVolumenResiduo.getRoot();
         setContentView(root);
 
-        cntVolumenResiduoVM = new ViewModelProvider(this).get(CntVolumenResiduoVM.class);
+//        cntVolumenResiduoVM = new ViewModelProvider(this).get(CntVolumenResiduoVM.class);
+        cntVolumenResiduoVM = app.getCntVolumenResiduoVM();
+
+//        cntDenunciaVM = new ViewModelProvider(this).get(CntDenunciaVM.class);
 
         initComponents();
         settingEvents();
@@ -83,7 +94,12 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
         labelRadioButtonMasGrande = bindingVolumenResiduo.includeOptionMasGrande.rbOption;
         cntVolumenResiduoVM.getLabelRadioButtonMasGrande().observe(this, labelRadioButtonMasGrande::setText);
 
+        btnAceptarVolumenResiduo = bindingVolumenResiduo.btnAceptarVolumenResiduo;
+        cntVolumenResiduoVM.getLabelButtonAceptar().observe(this, btnAceptarVolumenResiduo::setText);
+
         imgBack = bindingVolumenResiduo.actionToolbarAtras;
+
+        radioGroupVolumenResiduo = bindingVolumenResiduo.rgListVolumenResiduo;
     }
 
     public void settingEvents() {
@@ -94,17 +110,41 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
                 onBackPressed();
             }
         });
-/*
-        getListVolumenResiduo().setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+        // Escucha cambios en el RadioGroup
+        getRadioGroupVolumenResiduo().setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                onCheckedChangeListener(view, i);
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                onCheckedChangeListener( group, checkedId);
             }
         });
-*/
+
+        getBtnAceptarVolumenResiduo().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                labelRadioButtonMasGrande.setText("MUY GRANDEEEE");
+                getCntVolumenResiduoVM().getLabelRadioButtonMasGrande().setValue("MUY GRANDEEEE");
+//                cntVolumenResiduoVM.getLabelRadioButtonMasGrande().setValue("MUY GRANDEEEE");
+
+//                cntDenunciaVM.getLabelVolumenResiduoFeedback().setValue("Completadoooo");
+//                cntDenunciaVM.updateVolumenResiduoFeedback("Completado");
+
+//                Intent resultIntent = new Intent();
+//                resultIntent.putExtra("result_key", "Completado");
+//                setResult(RESULT_OK, resultIntent);
+//                finish(); // Cierra la Activity y regresa al Fragment
+
+                getUIManager().navigationMachine("back");
+            }
+        });
     }
 
     private void onCheckedChangeListener(View view, int i) {
+        // Activa el botón cuando se selecciona un RadioButton
+        btnAceptarVolumenResiduo.setEnabled(true);
+        btnAceptarVolumenResiduo.setBackgroundTintList(getResources().getColorStateList(R.color.color_ic_promocion));
+
+
 
         resourceRadioButton = i;
         radioButtonSelected = findViewById(i);
@@ -165,12 +205,20 @@ public class CntVolumenResiduoVP extends AppCompatActivity implements ViewVP {
         return imgBack;
     }
 
-    public RadioGroup getListVolumenResiduo() {
-        return listVolumenResiduo;
+    public RadioGroup getRadioGroupVolumenResiduo() {
+        return radioGroupVolumenResiduo;
     }
 
-    public void setListVolumenResiduo(RadioGroup listVolumenResiduo) {
-        this.listVolumenResiduo = listVolumenResiduo;
+    public void setRadioGroupVolumenResiduo(RadioGroup radioGroupVolumenResiduo) {
+        this.radioGroupVolumenResiduo = radioGroupVolumenResiduo;
+    }
+
+    public Button getBtnAceptarVolumenResiduo() {
+        return btnAceptarVolumenResiduo;
+    }
+
+    public void setBtnAceptarVolumenResiduo(Button btnAceptarVolumenResiduo) {
+        this.btnAceptarVolumenResiduo = btnAceptarVolumenResiduo;
     }
 
     public CntVolumenResiduoVM getCntVolumenResiduoVM() {

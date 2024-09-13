@@ -1,6 +1,7 @@
 package com.projectname.appestructurada;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.projectname.appestructurada.domain.Domain;
 import com.projectname.appestructurada.kernel.Kernel;
@@ -48,6 +49,9 @@ public class APP extends Application {
 
     public APP() {
         implementModel();
+        Log.e("APP: ", "cntVolumenResiduoVM: " + getTheUIManager().getTheDesktopVM().getCntDenunciaVM().getCntVolumenResiduoVM());
+        Log.e("APP: ", "cntVolumenResiduoVMData: " + getTheUIManager().getTheDesktopVM().getCntDenunciaVM().getCntVolumenResiduoVM().getLabelRadioButtonMasGrande().getValue());
+        Log.e("APP: ", "cntVolumenResiduoVMData: " + getTheUIManager().getTheDesktopVM().getCntDenunciaVM().getCntVolumenResiduoVM().getLabelRadioButtonMasGrande().getValue());
     }
 
     public APP implementModel() {
